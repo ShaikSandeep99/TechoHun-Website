@@ -1,0 +1,90 @@
+/* General Page Styling */
+.contact-page {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  .contact-hero {
+    
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    color: rgb(16, 16, 16);
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .contact-form-section {
+    padding: 60px 20px;
+    background-color: #f7f8fa;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  h2.text-center {
+    font-size: 36px;
+    color: #0793d1;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form-group textarea.form-control {
+    height: 150px;
+    resize: none;
+  }
+  
+  /* .btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: #0793d1;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #005bb5;
+  } */
+  
