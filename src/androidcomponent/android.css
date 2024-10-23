@@ -1,0 +1,29 @@
+.accordion {
+    background-color: #acc8e5;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.4s;
+  }
+  
+  .panel {
+    padding: 15px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+    border: 1px solid #ddd;
+  }
+  
+  .panel ol {
+    padding-left: 20px;
+  }
+  
+  .panel li {
+    margin-bottom: 10px;
+  }
+  
