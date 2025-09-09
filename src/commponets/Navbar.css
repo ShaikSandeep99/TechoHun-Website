@@ -120,6 +120,27 @@
   background-color: #007bff;
   color: #fff;
 } */
+.navbar-logo {
+  height: 45px;
+  width: auto;
+}
+
+/* Make all nav links bold */
+.nav-link {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;   /* 🔥 Bold text */
+  color: #000 !important; /* keep text black */
+}
+
+/* Special styling for SIGNUP / SIGNIN */
+.auth-link {
+  color: #e60000 !important; /* red */
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
 
 /* Responsive for mobile */
 @media (max-width: 768px) {

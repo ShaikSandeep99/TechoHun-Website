@@ -9,7 +9,7 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Countact';
 import CopyRight from './commponets/Copyrights';
 import Courses from './pages/Coursers';
-
+import Login from'./pages/Login';
 const App = () => {
   return (
     <BrowserRouter>
@@ -21,6 +21,7 @@ const App = () => {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/auth" element={<Login />} />
       </Routes>
       {/* <Footer /> */}
       <CopyRight />
