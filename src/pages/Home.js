@@ -14,6 +14,8 @@ import icon1 from "../assets/images/bg-imges/icon1.svg";
 import icon2 from "../assets/images/bg-imges/icon2.png"; 
 import icon3 from "../assets/images/bg-imges/icon3.png"; 
 import icon4 from "../assets/images/bg-imges/icon4.png"; 
+import { motion } from "framer-motion";
+
 
 const Hero = () => {
   // Hero Section Slideshow Data
@@ -115,65 +117,49 @@ const Hero = () => {
         </p>
       </div>
 
-   {/* Feature Cards Section */}
+  {/* Feature Cards Section */}
 <div className="container text-center my-4">
-<div className="row g-2 justify-content-center">
-    {/* Professionals Trained */}
-    <div className="col-md-3 mb-3">
-      <div
-        className="card feature-card shadow p-3 h-100 border-0 rounded-4"
-        style={{ maxWidth: "220px", margin: "0 auto" }}
+  <div className="row g-2 justify-content-center">
+    {[
+      { icon: icon1, text: "500+ Professionals Trained" },
+      { icon: icon2, text: "10+ Years of Experience" },
+      { icon: icon3, text: "30 to 40 Hours Live-Project" },
+      { icon: icon4, text: "100% Job Assistance" },
+    ].map((card, idx) => (
+      <motion.div
+        className="col-md-3 mb-3"
+        key={idx}
+        initial={{ y: 30, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ type: "spring", bounce: 0.3, duration: 0.4, delay: idx * 0.1 }}
       >
-        <div className="card-body">
-          <img src={icon1} alt="Professionals Trained" width="40" className="feature-icon" />
-        <h6 className="mt-2 fw-bold feature-text">
-  <span style={{ color: "#007BFF" }}>500+</span> Professionals Trained
-</h6>
-        </div>
-      </div>
-    </div>
 
-    {/* Years of Experience */}
-    <div className="col-md-3 mb-3">
-      <div
-        className="card feature-card shadow p-3 h-100 border-0 rounded-4"
-        style={{ maxWidth: "220px", margin: "0 auto" }}
-      >
-        <div className="card-body">
-          <img src={icon2} alt="Experience" width="40" className="feature-icon" />
-          <h6 className="mt-2 fw-bold feature-text">
-            <span style={{color:"#007BFF"}}>10+ Years </span> of Experience </h6>
-        </div>
-      </div>
-    </div>
-
-    {/* Live Project Hours */}
-    <div className="col-md-3 mb-3">
-      <div
-        className="card feature-card shadow p-3 h-100 border-0 rounded-4"
-        style={{ maxWidth: "220px", margin: "0 auto" }}
-      >
-        <div className="card-body">
-          <img src={icon3} alt="Live Project" width="40" className="feature-icon" />
-          <h6 className="mt-2 fw-bold feature-text">
-           <span style={{color:"#007BFF"}}>30 to 40 </span>Hours Live-Project</h6>
-        </div>
-      </div>
-    </div>
-
-    {/* Job Assistance */}
-    <div className="col-md-3 mb-3">
-      <div
-        className="card feature-card shadow p-3 h-100 border-0 rounded-4"
-        style={{ maxWidth: "220px", margin: "0 auto" }}
-      >
-        <div className="card-body">
-          <img src={icon4} alt="Job Assistance" width="40" className="feature-icon" />
-          <h6 className="mt-2 fw-bold feature-text">
-            <span style={{color:"#007BFF"}}>100% </span>Job Assistance</h6>
-        </div>
-      </div>
-    </div>
+        <motion.div
+          className="card feature-card shadow p-3 h-100 border-0 rounded-4"
+          style={{ maxWidth: "220px", margin: "0 auto", cursor: "pointer", transformStyle: "preserve-3d",boxShadow: "0 8px 20px rgba(0, 123, 255, 0.6)", border: "2px solid #007BFF", }}
+          whileHover={{ rotateX: 8, rotateY: 8 }}
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * 8;
+            const rotateY = ((x - centerX) / centerX) * -8;
+            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
+          }}
+        >
+          <div className="card-body">
+            <img src={card.icon} alt="Feature Icon" width="40" className="feature-icon" />
+            <h6 className="mt-2 fw-bold feature-text">{card.text}</h6>
+          </div>
+        </motion.div>
+      </motion.div>
+    ))}
   </div>
 </div>
 
@@ -182,176 +168,225 @@ const Hero = () => {
   <h2 className="fw-bold" style={{ color: "#007BFF" }}>
     Explore Our Featured Courses
   </h2>
-  <div className="row g-3 justify-content-center mt-4">
-    
-    {/* Java Programming */}
-    <div className="col-md-3">
-      <div className="card shadow-sm p-3 h-100 border-0 rounded-4">
-        <div className="card-body">
-          <h6 className="fw-bold" style={{ color: "#007BFF" }}>
-            Java Programming
-          </h6>
-          <p className="text-muted small">
-            Learn Java from scratch and become an expert in backend development.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    {/* React Development */}
-    <div className="col-md-3">
-      <div className="card shadow-sm p-3 h-100 border-0 rounded-4">
-        <div className="card-body">
-          <h6 className="fw-bold" style={{ color: "#007BFF" }}>
-            React Development
+  <div className="row g-4 mt-4">
+    {[
+      { title: "Java Programming", desc: "Learn Java from scratch and become an expert in backend development.", border: "#007BFF" },
+      { title: "React Development", desc: "Master React and build powerful front-end web applications.", border: "#007BFF" },
+      { title: "Python for Data Science", desc: "Learn Python for Data Science and build machine learning models.", border: "#007BFF" },
+      { title: "DevOps Essentials", desc: "Understand the fundamentals of DevOps and streamline development processes.", border: "#007BFF" },
+  
+    ].map((card, idx) => (
+      <motion.div
+        className="col-md-3"
+        key={idx}
+        initial={{ y: 50, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
+      >
+        <motion.div
+          className="card h-100 text-center p-4 border-0 rounded-4"
+          style={{
+            border: `2px solid ${card.border}`,
+            boxShadow: card.isGift
+              ? "0 4px 15px rgba(255, 215, 0, 0.6)" // gold glow for gift card
+              : "0 4px 12px rgba(0, 123, 255, 0.3)",
+            transformStyle: "preserve-3d",
+            cursor: "pointer",
+          }}
+          whileHover={{ rotateX: 8, rotateY: 8 }}
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * 8;
+            const rotateY = ((x - centerX) / centerX) * -8;
+            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
+          }}
+        >
+          <h6
+            className="fw-bold"
+            style={{ color: card.isGift ? "#FFD700" : "#007BFF" }}
+          >
+            {card.title}
           </h6>
-          <p className="text-muted small">
-            Master React and build powerful front-end web applications.
-          </p>
-        </div>
-      </div>
-    </div>
+          <p className="text-muted small">{card.desc}</p>
 
-    {/* Python for Data Science */}
-    <div className="col-md-3">
-      <div className="card shadow-sm p-3 h-100 border-0 rounded-4">
-        <div className="card-body">
-          <h6 className="fw-bold" style={{ color: "#007BFF" }}>
-            Python for Data Science
-          </h6>
-          <p className="text-muted small">
-            Learn Python for Data Science and build machine learning models.
-          </p>
-        </div>
-      </div>
-    </div>
-{/* DevOps Essentials */}
-    <div className="col-md-3">
-      <div className="card shadow-sm p-3 h-100 border-0 rounded-4">
-        <div className="card-body">
-          <h6 className="fw-bold" style={{ color: "#007BFF" }}>
-            DevOps Essentials
-          </h6>
-          <p className="text-muted small">
-            Understand the fundamentals of DevOps and streamline development processes.
-          </p>
-        </div>
-      </div>
-    </div>
+          {/* Only Gift Card has button */}
+          {card.isGift && (
+            <button className="btn btn-warning btn-sm fw-bold mt-2">
+              Grab Now
+            </button>
+          )}
+        </motion.div>
+      </motion.div>
+    ))}
   </div>
 </div>
+
 {/* Why Training Courses Section */}
 <div className="container text-center my-5">
   <h2 className="fw-bold" style={{ color: "#007BFF" }}>
     Why Training Courses from Technohub
   </h2>
   
-<div className="row g-4 mt-4">
-  {/* Card 1 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #ff00f2ff",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img1} alt="Live Learning" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">Live Interactive Learning</h6>
-      <p className="text-muted small">
-        World-class Instructor <br /> Expert-led mentoring sessions <br /> Instant doubt clearing
-      </p>
-    </div>
-  </div>
-
-  {/* Card 2 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #007BFF",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img2} alt="Lifetime Access" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">Lifetime Access</h6>
-      <p className="text-muted small">
-        Course access never expires <br /> Free access to future updates <br /> Unlimited course content
-      </p>
-    </div>
-  </div>
-
-  {/* Card 3 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #007BFF",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img3} alt="Support" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">24x7 Support</h6>
-      <p className="text-muted small">
-        One-on-one learning assistance <br /> Help desk support <br /> Resolve doubts in real time
-      </p>
-    </div>
-  </div>
-
-  {/* Card 4 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #007BFF",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img4} alt="Industry Curriculum" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">Industry-Aligned Curriculum</h6>
-      <p className="text-muted small">
-        Up-to-date course content <br /> Real-time projects <br /> Hands-on practical knowledge
-      </p>
-    </div>
-  </div>
-
-  {/* Card 5 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #007BFF",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img5} alt="Job Assistance" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">Job Assistance</h6>
-      <p className="text-muted small">
-        Resume building workshops <br /> Mock interview sessions <br /> Job placement support
-      </p>
-    </div>
-  </div>
-
-  {/* Card 6 */}
-  <div className="col-md-4">
-    <div
-      className="card h-100 text-center p-4 border-0 rounded-4"
-      style={{
-        border: "2px solid #007BFF",
-        boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-      }}
-    >
-      <img src={img6} alt="Flexible Learning" className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-      <h6 className="fw-bold text-primary">Flexible Learning</h6>
-      <p className="text-muted small">
-        Self-paced learning options <br /> Live online sessions <br /> Learn at your convenience
-      </p>
-    </div>
+  <div className="row g-4 mt-4">
+    {[
+      { img: img1, title: "Live Interactive Learning", desc: "World-class Instructor <br /> Expert-led mentoring sessions <br /> Instant doubt clearing", border: "#0022ffff" },
+      { img: img2, title: "Lifetime Access", desc: "Course access never expires <br /> Free access to future updates <br /> Unlimited course content", border: "#007BFF" },
+      { img: img3, title: "24x7 Support", desc: "One-on-one learning assistance <br /> Help desk support <br /> Resolve doubts in real time", border: "#007BFF" },
+      { img: img4, title: "Industry-Aligned Curriculum", desc: "Up-to-date course content <br /> Real-time projects <br /> Hands-on practical knowledge", border: "#007BFF" },
+      { img: img5, title: "Job Assistance", desc: "Resume building workshops <br /> Mock interview sessions <br /> Job placement support", border: "#007BFF" },
+      { img: img6, title: "Flexible Learning", desc: "Self-paced learning options <br /> Live online sessions <br /> Learn at your convenience", border: "#007BFF" },
+    ].map((card, idx) => (
+      <motion.div
+        className="col-md-4"
+        key={idx}
+        initial={{ y: 50, opacity: 0, scale: 0.9 }}
+        whileInView={{ y: 0, opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
+      >
+        <motion.div
+          className="card h-100 text-center p-4 border-0 rounded-4"
+          style={{
+            border: `2px solid ${card.border}`,
+            boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
+            transformStyle: "preserve-3d",
+            cursor: "pointer",
+          }}
+          whileHover={{ rotateX: 8, rotateY: 8 }}
+          onMouseMove={(e) => {
+            const rect = e.currentTarget.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = ((y - centerY) / centerY) * 8;
+            const rotateY = ((x - centerX) / centerX) * -8;
+            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
+          }}
+        >
+          <img src={card.img} alt={card.title} className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
+          <h6 className="fw-bold text-primary">{card.title}</h6>
+          <p className="text-muted small" dangerouslySetInnerHTML={{ __html: card.desc }} />
+        </motion.div>
+      </motion.div>
+    ))}
   </div>
 </div>
 
+{/* Placement Section with Carousel */}
+<div className="container my-5">
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF" }}>
+    Our Successful Placements
+  </h2>
 
+  <div id="placementCarousel" className="carousel slide mt-4" data-bs-ride="carousel">
+    <div className="carousel-inner">
+
+      {/* Placement 1 */}
+      <div className="carousel-item active">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src="https://via.placeholder.com/100" // replace with student photo
+            alt="Student"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              John Doe
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>TCS</strong> as Software Engineer
+            </p>
+            <p className="text-muted small">
+              “Technohub helped me gain the skills to land my dream job.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Placement 2 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Student"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              Sarah Smith
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>Infosys</strong> as Data Analyst
+            </p>
+            <p className="text-muted small">
+              “The live projects and support gave me the confidence to succeed.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Placement 3 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src="https://via.placeholder.com/100"
+            alt="Student"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              David Johnson
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>Wipro</strong> as Cloud Engineer
+            </p>
+            <p className="text-muted small">
+              “The placement training sessions were a game changer for me.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {/* Carousel Controls */}
+    <button
+      className="carousel-control-prev"
+      type="button"
+      data-bs-target="#placementCarousel"
+      data-bs-slide="prev"
+    >
+      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Previous</span>
+    </button>
+    <button
+      className="carousel-control-next"
+      type="button"
+      data-bs-target="#placementCarousel"
+      data-bs-slide="next"
+    >
+      <span className="carousel-control-next-icon" aria-hidden="true"></span>
+      <span className="visually-hidden">Next</span>
+    </button>
+  </div>
 </div>
+
     </section>
   );
 };
