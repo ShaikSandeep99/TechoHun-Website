@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './commponets/Navbar';
-import Footer from './commponets/Footer';
+// import Footer from './commponets/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Coursers';
@@ -12,7 +12,7 @@ import Courses from './pages/Coursers';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,11 +20,11 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Courses" element={<Courses />} />
+        <Route path="/courses" element={<Courses />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
       <CopyRight />
-    </Router>
+    </BrowserRouter>
   );
 };
 
