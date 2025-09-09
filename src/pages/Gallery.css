@@ -1,0 +1,134 @@
+/* .gallery1{
+-webkit-column-count:4;
+-moz-column-count:4;
+column-count: 4;
+-webkit-column-width:33%;
+-moz-column-width:33%;
+column-width: 35%;
+padding:0 12px;
+}
+.gallery1 .pics{
+    transition: all 350ms ease;
+    -webkit-transition:all 350ms ease;
+    cursor:pointer;
+    margin-bottom:12px;
+
+}
+.our_gallery{
+    text-align: center;
+}
+.gallery{
+    background: rgb(253, 252, 252);
+}
+@media(max-width:991px){
+    .gallery1{
+        -webkit-column-count:3;
+        -moz-column-count:2;
+        column-count: 2;
+      
+    } 
+}
+@media(max-width:480px){
+    .gallery1{
+        -webkit-column-count:1;
+        -moz-column-count:1;
+        column-count: 1;
+        -webkit-column-width:100%;
+        -moz-column-width:100%;
+        column-width: 100%;
+      
+    } 
+} */
+/*  
+.gallery-container {
+    padding: 20px;
+    background-color: #eaeaea; 
+  }
+  
+  .gallery-section {
+    margin-bottom: 40px; 
+  }
+  
+  .gallery-image {
+    height: 200px;
+    width: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 15px; 
+  }
+  
+  .slider-container {
+    padding: 10px;
+  }
+  
+  .slick-prev:before, .slick-next:before {
+    color: #333;
+  }
+  
+  .slick-dots li button:before {
+    color: #333; 
+  }
+
+
+  
+  h1,
+  h2 {
+    color: #333;
+  } */
+  .gallery-container {
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for better aesthetics */
+  }
+  
+  .gallery-section {
+    margin-bottom: 40px;
+  }
+  
+  .gallery-image {
+    height: 250px; /* Uniform height */
+    width: 100%; /* Ensures the image fits its container */
+    object-fit: cover; /* Maintains aspect ratio while cropping excess */
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+  
+  .gallery-slide {
+    padding: 10px; /* Consistent spacing around slides */
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: #007bff; /* Primary color for navigation arrows */
+  }
+  
+  .slick-dots li button:before {
+    color: #007bff; /* Primary color for dots */
+  }
+  
+  h1,
+  h2 {
+    color: #444; /* Darker text color for better contrast */
+  }
+  
+  button {
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #007bff; /* Primary color for buttons */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  

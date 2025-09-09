@@ -2,6 +2,196 @@
 .courses-page {
     font-family: 'Poppins', sans-serif;
     color: #333;
+}
+
+/* Hero Section */
+.courses-hero {
+    background: linear-gradient(120deg, #4facfe, #00f2fe);
+    padding: 100px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.courses-hero::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 20%);
+    background-size: 50% 50%;
+    animation: rotateBg 20s linear infinite;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+}
+
+.courses-hero h1 {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 0 20px rgba(255,255,255,0.5);
+    animation: fadeInDown 1s ease forwards;
+}
+
+.courses-hero p {
+    font-size: 18px;
+    color: #f0f0f0;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    animation: fadeInUp 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+/* Courses Grid */
+.courses-list-section {
+    padding: 80px 20px;
+    background-color: #f5f7fa;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.courses-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Course Cards */
+.course-card {
+    width: 30%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 25px;
+    margin-bottom: 40px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+    animation: fadeInUpCard 0.8s ease forwards;
+    perspective: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease;
+}
+
+.course-card h3 {
+    font-size: 24px;
+    color: #0793d1;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.course-card p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Enroll Now Button */
+.enroll-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    background-color: #0044cc;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s ease, transform 0.4s ease;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.course-card:hover .enroll-btn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    
+}
+
+/* Hover Effects */
+.course-card:hover {
+    transform: translateY(-10px) scale(1.05) rotateX(5deg) rotateY(5deg);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.course-card:hover img {
+    transform: scale(1.1);
+}
+
+.course-card:hover h3 {
+    color: #0044cc;
+}
+
+/* Card Animation Delay */
+.course-card:nth-child(1) { animation-delay: 0.1s; }
+.course-card:nth-child(2) { animation-delay: 0.2s; }
+.course-card:nth-child(3) { animation-delay: 0.3s; }
+.course-card:nth-child(4) { animation-delay: 0.4s; }
+.course-card:nth-child(5) { animation-delay: 0.5s; }
+/* Repeat for remaining cards */
+
+/* Animations */
+@keyframes fadeInUpCard {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes rotateBg {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Media Queries */
+@media screen and (max-width: 992px) {
+    .course-card { width: 45%; }
+}
+
+@media screen and (max-width: 768px) {
+    .course-card { width: 100%; }
+    .courses-hero h1 { font-size: 40px; }
+}
+
+
+
+
+
+
+
+/* General Styling
+.courses-page {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
   }
   
   .courses-hero {
@@ -73,7 +263,7 @@
   }
   
   /* Media Queries */
-  @media screen and (max-width: 992px) {
+  /* @media screen and (max-width: 992px) {
     .course-card {
       width: 45%;
     }
@@ -82,6 +272,6 @@
   @media screen and (max-width: 768px) {
     .course-card {
       width: 100%;
-    }
-  }
-  
+    } */
+  /* } */
+   
