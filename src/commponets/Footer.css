@@ -1,103 +1,107 @@
-Base styles for the footer
+/* Top Footer Container */
 .footer-container {
-    background: linear-gradient(45deg, rgb(166, 211, 226), rgb(60, 124, 241));
-    padding: 20px;
-    color: white;
-    text-align: left;
-  }
-  
+   background: linear-gradient(to right, #bed1ef, #c2e9fb); /* Gradient */
+  color: rgb(17, 18, 18);
+  padding: 30px 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Sections */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  color: #d24c4c; /* golden yellow for headings */
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list li a {
+  color: rgb(2, 1, 1);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-list li a:hover {
+  color: #d94d4d; /* hover effect */
+}
+
+/* Logo */
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.whatsapp-link {
+  color: rgb(155, 68, 68);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  background: linear-gradient(to right, #689acf, #4facfe); /* Gradient bottom */
+  color: rgb(15, 13, 13)a0a;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.footer-bottom .social-icons {
+  margin-bottom: 8px;
+}
+
+.footer-bottom .social-icons span {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.footer-bottom .social-icons a {
+  margin: 0 8px;
+  font-size: 18px;
+  color: rgb(6, 5, 5);
+  transition: 0.3s;
+}
+
+.footer-bottom .social-icons a:hover {
+  color: #db5252;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 30px;
-    flex-wrap: wrap; /* Allows wrapping in smaller screen sizes */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
-  
+
   .footer-section {
-    flex: 1; /* Flex item grows to fill available space */
-    margin-right: 30px;
+    margin: 15px 0;
   }
-  
-  .footer-section h4 {
-    margin-bottom: 15px;
-  }
-  
-  .footer-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .footer-list li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-list li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-list li a:hover {
-    color: #007bff; /* Change to blue on hover */
-  }
-  
-  /* Footer Logo */
-  .footer-logo {
-    width: 200px;
-    height: auto;
-    margin-top: 20px;
-  }
-  
-  /* AICTE logo for mobile */
-  .footer-aicte-logo {
-    width: 200px;
-    height: 100px;
-    margin-top: 20px;
-  }
-  
-  /* Center the footer for mobile devices */
-  @media (max-width: 768px) {
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .footer-section {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-  }
-  /* // copyrights */
-  /* Basic footer styling */
-.footer {
-    background-color: #f8f9fa; /* Light background */
-    display: flex; /* Enable Flexbox */
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
-    height: 10px; /* Set a fixed height for the footer */
-    padding: 20px; /* Padding to ensure the content is not too tight */
-    position: relative; /* For potential absolute positioning of elements inside */
-    width: 100%; /* Full-width across the page */
-  }
-  
-  /* Footer text content */
-  .footer-content {
-    font-size: 16px; /* Base font size */
-    color: #343a40; /* Dark gray text */
-    text-align: center; /* Ensure text is centered */
-  }
-  
-  /* Responsive adjustments for small devices */
-  @media (max-width: 768px) {
-    .footer {
-      height: auto; /* Allow dynamic height for small screens */
-      padding: 15px; /* Adjust padding */
-    }
-  
-    .footer-content {
-      font-size: 12px; /* Smaller font for mobile */
-    }
-  }
-  
+}
