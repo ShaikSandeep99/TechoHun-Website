@@ -6,15 +6,16 @@ import img3 from "../assets/images/bg-imges/img3.jpg";
 import img4 from "../assets/images/bg-imges/img4.jpg";
 import img5 from "../assets/images/bg-imges/img5.jpg";
 import img6 from "../assets/images/bg-imges/img6.jpg";
-import image1 from "../assets/images/bg-imges/bg1.jpg";
+import image1 from "../assets/images/bg-imges/bgg1.png";
 import image2 from "../assets/images/bg-imges/bg2.jpg";
-import image3 from "../assets/images/bg-imges/bg3.jpg";
 import image4 from "../assets/images/bg-imges/bg4.jpg";
 import icon1 from "../assets/images/bg-imges/icon1.svg"; 
 import icon2 from "../assets/images/bg-imges/icon2.png"; 
 import icon3 from "../assets/images/bg-imges/icon3.png"; 
 import icon4 from "../assets/images/bg-imges/icon4.png"; 
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
 
 
 const Hero = () => {
@@ -25,7 +26,7 @@ const Hero = () => {
       heading: "Transform Your Career with Technohub",
       description:
         "Join our professional courses and start your journey toward a successful career. Explore a variety of training programs tailored just for you!",
-      buttonText: "Get Started",
+      // buttonText: "Get Started",
       image: "/img/hero-image1.png",
     },
     {
@@ -33,21 +34,14 @@ const Hero = () => {
       heading: "Learn from the Best in the Industry",
       description:
         "Our expert instructors provide real-world knowledge to help you achieve your goals.",
-      buttonText: "Discover Courses",
+      // buttonText: "Discover Courses",
       image: "/img/hero-image2.png",
     },
-    {
-      backgroundImage: image3,
-      heading: "Upgrade Your Skills Today",
-      description:
-        "Stay ahead in your career with the latest tools and technologies.",
-      buttonText: "Join Now",
-      image: "/img/hero-image3.png",
-    },
+    
     {
       backgroundImage: image4,
       heading: "“Education is the passport to the future”",
-      buttonText: "Explore More",
+      // buttonText: "Explore More",
       image: "../assets/images/bg-imges/bg3.jpg",
     },
   ];
@@ -98,24 +92,44 @@ const Hero = () => {
         <div style={{ position: "relative", zIndex: 2, color: "#fff" }}>
           <h1 className="fw-bold display-4">{slide.heading}</h1>
           <p className="lead mt-3">{slide.description}</p>
-          <button className="btn btn-danger btn-lg mt-3">
+          {/* <button className="btn btn-danger btn-lg mt-3"> */}
             {slide.buttonText}
-          </button>
+          {/* </button> */}
         </div>
       </div>
 
-      {/* About Technohub Section */}
-      <div className="container text-center my-5">
-      <h2 className="fw-bold" style={{ color: "#007BFF" }}>About Technohub</h2>
-        <p className="mt-3">
-          Technohub is a training Institution and a good Software Training and
-          Certification platform. Technohub follows proper work ethics and has a
-          positive environment where an individual can learn and grow. We provide
-          both offline and online courses. The competitive environment at Technohub
-          also provides the necessary edge and exposure for every individual to
-          succeed in their career in Software.
-        </p>
-      </div>
+
+{/* About Technohub Section */}
+<div className="container text-center my-5">
+  <motion.h2
+    className="fw-bold"
+    style={{ color: "#007BFF" }}
+    initial={{ opacity: 0, rotateX: -90 }}
+    whileInView={{ opacity: 1, rotateX: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    About Technohub
+  </motion.h2>
+
+  <motion.p
+    className="mt-3"
+    initial={{ opacity: 0, rotateY: -90 }}
+    whileInView={{ opacity: 1, rotateY: 0 }}
+    viewport={{ once: true, amount: 0.3 }}
+    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+    style={{ transformOrigin: "left center" }}
+  >
+    Technohub is a training Institution and a good Software Training and
+    Certification platform. Technohub follows proper work ethics and has a
+    positive environment where an individual can learn and grow. We provide
+    both offline and online courses. The competitive environment at Technohub
+    also provides the necessary edge and exposure for every individual to
+    succeed in their career in Software.
+  </motion.p>
+</div>
+
+      
 
   {/* Feature Cards Section */}
 <div className="container text-center my-4">
@@ -276,8 +290,8 @@ const Hero = () => {
             e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
           }}
         >
-          <img src={card.img} alt={card.title} className="mx-auto mb-3" style={{ height: "60px", objectFit: "contain" }} />
-          <h6 className="fw-bold text-primary">{card.title}</h6>
+          <img src={card.img} alt={card.title} className="mx-auto mb-3" style={{ height: "100px", objectFit: "contain" }} />
+          <h4 className="fw-bold text-primary">{card.title}</h4>
           <p className="text-muted small" dangerouslySetInnerHTML={{ __html: card.desc }} />
         </motion.div>
       </motion.div>
@@ -291,73 +305,55 @@ const Hero = () => {
     Our Successful Placements
   </h2>
 
-  <div id="placementCarousel" className="carousel slide mt-4" data-bs-ride="carousel">
+  <div
+    id="placementCarousel"
+    className="carousel slide mt-4"
+    data-bs-ride="carousel"
+    data-bs-interval="3000"   // Auto rotate every 3 sec
+  >
     <div className="carousel-inner">
 
       {/* Placement 1 */}
-      <div className="carousel-item active">
+      <div className="carousel-item active" data-bs-interval="3000">
         <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
           <img
-            src="https://via.placeholder.com/100" // replace with student photo
-            alt="Student"
+            src="https://via.placeholder.com/100"
+            alt="Sarath Sai"
             className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+            style={{ width: "100px", height: "100px", objectFit: "contain" }}
           />
           <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              John Doe
-            </h6>
+            <h5 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              Sarath Sai
+            </h5>
             <p className="mb-1 text-muted small">
-              Placed at <strong>TCS</strong> as Software Engineer
+              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Technohub helped me gain the skills to land my dream job.”
+              “Joined as an intern, has been successfully placed as a Software Developer at ASAR IT Technology in 2024.”
             </p>
           </div>
         </div>
       </div>
 
       {/* Placement 2 */}
-      <div className="carousel-item">
+      <div className="carousel-item" data-bs-interval="3000">
         <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
           <img
             src="https://via.placeholder.com/100"
-            alt="Student"
+            alt="Yamini"
             className="rounded-circle me-3"
             style={{ width: "100px", height: "100px", objectFit: "cover" }}
           />
           <div>
             <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              Sarah Smith
+              Yamini
             </h6>
             <p className="mb-1 text-muted small">
-              Placed at <strong>Infosys</strong> as Data Analyst
+              Placed at <strong>ASAR IT Technology</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “The live projects and support gave me the confidence to succeed.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 3 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src="https://via.placeholder.com/100"
-            alt="Student"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              David Johnson
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>Wipro</strong> as Cloud Engineer
-            </p>
-            <p className="text-muted small">
-              “The placement training sessions were a game changer for me.”
+              “Joined as an intern, has been successfully placed as a Software Developer at ASAR IT Technology in 2024.”
             </p>
           </div>
         </div>
@@ -365,7 +361,25 @@ const Hero = () => {
 
     </div>
 
-    {/* Carousel Controls */}
+    {/* Carousel Indicators */}
+    <div className="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#placementCarousel"
+        data-bs-slide-to="0"
+        className="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#placementCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+    </div>
+
+    {/* Controls */}
     <button
       className="carousel-control-prev"
       type="button"
@@ -387,6 +401,8 @@ const Hero = () => {
   </div>
 </div>
 
+
+    
     </section>
   );
 };
