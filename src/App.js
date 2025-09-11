@@ -12,7 +12,9 @@ import Register from './pages/Register';
 import CopyRight from './commponets/Copyrights';
 // import WhatsappButton from './commponets/WhatsappButton';
 import Courses from './pages/Coursers';
-import Login from'./pages/Login';
+import Login from './pages/Login';
+import Register from './pages/Register';   // ✅ Import Registern
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -27,6 +29,7 @@ const App = () => {
         <Route path="/courses" element={<Courses />} />
         <Route path="/Register" element={<Register/>}/>
         <Route path="/auth" element={<Login />} />
+        <Route path="/register" element={<Register />} /> {/* ✅ Registration route */}
       </Routes>
       { <Footer /> }
       <CopyRight />
