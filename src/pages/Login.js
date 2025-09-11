@@ -25,7 +25,7 @@ export default function Login() {
           </button>
 
           <p className="register-text">
-            Don't have an account? <a href="#">Register</a>
+            Don't have an account? <a href="/Register">Register</a>
           </p>
         </form>
       </div>

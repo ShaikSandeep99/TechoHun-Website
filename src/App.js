@@ -4,9 +4,11 @@ import Navbar from './commponets/Navbar';
 import Footer from './commponets/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Coursers';
+import Services from './pages/About';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Countact';
+import Industry from './pages/industry';
+import Register from './pages/Register';
 import CopyRight from './commponets/Copyrights';
 // import WhatsappButton from './commponets/WhatsappButton';
 import Courses from './pages/Coursers';
@@ -21,7 +23,9 @@ const App = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/industry" element={<Industry/>}/>
         <Route path="/courses" element={<Courses />} />
+        <Route path="/Register" element={<Register/>}/>
         <Route path="/auth" element={<Login />} />
       </Routes>
       { <Footer /> }
