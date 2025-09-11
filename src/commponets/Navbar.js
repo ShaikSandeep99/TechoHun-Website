@@ -1,15 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import profileImg from '../assets/profile.png'; 
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
+
+         {/* Profile */}
+        <NavLink className="photo" to="/">
+          <img src={profileImg} alt="Technohub" className="profile-photo" />
+        </NavLink>
+        
         {/* Logo */}
         <NavLink className="navbar-brand" to="/">
           <img src="/img/technohub-logo.png" alt="Technohub" className="navbar-logo" />
         </NavLink>
+
+       
 
         {/* Toggler for mobile */}
         <button
@@ -73,6 +82,7 @@ function Navbar() {
           </ul>
         </div>
       </div>
+
     </nav>
   );
 }

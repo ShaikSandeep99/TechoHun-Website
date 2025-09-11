@@ -62,11 +62,11 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="social-icons">
           <span>FOLLOW US :</span>
-          <a href="#"><FaWhatsapp /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaYoutube /></a>
+          <a href="https://chat.whatsapp.com/"><FaWhatsapp /></a>
+          <a href="https://chat.whatsapp.com/"><FaInstagram /></a>
+          <a href="https://chat.whatsapp.com/"><FaFacebook /></a>
+          <a href="https://chat.whatsapp.com/"><FaLinkedin /></a>
+          <a href="https://chat.whatsapp.com/"><FaYoutube /></a>
         </div>
         <p>© 2025 TECHNOHUB All Rights Reserved.</p>
       </div>
