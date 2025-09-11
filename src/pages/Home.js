@@ -6,7 +6,7 @@ import img3 from "../assets/images/bg-imges/img3.jpg";
 import img4 from "../assets/images/bg-imges/img4.jpg";
 import img5 from "../assets/images/bg-imges/img5.jpg";
 import img6 from "../assets/images/bg-imges/img6.jpg";
-import image1 from "../assets/images/bg-imges/bgg1.png";
+import image1 from "../assets/images/bg-imges/bg1.jpg"
 import image2 from "../assets/images/bg-imges/bg2.jpg";
 import image4 from "../assets/images/bg-imges/bg4.jpg";
 import icon1 from "../assets/images/bg-imges/icon1.svg"; 
