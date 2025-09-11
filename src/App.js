@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './commponets/Navbar';
-// import Footer from './commponets/Footer';
+//  import Footer from './commponets/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Coursers';
@@ -9,7 +9,9 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Countact';
 import CopyRight from './commponets/Copyrights';
 import Courses from './pages/Coursers';
-import Login from'./pages/Login';
+import Login from './pages/Login';
+import Register from './pages/Register';   // ✅ Import Registern
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -22,6 +24,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/auth" element={<Login />} />
+        <Route path="/register" element={<Register />} /> {/* ✅ Registration route */}
       </Routes>
       {/* <Footer /> */}
       <CopyRight />
