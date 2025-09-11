@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .footer {
   background: linear-gradient(to right, #bae6fd, #60a5fa);
   color: #2d2d2d;
@@ -72,4 +73,112 @@
 .social-icons a:hover {
   background: #2563eb;
   color: white;
+=======
+/* Top Footer Container */
+.footer-container {
+   background: linear-gradient(to right, #bed1ef, #c2e9fb); /* Gradient */
+  color: rgb(17, 18, 18);
+  padding: 30px 50px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Sections */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px 20px;
+}
+
+.footer-section h4 {
+  color: #d24c4c; /* golden yellow for headings */
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list li a {
+  color: rgb(2, 1, 1);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-list li a:hover {
+  color: #d94d4d; /* hover effect */
+}
+
+/* Logo */
+.footer-logo {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+/* Contact Section */
+.contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.whatsapp-link {
+  color: rgb(155, 68, 68);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  background: linear-gradient(to right, #689acf, #4facfe); /* Gradient bottom */
+  color: rgb(15, 13, 13)a0a;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.footer-bottom .social-icons {
+  margin-bottom: 8px;
+}
+
+.footer-bottom .social-icons span {
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.footer-bottom .social-icons a {
+  margin: 0 8px;
+  font-size: 18px;
+  color: rgb(6, 5, 5);
+  transition: 0.3s;
+}
+
+.footer-bottom .social-icons a:hover {
+  color: #db5252;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin: 15px 0;
+  }
+>>>>>>> c4ff8cc8f517377667953ccbaade2551355bd0c2
 }
