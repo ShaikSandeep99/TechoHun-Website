@@ -1,48 +1,33 @@
-import React from 'react';
-import './About.css'; // Custom CSS
+import { motion } from "framer-motion";
 
-const About = () => {
-  return (
-    <div className="about-page">
-      <section className="about-us py-5">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <h1>About Technohub</h1>
-              <p className="lead text-muted">
-                Technohub is dedicated to providing top-tier education for professionals.
-                With over 10 years of experience, we help students achieve their career goals through both online and offline courses.
-              </p>
-              <button className="btn btn-primary btn-lg mt-4">Learn More</button>
-            </div>
-            <div className="col-md-6">
-              <img src="/img/about-image.png" alt="About Technohub" className="img-fluid"/>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Partnership Section */}
-      <section className="bg-light py-5">
-        <div className="container">
-          <h3 className="text-center text-primary fw-bold mb-4">Empowering Education and Innovation</h3>
-          <div className="row">
-            <div className="col-md-12">
-              <p className="text-center">
-                We are delighted to announce a strategic collaboration with the Government of Uzbekistan.
-                This partnership solidifies our commitment to advancing education and innovation in the region.
-              </p>
-              <ul className="list-unstyled text-center">
-                <li><strong>Elevating Engineering Education</strong> - Enhancing the quality of engineering programs in Uzbekistan.</li>
-                <li><strong>Startup Ecosystem</strong> - Supporting the growth of startups in the region.</li>
-                <li><strong>A Collaborative Vision for Progress</strong> - Building a shared vision for progress.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+const About = () => (
+  <motion.div
+    initial={{ opacity: 0, y: 50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.7 }}
+    style={{
+      background: "linear-gradient(180deg, #e3f2fd 0%, #90caf9 100%)",
+      minHeight: "100vh",
+      fontFamily: "Segoe UI, Arial, sans-serif"
+    }}
+  >
+    {/* Header Section */}
+    <div style={{ maxWidth: 900, margin: "0 auto", paddingTop: 40 }}>
+      <h1 style={{ color: "#1565c0", marginTop: 20, fontSize: "2.8rem", textAlign: "center" }}>
+        About Technohub
+      </h1>
+      <p style={{ marginTop: 30, color: "#37474f", fontSize: "1.1rem", textAlign: "center" }}>
+        Welcome to Technohub, where we help people gain the knowledge and skills needed to succeed in the fast-changing world of technology. We offer a variety of online and offline courses for both beginners and professionals looking to grow their careers in tech.
+      </p>
+      <p style={{ marginTop: 18, color: "#37474f", fontSize: "1.1rem", textAlign: "center" }}>
+        Our courses cover a range of topics, including Software Development, Data Science, Cybersecurity, Mobile App Development, and more. We focus on providing hands-on experience through real-world projects,
+        helping you learn practical skills that can be applied directly in the industry.
+      </p>
+      <p style={{ marginTop: 18, color: "#37474f", fontSize: "1.1rem", textAlign: "center" }}>
+        At Technohub, we believe learning is a continuous process. That’s why we offer lifetime access to our course materials and keep them updated to ensure you stay current in your field. With expert instructors and personalized support, we’re here to help you reach your goals and advance your career.
+      </p>
     </div>
-  );
-};
+  </motion.div>
+);
 
 export default About;
