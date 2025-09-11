@@ -11,15 +11,9 @@
   background: #fff;
   padding: 25px;
   border-radius: 12px;
-<<<<<<< HEAD
   border: 2px solid #ddd;   /* Four-side border */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   width: 460px;             /* Wider box */
-=======
-  border: 2px solid #ddd;   /* ✅ Four-side border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  width: 460px;             /* ✅ Wider box */
->>>>>>> a5202d6e9ae73bcc2b3619d8ae0136ac4ec5bdef
   max-height: 95vh;
   overflow-y: auto;
 }
@@ -55,11 +49,7 @@
   width: 100%;
   padding: 12px;
   margin-top: 10px;
-<<<<<<< HEAD
   background: linear-gradient(90deg, #4a90e2, #0077b6); /* modern gradient */
-=======
-  background: #4a7edb;
->>>>>>> a5202d6e9ae73bcc2b3619d8ae0136ac4ec5bdef
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -70,11 +60,7 @@
 }
 
 .btn:hover {
-<<<<<<< HEAD
   background: linear-gradient(90deg, #0077b6, #005f8a); /* hover gradient */
-=======
-  background: #346ac9;
->>>>>>> a5202d6e9ae73bcc2b3619d8ae0136ac4ec5bdef
   transform: scale(1.02);
 }
 

@@ -8,12 +8,12 @@ import Services from './pages/About';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Countact';
 import Industry from './pages/industry';
-import Register from './pages/Register';
+import Register from './pages/register';
 import CopyRight from './commponets/Copyrights';
 // import WhatsappButton from './commponets/WhatsappButton';
 import Courses from './pages/Coursers';
-import Login from './pages/Login';
-import Register from './pages/Register';   // ✅ Import Registern
+import Login from './pages/login';
+
 
 const App = () => {
   return (

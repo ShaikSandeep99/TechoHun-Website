@@ -1,84 +1,9 @@
-<<<<<<< HEAD
-.footer {
-  background: linear-gradient(to right, #bae6fd, #60a5fa);
-  color: #2d2d2d;
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 40px 20px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.footer-section h3 {
-  font-size: 16px;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-section ul li {
-  margin-bottom: 8px;
-}
-
-.footer-section ul li a {
-  color: #2d2d2d;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-section ul li a:hover {
-  color: #0f172a;
-}
-
-.footer-logo {
-  width: 100px;
-  margin-bottom: 8px;
-}
-
-.footer-tagline {
-  font-size: 12px;
-  color: #444;
-}
-
-.social-icons {
-  margin-top: 12px;
-  display: flex;
-  gap: 12px;
-}
-
-.social-icons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: white;
-  color: #2563eb;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-  background: #2563eb;
-  color: white;
-=======
 /* Top Footer Container */
 .footer-container {
    background: linear-gradient(to right, #bed1ef, #c2e9fb); /* Gradient */
   color: rgb(17, 18, 18);
-  padding: 30px 50px;
+  padding: 15px 30px;
+  font-size: 12px;
 }
 
 .footer-content {
@@ -146,27 +71,33 @@
   background: linear-gradient(to right, #689acf, #4facfe); /* Gradient bottom */
   color: rgb(15, 13, 13)a0a;
   text-align: center;
-  padding: 10px 20px;
-}
-
-.footer-bottom .social-icons {
-  margin-bottom: 8px;
+  padding: 8px 10px;
 }
 
 .footer-bottom .social-icons span {
   margin-right: 8px;
   font-weight: bold;
+  font-size: 14px; /* smaller text */
 }
 
+
+.footer-social-icons a {
+  color: black;          /* Change icons to black */
+  margin: 0 10px;        /* Add space between icons */
+  font-size: 22px;       /* (Optional) Adjust size */
+  transition: color 0.3s ease;
+}
+/* Footer Follow Us Icons */
 .footer-bottom .social-icons a {
-  margin: 0 8px;
-  font-size: 18px;
-  color: rgb(6, 5, 5);
+  margin: 0 15px; /* Adds space left and right of each icon */
+  font-size: 20px; /* Adjust size if needed */
   transition: 0.3s;
+    color: #000; 
 }
 
+/* Optional hover effect */
 .footer-bottom .social-icons a:hover {
-  color: #db5252;
+  opacity: 0.8;
 }
 
 /* Responsive */
@@ -180,5 +111,4 @@
   .footer-section {
     margin: 15px 0;
   }
->>>>>>> c4ff8cc8f517377667953ccbaade2551355bd0c2
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css";
+import "./register.css";
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -114,8 +114,4 @@ export default function Register() {
       </form>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a5202d6e9ae73bcc2b3619d8ae0136ac4ec5bdef
