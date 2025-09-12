@@ -57,6 +57,11 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/industry" activeclassname="active">
+                INDUSTRY ADVISORS
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/gallery" activeclassname="active">
                 Gallery
               </NavLink>

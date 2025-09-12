@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-/* Watermark style Login Card */
+/* Login Card with glassmorphism */
 .login-card {
   width: 350px;
   padding: 30px 25px;
@@ -19,7 +19,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  backdrop-filter: blur(12px); /* glass/blur effect */
+  backdrop-filter: blur(12px); /* glass blur effect */
   -webkit-backdrop-filter: blur(12px); /* Safari support */
   border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
 }
@@ -29,7 +29,7 @@
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #2e2c2c; /* white text for contrast */
+  color: #2e2c2c;
 }
 
 /* Labels */

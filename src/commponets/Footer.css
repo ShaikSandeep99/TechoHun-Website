@@ -2,7 +2,8 @@
 .footer-container {
    background: linear-gradient(to right, #bed1ef, #c2e9fb); /* Gradient */
   color: rgb(17, 18, 18);
-  padding: 30px 50px;
+  padding: 15px 30px;
+  font-size: 12px;
 }
 
 .footer-content {
@@ -70,27 +71,33 @@
   background: linear-gradient(to right, #689acf, #4facfe); /* Gradient bottom */
   color: rgb(15, 13, 13)a0a;
   text-align: center;
-  padding: 10px 20px;
-}
-
-.footer-bottom .social-icons {
-  margin-bottom: 8px;
+  padding: 8px 10px;
 }
 
 .footer-bottom .social-icons span {
   margin-right: 8px;
   font-weight: bold;
+  font-size: 14px; /* smaller text */
 }
 
+
+.footer-social-icons a {
+  color: black;          /* Change icons to black */
+  margin: 0 10px;        /* Add space between icons */
+  font-size: 22px;       /* (Optional) Adjust size */
+  transition: color 0.3s ease;
+}
+/* Footer Follow Us Icons */
 .footer-bottom .social-icons a {
-  margin: 0 8px;
-  font-size: 18px;
-  color: rgb(6, 5, 5);
+  margin: 0 15px; /* Adds space left and right of each icon */
+  font-size: 20px; /* Adjust size if needed */
   transition: 0.3s;
+    color: #000; 
 }
 
+/* Optional hover effect */
 .footer-bottom .social-icons a:hover {
-  color: #db5252;
+  opacity: 0.8;
 }
 
 /* Responsive */
