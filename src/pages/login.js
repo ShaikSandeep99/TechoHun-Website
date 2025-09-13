@@ -20,7 +20,7 @@ export default function Login() {
               <label>
                 <input type="checkbox" /> Remember Me
               </label>
-              <a href="/#">Forget Password</a>
+              {/* <a href="/#">Forget Password</a> */}
               <Link to="/forgot-password">Forget Password</Link>
             </div>
 
