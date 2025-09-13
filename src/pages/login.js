@@ -1,5 +1,6 @@
 import React from "react";
 import Tilt from "react-parallax-tilt";
+import { Link } from "react-router-dom";
 import "./login.css";
 
 export default function Login() {
@@ -20,6 +21,7 @@ export default function Login() {
                 <input type="checkbox" /> Remember Me
               </label>
               <a href="/#">Forget Password</a>
+              <Link to="/forgot-password">Forget Password</Link>
             </div>
 
             <button type="submit" className="login-btn">
@@ -27,7 +29,7 @@ export default function Login() {
             </button>
 
             <p className="register-text">
-              Don't have an account? <a href="/register">Register</a>
+              Don't have an account? <Link to="/register">Register</Link>
             </p>
           </form>
         </div>

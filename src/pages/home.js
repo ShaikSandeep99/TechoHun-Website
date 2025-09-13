@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import img1 from "../assets/images/bg-imges/img1.png"; // professionals trained
 import img2 from "../assets/images/bg-imges/img2.jpg";
 import img3 from "../assets/images/bg-imges/img3.jpg";
