@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import heroBg from "../assets/images/bg-imges/bg1.jpg";
+
 import img1 from "../assets/images/bg-imges/img1.png"; // professionals trained
 import img2 from "../assets/images/bg-imges/img2.jpg";
 import img3 from "../assets/images/bg-imges/img3.jpg";
@@ -14,7 +14,8 @@ import icon2 from "../assets/images/bg-imges/icon2.png";
 import icon3 from "../assets/images/bg-imges/icon3.png"; 
 import icon4 from "../assets/images/bg-imges/icon4.png"; 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+
+import "./home.css";
 
 
 

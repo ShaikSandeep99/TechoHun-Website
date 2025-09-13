@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Gallery.css";
+import "./gallery.css";
 import image1 from "../assets/images/hacathon-img/hackathon.jpeg";
 import image2 from "../assets/images/internship-images/intenship-img1.jpg";
 import image3 from "../assets/images/reacent-images/IMG20240930104111_01.jpg";
