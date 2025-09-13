@@ -1,32 +1,43 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Navbar from './commponets/Navbar';
-import Footer from './commponets/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Coursers';
-import Gallery from './pages/Gallery';
-import Contact from './pages/Countact';
-import CopyRight from './commponets/Copyrights';
-// import WhatsappButton from './commponets/WhatsappButton';
-import Courses from './pages/Coursers';
-import Login from'./pages/Login';
+
+import Navbar from './commponets/navbar';
+import Footer from './commponets/footer';
+
+import Home from './pages/home';
+import About from './pages/about';
+import Services from './pages/services';
+import Gallery from './pages/gallery';
+import Contact from './pages/contact';
+import Industry from './pages/industry';
+import Register from './pages/register';
+
+
+import Courses from './pages/courses';
+import Login from './pages/login';
+
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
+
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/industry" element={<Industry />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/auth" element={<Login />} />
       </Routes>
-      { <Footer /> }
-      <CopyRight />
-       {/* <WhatsappButton />  */}
+
+
+      <Footer />
+      
+      {/* <WhatsappButton /> */}
     </BrowserRouter>
   );
 };

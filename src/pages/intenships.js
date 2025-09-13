@@ -2,17 +2,18 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 // Import images
-import reactImg from '../assets/images/react.jpg';
-import backendImg from '../assets/images/backend.jpg';
-import dsImg from '../assets/images/ds.jpg';
-import csImg from '../assets/images/cs.jpg';
-import mdaImg from '../assets/images/mda.jpg';
-import ccImg from '../assets/images/cc.jpg';
-import doImg from '../assets/images/do1.jpg';
-import uiuxImg from '../assets/images/uiux.jpg';
-import mlImg from '../assets/images/ml.jpg';
-import fsdImg from '../assets/images/fsd.jpg';
-import dbmsImg from '../assets/images/dbms.jpg';
+import reactImg from '../assets/images/bg-imges/react.jpg';
+import backendImg from '../assets/images/bg-imges/backend.jpg';
+import dsImg from '../assets/images/bg-imges/datascience.jpg';
+import csImg from '../assets/images/bg-imges/cyber.jpg';
+import mdaImg from '../assets/images/bg-imges/mobile.jpg';
+import ccImg from '../assets/images/bg-imges/could.jpg';
+import doImg from '../assets/images/bg-imges/devops.jpg';
+import uiuxImg from '../assets/images/bg-imges/uxui.jpg';
+import mlImg from '../assets/images/bg-imges/machine.jpg';
+import fsdImg from '../assets/images/bg-imges/fullstack.jpg';
+import dbmsImg from '../assets/images/bg-imges/dbms.jpg';
+import { Link } from "react-router-dom"; 
 
 const internships = [
   {
@@ -21,6 +22,7 @@ const internships = [
     image: reactImg,
   
     description: 'Work on modern React projects and contribute to real-world applications.',
+    link: "#"
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ const internships = [
     image: backendImg,
     
     description: 'Node.js, Express, and API development with hands-on backend challenges.',
+     link: "#"
   },
   {
     id: 3,
@@ -35,6 +38,7 @@ const internships = [
     image: dsImg,
     
     description: 'Explore data, build models, and learn the basics of analytics and ML.',
+    link: "#"
   },
   {
     id: 4,
@@ -42,6 +46,7 @@ const internships = [
     image: csImg,
   
     description: 'Learn the essentials of keeping systems secure with practical labs.',
+    link: "#"
   },
   {
     id: 5,
@@ -49,6 +54,7 @@ const internships = [
     image: mdaImg,
     
     description: 'Participate in designing and building Android/iOS mobile apps.',
+     link: "#"
   },
   {
     id: 6,
@@ -56,6 +62,7 @@ const internships = [
     image: ccImg,
     
     description: 'Work with AWS/Azure to provision, deploy, and manage scalable cloud solutions.',
+     link: "#"
   },
   {
     id: 7,
@@ -63,6 +70,7 @@ const internships = [
     image: doImg,
     
     description: 'Work with AWS/Azure to provision, deploy, and manage scalable cloud solutions.',
+     link: "#"
   },
   {
     id: 8,
@@ -70,6 +78,7 @@ const internships = [
     image: uiuxImg,
     
     description: 'Design user-friendly interfaces',
+     link: "#"
   },
   {
     id: 9,
@@ -77,6 +86,7 @@ const internships = [
     image: mlImg,
     
     description: 'Build intelligent systems',
+     link: "#"
   },
   {
     id: 10,
@@ -84,6 +94,7 @@ const internships = [
     image: fsdImg,
     
     description: 'End-to-end web development',
+     link: "#"
   },
   {
     id: 11,
@@ -91,6 +102,7 @@ const internships = [
     image: dbmsImg,
     
     description: 'Manage and optimize databases',
+     link: "#"
   },
 ];
 

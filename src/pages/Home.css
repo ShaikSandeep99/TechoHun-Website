@@ -1,8 +1,8 @@
 
-/* Hero Section */
+/* Hero Section
 .hero-section {
     height: 90vh;
-     background: linear-gradient(135deg, pink, lightblue, white);
+    background: linear-gradient(135deg, pink, lightblue, white);
     background-size: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,7 +46,95 @@
   .hero-section img {
     max-width: 100%;
     height: auto;
+  } */
+
+
+  /* Hero Section */
+.hero-section {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  background: linear-gradient(135deg, pink, lightblue, white);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: white;
+}
+
+.hero-content {
+  max-width: 50%;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #b64d7f;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  color: #fff;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #b73e99;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  max-width: 40%;
+  z-index: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
   }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+}
+
   
   /* Why Technohub Section */
   .bg-light {
@@ -193,6 +281,7 @@
 .feature-card:hover .feature-icon {
   filter: brightness(0) invert(1); /* Make icons white */
   transition: filter 0.3s ease-in-out;
+  
 }
 
 }

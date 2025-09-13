@@ -1,7 +1,9 @@
 import React from "react";
-import "./Footer.css";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaYoutube, FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import logo from "../assets/images/bg-imges/tchnohub logo.png"; // update your logo path
+import "./footer.css";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin,  FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import logo from "../assets/images/bg-imges/tchnohub logo.png"; 
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
   return (
@@ -19,32 +21,33 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="footer-section">
-            <h4>QUICK LINKS</h4>
-            <ul className="footer-list">
-              <li><a href="/home">Home</a></li>
-              <li><a href="/online-training">Online Training</a></li>
-              <li><a href="/classroom-training">Classroom Training</a></li>
-              <li><a href="/contact">Contact Us</a></li>
-              <li><a href="/about">About Us</a></li>
-            </ul>
-          </div>
+         {/* Quick Links */}
+<div className="footer-section">
+  <h5 style={{ color: "#E63946" }}>QUICK LINKS</h5>
+  <ul className="footer-list">
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/about">About</Link></li>
+    <li><Link to="/courses">Courses</Link></li>
+    <li><Link to="/services">Services</Link></li>
+    <li><Link to="/internships">Internships</Link></li>
+    <li><Link to="/contact">Contact Us</Link></li>
+  </ul>
+</div>
 
           {/* Policies */}
           <div className="footer-section">
-            <h4>OUR POLICIES</h4>
+            <h5 style={{ color: "#E63946" }}>OUR POLICIES</h5>
             <ul className="footer-list">
-              <li><a href="/pricing-policy">Pricing Policy</a></li>
-              <li><a href="/terms">Terms & Conditions</a></li>
-              <li><a href="/privacy">Privacy Policy</a></li>
-              <li><a href="/refund">Refund Policy</a></li>
+              <li>Pricing Policy</li>
+              <li>Terms & Conditions</li>
+              <li>Privacy Policy</li>
+              <li>Refund Policy</li>
             </ul>
           </div>
 
           {/* Contact Section */}
           <div className="footer-section contact">
-            <h4>CONTACT US</h4>
+            <h5 style={{ color: "#E63946" }}>CONTACT US</h5>
             <p><FaPhone /> +91 9849175588</p>
             <p><FaEnvelope /> shameer@technohubtrainings.com</p>
             <p><FaMapMarkerAlt /> #131A, 1st floor, 80 Feet Rd, RMV 2nd stage MET Layout,  
@@ -57,19 +60,61 @@ const Footer = () => {
           </div>
         </div>
       </div>
+{/* Social Media Section */}
+<div
+  className="footer-section social-icons"
+  style={{
+    textAlign: "center",
+    backgroundColor: "#b8ecf3ff",
+    padding: "10px 5px",
+    margin: "0",
+    width: "100%",
+  }}
+>
+  <h4>FOLLOW US</h4>
+  <div style={{ display: "flex", justifyContent: "center", gap: "20px", marginTop: "10px" }}>
+    <a
+      href="https://wa.me/919849175588"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "black", fontSize: "20px" }}
+    >
+      <FaWhatsapp />
+    </a>
+    <a
+      href="https://www.instagram.com/technohub_trainings/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "black", fontSize: "20px" }}
+    >
+      <FaInstagram />
+    </a>
+    <a
+      href="https://www.facebook.com/share/1Eq9657Dbp/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "black", fontSize: "20px" }}
+    >
+      <FaFacebook />
+    </a>
+    <a href="mailto:shameer@technohubtrainings.com" style={{ color: "black", fontSize: "20px" }}>
+      <FaEnvelope />
+    </a>
+    <a
+      href="https://www.linkedin.com/company/asar-it-technologies/"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{ color: "black", fontSize: "20px" }}
+    >
+      <FaLinkedin />
+    </a>
+  </div>
+  {/* Copyright */}
+  <p style={{ marginTop: "15px", color: "#333", fontSize: "14px" }}>
+    © 2012 TECHNOHUB All Rights Reserved.
+  </p>
+</div>
 
-      {/* Bottom Bar */}
-      <div className="footer-bottom">
-        <div className="social-icons">
-          <span>FOLLOW US :</span>
-          <a href="#"><FaWhatsapp /></a>
-          <a href="#"><FaInstagram /></a>
-          <a href="#"><FaFacebook /></a>
-          <a href="#"><FaLinkedin /></a>
-          <a href="#"><FaYoutube /></a>
-        </div>
-        <p>© 2025 TECHNOHUB All Rights Reserved.</p>
-      </div>
     </footer>
   );
 };
