@@ -73,23 +73,23 @@ const servicesData = [
 
 const HomePage = () => {
   return (
-    <div className="homepage">
+    <div className="service_homepage">
       {/* Hero Section */}
       <motion.section
         id="home"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="hero-section"
+        className="service_hero-section"
       >
         <div
-          className="hero-bg"
+          className="service_hero-bg"
           style={{
             backgroundImage: `url(${require("../assets/services-images/servicesBbImg.png")})`,
           }}
         ></div>
 
-        <div className="hero-content">
+        <div className="service_hero-content">
           <h1>
             Empower Your <br /> Learning Journey
           </h1>
@@ -97,11 +97,11 @@ const HomePage = () => {
             Discover top courses, expert mentorship, and level up your skills <br />
             with flexible, practical, and career-aligned programs.
           </p>
-          <div className="hero-buttons">
-            <Link to="/courses" className="btn btn-primary">
+          <div className="service_hero-buttons">
+            <Link to="/courses" className="service_btn service_btn-primary">
               Browse Courses
             </Link>
-            <Link to="/auth" className="btn btn-primary">
+            <Link to="/auth" className="service_btn service_btn-primary">
               Login
             </Link>
           </div>
@@ -153,7 +153,7 @@ const HomePage = () => {
               <div className="service-text">
                 <h3>{service.title}</h3>
                 <p>{service.desc}</p>
-                <Link to="/contact" className="btn btn-primary mt-4">
+                <Link to="/contact" className="service_btn service_btn-primary mt-4">
                   Explore More
                 </Link>
               </div>
@@ -163,18 +163,18 @@ const HomePage = () => {
       </section>
 
       {/* Career Value */}
-      <section className="career-value" id="career-value">
-        <div className="container">
+      <section className="service_career-value" id="career-value">
+        <div className="service_container">
           <h2>The Bright Place to Build The Best Career Value</h2>
           <p>Best Opportunity To Learn From Currently Working Professionals</p>
 
-          <div className="career-buttons">
-            <button className="btn green">Online Training</button>
-            <button className="btn blue">Classroom Training</button>
+          <div className="service_career-buttons">
+            <button className="service_btn service_green">Online Training</button>
+            <button className="service_btn service_blue">Classroom Training</button>
           </div>
 
-          <div className="career-buttons">
-            <button className="btn orange">Internships</button>
+          <div className="service_career-buttons">
+            <button className="service_btn service_orange">Internships</button>
           </div>
         </div>
       </section>
@@ -196,11 +196,11 @@ const HomePage = () => {
       ></motion.div>
 
       {/* Cards Grid */}
-      <div className="cards-grid">
+      <div className="service_cards-grid">
         {servicesData.map(({ id, image, title, link, description }) => (
           <motion.div
             key={id}
-            className="card"
+            className="service_card"
             variants={cardVariants}
             initial="hidden"
             animate="visible"
@@ -208,7 +208,7 @@ const HomePage = () => {
           >
             <img src={image} alt={title} />
             <a href={link}>{title}</a>
-            <p className="desc">{description}</p>
+            <p className="service_desc">{description}</p>
           </motion.div>
         ))}
       </div>
@@ -218,10 +218,10 @@ const HomePage = () => {
       
 
       {/* Training Features */}
-      <section className="features">
+      <section className="service_features">
         <h2>Our Training Features</h2>
-        <div className="features-grid">
-          <div className="feature-card">
+        <div className="service_features-grid">
+          <div className="service_feature-card">
             <i className="fas fa-calendar-check icon blue"></i>
             <h3>In-time Course Completion</h3>
             <p>
@@ -229,7 +229,7 @@ const HomePage = () => {
               of theory and practice.
             </p>
           </div>
-          <div className="feature-card">
+          <div className="service_feature-card">
             <i className="fas fa-building icon green"></i>
             <h3>State-of-the-art Infrastructure</h3>
             <p>
@@ -237,7 +237,7 @@ const HomePage = () => {
               by modern infrastructure, tools and labs.
             </p>
           </div>
-          <div className="feature-card">
+          <div className="service_feature-card">
             <i className="fas fa-sync-alt icon red"></i>
             <h3>Blended Training Approach</h3>
             <p>
@@ -245,7 +245,7 @@ const HomePage = () => {
               students get both IT knowledge and skills.
             </p>
           </div>
-          <div className="feature-card">
+          <div className="service_feature-card">
             <i className="fas fa-handshake icon yellow"></i>
             <h3>Free Demo Sessions</h3>
             <p>
@@ -257,30 +257,30 @@ const HomePage = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="why-choose-us" id="why-choose-us">
-        <div className="container">
+      <section className="service_why-choose-us" id="why-choose-us">
+        <div className="service_container">
           <h2>Why Choose Us?</h2>
           <p>
             Our platform is built to provide not only knowledge but also
             mentorship and career acceleration with real-world projects and
             industry-aligned curriculum.
           </p>
-          <div className="why-grid">
-            <div className="why-card">
+          <div className="service_why-grid">
+            <div className="service_why-card">
               <h3>Expert Mentors</h3>
               <p>
                 Learn from professionals who actively work in the industry with
                 years of experience.
               </p>
             </div>
-            <div className="why-card">
+            <div className="service_why-card">
               <h3>Real Projects</h3>
               <p>
                 Work on actual business problems to prepare for interviews and
                 the workplace.
               </p>
             </div>
-            <div className="why-card">
+            <div className="service_why-card">
               <h3>Career Support</h3>
               <p>
                 Mock interviews, resume reviews, and job referrals for our

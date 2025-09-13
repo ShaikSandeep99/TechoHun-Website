@@ -1,6 +1,6 @@
 import React from "react";
-import "./Footer.css";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin,  FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import "./footer.css";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin,FaYoutube,  FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import logo from "../assets/images/bg-imges/tchnohub logo.png"; 
 import { Link } from "react-router-dom";
 
@@ -115,7 +115,7 @@ const Footer = () => {
   </p>
 </div>
 
-<<<<<<< HEAD
+
       {/* Bottom Bar */}
       <div className="footer-bottom">
         <div className="social-icons">
@@ -128,8 +128,7 @@ const Footer = () => {
         </div>
         <p>© 2025 TECHNOHUB All Rights Reserved.</p>
       </div>
-=======
->>>>>>> a1eb775aec2fb826a16ef73a990ccc491249fac5
+
     </footer>
   );
 };
