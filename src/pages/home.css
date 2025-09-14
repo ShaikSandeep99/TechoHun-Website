@@ -90,18 +90,25 @@
 .btn-primary {
   display: inline-block;
   text-decoration: none;
-  background-color: #b64d7f;
+  background-color: #61a4e7;
   border: none;
-  padding: 15px 40px;
+  padding: 10px 20px;
   font-size: 1.2rem;
   border-radius: 50px;
-  color: #fff;
+  color: #eaf1f3;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #b73e99;
+  background-color: #91dee0;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom-small {
+  display: inline-block;   /* prevent full width */
+  font-size: 0.9rem;       /* smaller text */
+  padding: 8px 10px;       /* smaller padding */
+  border-radius: 25px;     /* rounded */
 }
 
 .hero-image {
@@ -290,4 +297,29 @@
   
 }
 
-  
+ /* View All Button */
+.view-all-btn {
+  display: inline-block;   /* Prevent full width */
+  padding: 10px 25px;      /* Smaller size */
+  font-size: 1rem;         /* Adjust text */
+  border-radius: 25px;     /* Keep rounded look */
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  width: auto;             /* Shrink to fit text */
+  min-width: 140px;        /* Optional */
+  text-align: center;
+  margin: 0 auto;          /* Centers the button */
+}
+.btn-custom-small {
+  font-size: 1rem;
+  padding: 8px 20px;       /* Smaller padding */
+  border-radius: 25px;
+  width: 120px;            /* Fixed smaller width */
+  max-width: 130px;        /* Prevent too large */
+  text-align: center;      /* Keep text centered */
+  display: inline-block;   /* Prevent full row */
+}

@@ -67,8 +67,8 @@ const Hero = () => {
       backgroundImage: image3,
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
-      buttonText: "Explore More",
-      // path: "/courses",
+      buttonText: "Services",
+       path: "/services",
       image: "../assets/images/bg-imges/bg3.jpg",
     },
   ];
@@ -281,12 +281,17 @@ const Hero = () => {
               </motion.div>
             </motion.div>
           ))}
-            {/* View All Button after DevOps */}
-    <div className="col-12 mt-4">
-      <Link to="/courses" className="btn btn-primary px-4 rounded-pill fw-bold">
-        View All
-      </Link>
-    </div>
+            
+   {/* View All Button after DevOps */}
+<div className="mt-4 text-center">
+  <Link 
+    to="/courses" 
+    className="btn btn-primary btn-custom-small rounded-pill fw-bold"
+  >
+    View All
+  </Link>
+</div>
+
           
 </div>
 </div>
@@ -416,7 +421,7 @@ const Hero = () => {
               Placed at <strong>AMAZON</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Joined as an intern, has been successfully placed at AMAZON.”
+              “Joined as an Java full stack developer has been successfully placed at AMAZON.”
             </p>
           </div>
         </div>
@@ -439,7 +444,7 @@ const Hero = () => {
               Placed at <strong>AMAZON</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Joined as an intern in TechnoHub and successfully placed at AMAZON.”
+              “Joined as Java full stack developer in TechnoHub and successfully placed at AMAZON.”
             </p>
           </div>
         </div>
@@ -462,7 +467,7 @@ const Hero = () => {
               Placed at <strong>REVARTURE</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Joined as an intern in TechnoHub and successfully placed at REVARTURE.”
+              “Joined as UX/UI Designer in TechnoHub and successfully placed at REVARTURE.”
             </p>
           </div>
         </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 // Import images
-import certificate from "../assets/images/Industryrecognized.png";
-import liveprojects from "../assets/images/srcproject.jpg";
-import internshipImg from "../assets/images/srcintern1.jpeg";
-import training from "../assets/images/srctraining.jpeg";
-import onandofflearning from "../assets/images/blendedlearning.jpg";
-import weeklyassignments from "../assets/images/weeklyexams.jpg";
-import lifetimeaccess from "../assets/images/LTA1.jpg";
+import certificate from "../assets/services-images/Industryrecognized.jpg";
+import liveprojects from "../assets/services-images/srcproject.jpg";
+import internshipImg from "../assets/services-images/srcintern1.jpg";
+import training from "../assets/services-images/intern.png";
+import onandofflearning from "../assets/services-images/blendedlearning.jpg";
+import weeklyassignments from "../assets/services-images/weeklyexams.jpg";
+import lifetimeaccess from "../assets/services-images/weeklyexams.jpg";
 
 const servicesData = [
     {
