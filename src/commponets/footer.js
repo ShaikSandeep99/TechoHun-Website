@@ -1,6 +1,6 @@
 import React from "react";
 import "./footer.css";
-import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin,  FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin,FaYoutube,  FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import logo from "../assets/images/bg-imges/tchnohub logo.png"; 
 import { Link } from "react-router-dom";
 
@@ -90,7 +90,7 @@ const Footer = () => {
       <FaInstagram />
     </a>
     <a
-      href="https://www.facebook.com/share/1Eq9657Dbp/"
+      href="https://www.facebook.com/yourpage"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: "black", fontSize: "20px" }}
@@ -101,7 +101,7 @@ const Footer = () => {
       <FaEnvelope />
     </a>
     <a
-      href="https://www.linkedin.com/company/asar-it-technologies/"
+      href="https://www.linkedin.com/company/yourcompany"
       target="_blank"
       rel="noopener noreferrer"
       style={{ color: "black", fontSize: "20px" }}
@@ -114,6 +114,20 @@ const Footer = () => {
     © 2012 TECHNOHUB All Rights Reserved.
   </p>
 </div>
+
+
+      {/* Bottom Bar */}
+      <div className="footer-bottom">
+        <div className="social-icons">
+          <span>FOLLOW US :</span>
+          <a href="https://chat.whatsapp.com/"><FaWhatsapp /></a>
+          <a href="https://chat.whatsapp.com/"><FaInstagram /></a>
+          <a href="https://chat.whatsapp.com/"><FaFacebook /></a>
+          <a href="https://chat.whatsapp.com/"><FaLinkedin /></a>
+          <a href="https://chat.whatsapp.com/"><FaYoutube /></a>
+        </div>
+        <p>© 2025 TECHNOHUB All Rights Reserved.</p>
+      </div>
 
     </footer>
   );

@@ -1,0 +1,71 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #74a8e3;
+  padding: 20px;
+}
+
+.register-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #ddd;   /* Four-side border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 460px;             /* Wider box */
+  max-height: 95vh;
+  overflow-y: auto;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.register-card label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 600;
+  color: #444;
+}
+
+.register-card input,
+.register-card select,
+.register-card textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* ✅ Register Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #4a90e2, #0077b6); /* modern gradient */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #0077b6, #005f8a); /* hover gradient */
+  transform: scale(1.02);
+}
+
+.switch-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}

@@ -1,303 +1,225 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import { motion } from "framer-motion";
-// import "./services.css";
+import React from 'react';
+import { motion } from 'framer-motion';
+// Import images
+import certificate from "../assets/images/Industryrecognized.png";
+import liveprojects from "../assets/images/srcproject.jpg";
+import internshipImg from "../assets/images/srcintern1.jpeg";
+import training from "../assets/images/srctraining.jpeg";
+import onandofflearning from "../assets/images/blendedlearning.jpg";
+import weeklyassignments from "../assets/images/weeklyexams.jpg";
+import lifetimeaccess from "../assets/images/LTA1.jpg";
 
+const servicesData = [
+    {
+        id: 1,
+        image: certificate,
+        title: "Industry Recognized Certificates",
+        link: "#",
+        description: "Earn certificates that are recognized by top tech companies to boost your career prospects."
+    },
+    {
+        id: 2,
+        image: liveprojects,
+        title: "Real-world Projects",
+        link: "#",
+        description: "Work on real-world projects that simulate industry scenarios, enhancing your practical skills."
+    },
+    {
+        id: 3,
+        image: internshipImg,
+        title: "Internship Opportunities",
+        link: "#",
+        description: "Gain hands-on experience through internships with leading tech firms and startups."
+    },
+    {
+        id: 4,
+        image: training,
+        title: "Expert Training",
+        link: "#",
+        description: "Learn from industry experts through comprehensive training sessions and workshops."
+    },
+    {
+        id: 5,
+        image: onandofflearning,
+        title: "Blended Learning",
+        link: "#",
+        description: "Enjoy the flexibility of both online and offline learning to suit your schedule."
+    },
+    {
+        id: 6,
+        image: weeklyassignments,
+        title: "Weekly Assignments",
+        link: "#",
+        description: "Stay on track with regular assignments that reinforce your learning and understanding."
+    },
+    {
+        id: 7,
+        image: lifetimeaccess,
+        title: "Lifetime Access",
+        link: "#",
+        description: "Get lifetime access to course materials and updates, ensuring you stay current in your field."
+    },
+];
 
-// // Import images
-// import certificate from "../assets/services-images/Industryrecognized.jpg";
-// import liveprojects from "../assets/services-images/srcproject.jpg";
-// import internshipImg from "../assets/services-images/srcintern1.jpg";
-// import training from "../assets/services-images/intern.png";
-// import onandofflearning from "../assets/services-images/blendedlearning.jpg";
-// import weeklyassignments from "../assets/services-images/weeklyexams.jpg";
-// import lifetimeaccess from "../assets/services-images/weeklyexams.jpg";
+const cardStyle = {
+  background: '#fff',
+  borderRadius: '18px',
+  boxShadow: '0 4px 24px 0 rgba(30,60,150,0.09)',
+  padding: '28px 22px 32px',
+  textAlign: 'center',
+  minWidth: 290,
+  maxWidth: 370,
+  flex: '1 1 290px',
+  margin: '0 0 32px 0',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+};
 
+const imgStyle = {
+  width: '100%',
+  maxWidth: 240,
+  height: 130,
+  objectFit: 'cover',
+  borderRadius: '10px',
+  marginBottom: 22,
+  background: "#e3f2fd",
+  boxShadow: '0 2px 10px #1565c018'
+};
 
-// const containerVariants = {
-//   hidden: { opacity: 0 },
-//   visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
-// };
+const linkStyle = {
+  color: '#1883f7',
+  fontWeight: 600,
+  fontSize: '1.13rem',
+  marginBottom: 8,
+  marginTop: 0,
+  textDecoration: 'underline',
+  cursor: 'pointer',
+  display: 'block',
+};
 
-// const cardVariants = {
-//   hidden: { opacity: 0, y: 30 },
-//   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-//   hover: { scale: 1.05, boxShadow: "0 8px 20px rgba(0,0,0,0.15)" },
-// };
+const descStyle = {
+  color: '#555f6d',
+  fontSize: '1rem',
+  margin: '0 auto 18px auto',
+  minHeight: 48,
+  maxWidth: 280,
+};
 
-// const servicesData = [
-//     {
-//         id: 1,
-//         image: certificate,
-//         title: "Industry Recognized Certificates",        
-//         description: "Earn certificates that are recognized by top tech companies to boost your career prospects."
-//     },
-//     {
-//         id: 2,
-//         image: liveprojects,
-//         title: "Real-world Projects",        
-//         description: "Work on real-world projects that simulate industry scenarios, enhancing your practical skills."
-//     },
-//     {
-//         id: 3,
-//         image: internshipImg,
-//         title: "Internship Opportunities",       
-//         description: "Gain hands-on experience through internships with leading tech firms and startups approved by AICTE."
-//     },
-//     {
-//         id: 4,
-//         image: training,
-//         title: "Expert Training",        
-//         description: "Learn from industry experts through comprehensive training sessions and workshops."
-//     },
-//     {
-//         id: 5,
-//         image: onandofflearning,
-//         title: "Blended Learning",        
-//         description: "Enjoy the flexibility of both online and offline learning to suit your schedule."
-//     },
-//     {
-//         id: 6,
-//         image: weeklyassignments,
-//         title: "Weekly Assignments",        
-//         description: "Stay on track with regular assignments that reinforce your learning and understanding."
-//     },
-//     {
-//         id: 7,
-//         image: lifetimeaccess,
-//         title: "Lifetime Access",        
-//         description: "Get lifetime access to course materials and updates, ensuring you stay current in your field."
-//     },
-// ];
+const buttonStyle = {
+  marginTop: 'auto',
+  padding: '10px 24px',
+  backgroundColor: '#00B5F7',
+  color: 'white',
+  border: 'none',
+  borderRadius: 25,
+  fontWeight: 600,
+  fontSize: 16,
+  letterSpacing: '.02em',
+  boxShadow: '0 2px 12px rgba(1, 133, 214, 0.13)',
+  cursor: 'pointer',
+  outline: 'none',
+  transition: 'background .2s',
+};
 
+const containerVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { 
+      duration: 0.7, 
+      when: "beforeChildren",
+      staggerChildren: 0.12
+    }
+  }
+};
 
-// const HomePage = () => {
-//   return (
-//     <div className="service_homepage">
-//       {/* Hero Section */}
-//       <motion.section
-//         id="home"
-//         initial={{ opacity: 0, y: 40 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 1 }}
-//         className="service_hero-section"
-//       >
-//         <div
-//           className="service_hero-bg"
-//           style={{
-//             backgroundImage: url(${require("../assets/services-images/servicesBbImg.png")}),
-//           }}
-//         ></div>
+const cardVariants = {
+  hidden: { opacity: 0, scale: 0.98, y: 30 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { type: "spring", duration: 0.4 } },
+  hover: { scale: 1.04, boxShadow: "0 8px 30px rgba(24,131,247,0.12)" }
+};
 
-//         <div className="service_hero-content">
-//           <h1>
-//             Empower Your <br /> Learning Journey
-//           </h1>
-//           <p>
-//             Discover top courses, expert mentorship, and level up your skills <br />
-//             with flexible, practical, and career-aligned programs.
-//           </p>
-//           <div className="service_hero-buttons">
-//             <Link to="/courses" className="service_btn service_btn-primary">
-//               Browse Courses
-//             </Link>
-//             <Link to="/auth" className="service_btn service_btn-primary">
-//               Login
-//             </Link>
-//           </div>
-//         </div>
-//       </motion.section>
+const buttonVariants = {
+  rest: { scale: 1 },
+  hover: { scale: 1.10, backgroundColor: "#1883f7", transition: { duration: 0.15 } },
+  tap: { scale: 0.95 }
+};
 
-//       {/* Our Services */}
-//       <section id="services" className="services">
-//         <h2>Our Services</h2>
-
-//          <p style={{
-//                 color:  'black',
-//                 fontSize: '17px',
-//                 maxWidth: 700,
-//                 margin: 'auto',
-//                 marginBottom: '80px'
-//               }}>
-//                 Discover hands-on services designed to help you gain real skills and launch yourself
-                
-//               </p>
-
-//         <div className="services-list">
-//           {[
-//             {
-//               id: "online-training",
-//               title: "Online IT Training",
-//               img: require("../assets/services-images/OnilneTraining.png"),
-//               desc: Our online IT training programs are built to help both working people and learners grow their skills from anywhere, at any time. They are budget-friendly, flexible, and easy to use. Each course is thoughtfully planned to keep you interested and involved, even while studying online. You’ll gain useful, real-life knowledge along with strong basic understanding. These programs are created to prepare you for real-world challenges in today’s fast-changing tech field.,
-//             },
-//             {
-//               id: "classroom-training",
-//               title: "Classroom Training",
-//               img: require("../assets/services-images/classroomTraining.png"),
-//               desc: We also provide classroom-based IT training for those who prefer direct, hands-on learning. These in-person sessions create a friendly and interactive space where learners and trainers work together. Students get to meet industry experts face-to-face and take part in practical projects that help them learn by doing. This mode also strengthens teamwork, communication, and presentation skills.,
-//             },
-//             {
-//               id: "internships",
-//               title: "Internship Programs",
-//               img: require("../assets/services-images/intern.png"),
-//               desc: The world of IT is growing and changing every single day. With new tools, technologies, and trends coming up often, it’s important for IT professionals to keep learning and updating their skills. Our internship programs bridge this gap, offering practical industry exposure and teamwork, leadership, and communication development.,
-//             },
-//           ].map((service, idx) => (
-//             <section
-//               id={service.id}
-//               key={service.id}
-//               className={service-item ${idx % 2 === 1 ? "reverse" : ""}}
-//             >
-//               <img src={service.img} alt={service.title} />
-//               <div className="service-text">
-//                 <h3>{service.title}</h3>
-//                 <p>{service.desc}</p>
-//                 <Link to="/contact" className="service_btn service_btn-primary mt-4">
-//                   Explore More
-//                 </Link>
-//               </div>
-//             </section>
-//           ))}
-//         </div>
-//       </section>
-
-//       {/* Career Value */}
-//       <section className="service_career-value" id="career-value">
-//         <div className="service_container">
-//           <h2>The Bright Place to Build The Best Career Value</h2>
-//           <p>Best Opportunity To Learn From Currently Working Professionals</p>
-
-//           <div className="service_career-buttons">
-//             <button className="service_btn service_green">Online Training</button>
-//             <button className="service_btn service_blue">Classroom Training</button>
-//           </div>
-
-//           <div className="service_career-buttons">
-//             <button className="service_btn service_orange">Internships</button>
-//           </div>
-//         </div>
-//       </section>
-
-
-
-//     <motion.div
-//       className="services-container"
-//       initial="hidden"
-//       animate="visible"
-//       variants={containerVariants}
-//     >
-//       {/* Hero / Gradient Section */}
-//       <motion.div
-//         className="services-hero"
-//         initial={{ opacity: 0, y: -36 }}
-//         animate={{ opacity: 1, y: 0 }}
-//         transition={{ duration: 0.5, delay: 0.1 }}
-//       ></motion.div>
-
-//       {/* Cards Grid */}
-//       <div className="service_cards-grid">
-//         {servicesData.map(({ id, image, title, link, description }) => (
-//           <motion.div
-//             key={id}
-//             className="service_card"
-//             variants={cardVariants}
-//             initial="hidden"
-//             animate="visible"
-//             whileHover="hover"
-//           >
-//             <img src={image} alt={title} />
-//             <a href={link}>{title}</a>
-//             <p className="service_desc">{description}</p>
-//           </motion.div>
-//         ))}
-//       </div>
-//     </motion.div>
-       
-
-      
-
-//       {/* Training Features */}
-//       <section className="service_features">
-//         <h2>Our Training Features</h2>
-//         <div className="service_features-grid">
-//           <div className="service_feature-card">
-//             <i className="fas fa-calendar-check icon blue"></i>
-//             <h3>In-time Course Completion</h3>
-//             <p>
-//               We ensure every course is completed on time with a perfect balance
-//               of theory and practice.
-//             </p>
-//           </div>
-//           <div className="service_feature-card">
-//             <i className="fas fa-building icon green"></i>
-//             <h3>State-of-the-art Infrastructure</h3>
-//             <p>
-//               At TECHNOHUB, students study in a learning environment supported
-//               by modern infrastructure, tools and labs.
-//             </p>
-//           </div>
-//           <div className="service_feature-card">
-//             <i className="fas fa-sync-alt icon red"></i>
-//             <h3>Blended Training Approach</h3>
-//             <p>
-//               We adopt an integrated approach to training that helps our
-//               students get both IT knowledge and skills.
-//             </p>
-//           </div>
-//           <div className="service_feature-card">
-//             <i className="fas fa-handshake icon yellow"></i>
-//             <h3>Free Demo Sessions</h3>
-//             <p>
-//               We also provide prospective students with the option to try the
-//               courses with free demo sessions.
-//             </p>
-//           </div>
-//         </div>
-//       </section>
-
-//       {/* Why Choose Us */}
-//       <section className="service_why-choose-us" id="why-choose-us">
-//         <div className="service_container">
-//           <h2>Why Choose Us?</h2>
-//           <p>
-//             Our platform is built to provide not only knowledge but also
-//             mentorship and career acceleration with real-world projects and
-//             industry-aligned curriculum.
-//           </p>
-//           <div className="service_why-grid">
-//             <div className="service_why-card">
-//               <h3>Expert Mentors</h3>
-//               <p>
-//                 Learn from professionals who actively work in the industry with
-//                 years of experience.
-//               </p>
-//             </div>
-//             <div className="service_why-card">
-//               <h3>Real Projects</h3>
-//               <p>
-//                 Work on actual business problems to prepare for interviews and
-//                 the workplace.
-//               </p>
-//             </div>
-//             <div className="service_why-card">
-//               <h3>Career Support</h3>
-//               <p>
-//                 Mock interviews, resume reviews, and job referrals for our
-//                 top-performing students.
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-
-
-
-
-
-     
-//     </div>
-//   );
-// };
-
-// export default HomePage;
+export default function ServicesList() {
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      style={{ minHeight: '100vh', background: '#0080ffff' }}
+    >
+      <motion.div
+        initial={{ opacity: 0, y: -36 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        style={{
+          background: 'linear-gradient(90deg, #15bffe, #54e5ff 90%)',
+          padding: '64px 0 48px 0',
+          textAlign: 'center'
+        }}
+      >
+        <h1 style={{
+          fontSize: '2.8rem',
+          fontWeight: 'bold',
+          color: '#fff',
+          marginBottom: '12px',
+          letterSpacing: '.03em'
+        }}>
+          Our Services
+        </h1>
+        <p style={{
+          color: '#f8fbfe',
+          fontSize: '1.18rem',
+          maxWidth: 700,
+          margin: '0 auto'
+        }}>
+          Discover our hands-on services designed to help you gain real skills and launch your career.
+        </p>
+      </motion.div>
+      {/* Cards Grid */}
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: '36px',
+        maxWidth: 1200,
+        margin: '-70px auto 0 auto',
+        padding: '0 24px',
+        position: 'relative',
+        zIndex: 2,
+      }}>
+        {servicesData.map(({ id, image, title, link, description }) => (
+          <motion.div
+            key={id}
+            style={cardStyle}
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+          >
+            <img src={image} alt={title} style={imgStyle} />
+            <a href={link} style={linkStyle}>{title}</a>
+            <div style={descStyle}>{description}</div>
+            <motion.button
+              style={buttonStyle}
+              variants={buttonVariants}
+              initial="rest"
+              whileHover="hover"
+              whileTap="tap"
+              onClick={() => alert(`Interested in ${title}`)}
+            >
+              Learn More
+            </motion.button>
+          </motion.div>
+        ))}
+      </div>
+    </motion.div>
+  );
+}

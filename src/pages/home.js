@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 // import heroBg from "../assets/images/bg-imges/bg1.jpg";
 import img1 from "../assets/images/bg-imges/img1.png"; 
 import img2 from "../assets/images/bg-imges/img2.jpg";
@@ -28,12 +29,16 @@ import shannu from "../assets/images/bg-imges/shannu.jpg";
 import sarath from "../assets/images/bg-imges/sarath.jpg";
 import yamini from "../assets/images/bg-imges/yamini.jpg";
 import { motion } from "framer-motion";
+
 import { Link } from "react-router-dom";
 import Slider from "react-slick";   
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+
+
+import "./home.css";
 
 
 
@@ -148,8 +153,8 @@ const Hero = () => {
     )
   )}
 </div>
-         {/* Oval Button
-         {slide.buttonText === "Get Started" ? (
+        {/* Oval Button
+        {slide.buttonText === "Get Started" ? (
         <Link to={slide.path} className="hero-gift-card-btn mt-3">
           {slide.buttonText}
         </Link>
@@ -173,7 +178,7 @@ const Hero = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-         <b> About Technohub</b>
+        <b> About Technohub</b>
         </motion.h2>
 
         <motion.p

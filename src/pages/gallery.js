@@ -62,9 +62,15 @@ const sliderSettings = {
       {list.map((img, idx) => (
         <div
           className="col-12 col-sm-6 col-md-4 col-lg-3 px-2 mb-3"
+
           key={${section}-${idx}}
         >
           <img src={img} alt={${section} ${idx}} className="img-fluid gallery-image" />
+
+          key={`${section}-${idx}`}
+        >
+          <img src={img} alt={`${section} ${idx}`} className="img-fluid gallery-image" />
+
         </div>
       ))}
     </div>
@@ -81,10 +87,17 @@ const sliderSettings = {
   {!viewAll.institute ? (
     <Slider {...sliderSettings}>
       {images.map((img, idx) => (
+<<<<<<< HEAD:src/pages/Gallery.js
         <div key={institute-${idx}} className="gallery-slide">
           <img
             src={img}
             alt={Institute ${idx}}
+=======
+        <div key={`institute-${idx}`} className="gallery-slide">
+          <img
+            src={img}
+            alt={`Institute ${idx}`}
+>>>>>>> 1b6d17edd9424e1051ab35a5fd454a6bcb1d34ca:src/pages/gallery.js
             className="img-fluid gallery-image"
           />
         </div>
@@ -113,8 +126,13 @@ const sliderSettings = {
         {!viewAll.colleges ? (
           <Slider {...{ ...sliderSettings, rtl: true }}>
             {collaboratedImages.map((img, idx) => (
+<<<<<<< HEAD:src/pages/Gallery.js
               <div key={colleges-${idx}} className="gallery-slide">
                 <img src={img} alt={College ${idx}} className="img-fluid gallery-image" />
+=======
+              <div key={`colleges-${idx}`} className="gallery-slide">
+                <img src={img} alt={`College ${idx}`} className="img-fluid gallery-image" />
+>>>>>>> 1b6d17edd9424e1051ab35a5fd454a6bcb1d34ca:src/pages/gallery.js
               </div>
             ))}
           </Slider>
@@ -139,8 +157,13 @@ const sliderSettings = {
         {!viewAll.visit ? (
           <Slider {...sliderSettings}>
             {images.map((img, idx) => (
+<<<<<<< HEAD:src/pages/Gallery.js
               <div key={visit-${idx}} className="gallery-slide">
                 <img src={img} alt={Visit ${idx}} className="img-fluid gallery-image" />
+=======
+              <div key={`visit-${idx}`} className="gallery-slide">
+                <img src={img} alt={`Visit ${idx}`} className="img-fluid gallery-image" />
+>>>>>>> 1b6d17edd9424e1051ab35a5fd454a6bcb1d34ca:src/pages/gallery.js
               </div>
             ))}
           </Slider>
@@ -165,8 +188,13 @@ const sliderSettings = {
         {!viewAll.events ? (
           <Slider {...{ ...sliderSettings, rtl: true }}>
             {images.map((img, idx) => (
+
               <div key={events-${idx}} className="gallery-slide">
                 <img src={img} alt={Events ${idx}} className="img-fluid gallery-image" />
+=======
+              <div key={`events-${idx}`} className="gallery-slide">
+                <img src={img} alt={`Events ${idx}`} className="img-fluid gallery-image" />
+
               </div>
             ))}
           </Slider>
@@ -192,7 +220,7 @@ export default Gallery;
 
 
 
-
+{/* 
 // import React, { useState } from "react";
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css";
@@ -203,7 +231,7 @@ export default Gallery;
 // import image3 from "../assets/images/reacent-images/IMG20240930104111_01.jpg";
 // import image4 from "../assets/images/reacent-images/IMG20241004114738_01.jpg";
 
-// const Gallery = () => {
+// const Gallery = () => { */}
 //   const images = [image1, image2, image3, image4, image1, image2];
 
 //   const [viewAll, setViewAll] = useState({
@@ -212,7 +240,6 @@ export default Gallery;
 //     events: false,
 //   });
 
-//   // Slick carousel settings
 //   const sliderSettings = {
 //     dots: true,
 //     infinite: true,
@@ -250,6 +277,10 @@ export default Gallery;
 //           key={${section}-${idx}}
 //         >
 //           <img src={img} alt={${section} ${idx}} className="img-fluid gallery-image" />
+//           key={`${section}-${idx}`}
+//         >
+//           <img src={img} alt={`${section} ${idx}`} className="img-fluid gallery-image" />
+
 //         </div>
 //       ))}
 //     </div>
@@ -318,5 +349,7 @@ export default Gallery;
 //     </div>
 //   );
 // };
+
+// export default Gallery;
 
 // export default Gallery;

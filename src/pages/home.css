@@ -1,8 +1,14 @@
 
+
 /* Hero Section
 .hero-section {
     height: 90vh;
     background: linear-gradient(135deg, pink, lightblue, white);
+=======
+
+/* Hero Section */
+.hero-section {
+    height: 90vh;
     background-size: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
@@ -15,7 +21,7 @@
   }
   
   .hero-section h1 {
-    font-size: 8rem;
+    font-size: 3rem;
     font-weight: bold;
   }
   
@@ -24,7 +30,7 @@
   }
   
   .hero-section p {
-    font-size: 8rem;
+    font-size: 1.2rem;
   }
   
   .hero-section .btn-primary {
@@ -158,6 +164,7 @@
   .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
   .card:hover {
     transform: scale(1.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -238,7 +245,7 @@
     text-align: center;
 }
 /* Statistics Section */
-.stats-section {
+/* .stats-section { */
 /* Statistics Section */
 .stats-section {
     background-color: #2c2c2c;
@@ -246,7 +253,7 @@
   }
   
   .stats-section .display-4 {
-    color: #f593df;
+    color: #ff6f61;
   }
   
   .stats-section p {
@@ -273,7 +280,6 @@
   transform: translateY(-8px); /* Slight lift */
 }
 
-
 .feature-card:hover .feature-text {
   color: #fff; /* White text on hover */
 }
@@ -284,5 +290,4 @@
   
 }
 
-}
-  } 
+  
