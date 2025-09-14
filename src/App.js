@@ -11,7 +11,7 @@ import Gallery from './pages/gallery';
 import Contact from './pages/contact';
 import Industry from './pages/industry';
 import Register from './pages/register';
-import Internship from "./pages/Internships";
+import Internship from "./pages/Internship";
 import Courses from './pages/courses';
 import Login from './pages/login';
 
