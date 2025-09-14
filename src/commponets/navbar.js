@@ -1,7 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
+
 import profileImg from '../assets/profile.png'; 
+
 
 function Navbar() {
   return (

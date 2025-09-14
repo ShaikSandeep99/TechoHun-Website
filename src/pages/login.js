@@ -1,39 +1,47 @@
-import React from "react";
-import Tilt from "react-parallax-tilt";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"; 
 import "./login.css";
 
 export default function Login() {
+  const [isClicked, setIsClicked] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setIsClicked(true);
+
+    // Wait for animation to finish (0.6s) then navigate
+    setTimeout(() => {
+      navigate("/register");
+    }, 600);
+  };
   return (
     <div className="login-container">
-      <Tilt tiltMaxAngleX={10} tiltMaxAngleY={10} scale={1.05} transitionSpeed={400}>
-        <div className="login-card">
-          <h2 className="login-title">Login</h2>
-          <form>
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" required />
+      <div className="login-card">
+        <h2 className="login-title">Login</h2>
+        <form>
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
 
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required />
 
-            <div className="login-options">
-              <label>
-                <input type="checkbox" /> Remember Me
-              </label>
-              {/* <a href="/#">Forget Password</a> */}
-              <Link to="/forgot-password">Forget Password</Link>
-            </div>
+          <div className="login-options">
+            <label>
+              <input type="checkbox" /> Remember Me
+            </label>
+            <Link to="/forgot-password">Forget Password</Link>
+          </div>
 
-            <button type="submit" className="login-btn">
-              Log in
-            </button>
+          <button type="submit" className="login-btn">
+            Log in
+          </button>
 
-            <p className="register-text">
-              Don't have an account? <Link to="/register">Register</Link>
-            </p>
-          </form>
-        </div>
-      </Tilt>
+          <p className="register-text">
+            Don't have an account? <Link to="/register">Register</Link>
+          </p>
+        </form>
+      </div>
     </div>
   );
 }

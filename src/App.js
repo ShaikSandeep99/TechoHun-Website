@@ -11,8 +11,7 @@ import Gallery from './pages/gallery';
 import Contact from './pages/contact';
 import Industry from './pages/industry';
 import Register from './pages/register';
-import InternshipList from './pages/internships';
-
+import Internship from "./pages/Internships";
 import Courses from './pages/courses';
 import Login from './pages/login';
 
@@ -33,12 +32,9 @@ const App = () => {
         <Route path="/internships" element={<InternshipList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/auth" element={<Login />} />
+        <Route path="/Internships" element={<Internship />} />
       </Routes>
-
-
       <Footer />
-      
-      {/* <WhatsappButton /> */}
     </BrowserRouter>
   );
 };

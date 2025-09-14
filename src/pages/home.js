@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../assets/images/bg-imges/img1.png"; // professionals trained
+
+// import heroBg from "../assets/images/bg-imges/bg1.jpg";
+import img1 from "../assets/images/bg-imges/img1.png"; 
 import img2 from "../assets/images/bg-imges/img2.jpg";
 import img3 from "../assets/images/bg-imges/img3.jpg";
 import img4 from "../assets/images/bg-imges/img4.jpg";
@@ -7,12 +9,34 @@ import img5 from "../assets/images/bg-imges/img5.jpg";
 import img6 from "../assets/images/bg-imges/img6.jpg";
 import image1 from "../assets/images/bg-imges/bg1.jpg"
 import image2 from "../assets/images/bg-imges/bg2.jpg";
-import image4 from "../assets/images/bg-imges/bg4.jpg";
+import image3 from "../assets/images/bg-imges/bg3.jpg";
 import icon1 from "../assets/images/bg-imges/icon1.svg"; 
 import icon2 from "../assets/images/bg-imges/icon2.png"; 
 import icon3 from "../assets/images/bg-imges/icon3.png"; 
 import icon4 from "../assets/images/bg-imges/icon4.png"; 
+import amazon from "../assets/images/bg-imges/amazon.png";
+import infosys from "../assets/images/bg-imges/infosys.png";
+import shell from "../assets/images/bg-imges/shell.png";
+import strive from "../assets/images/bg-imges/strive.png";
+import global from "../assets/images/bg-imges/global.png";
+import revature from "../assets/images/bg-imges/revature.png";
+import asar from "../assets/images/bg-imges/ASAR.png";
+import atpar from "../assets/images/bg-imges/@par.png";
+import cognizant from "../assets/images/bg-imges/cognizant.png";
+import abbas from "../assets/images/bg-imges/abbas.jpg";
+import bindu from "../assets/images/bg-imges/bindu.jpg";
+import shannu from "../assets/images/bg-imges/shannu.jpg";
+import sarath from "../assets/images/bg-imges/sarath.jpg";
+import yamini from "../assets/images/bg-imges/yamini.jpg";
 import { motion } from "framer-motion";
+
+import { Link } from "react-router-dom";
+import Slider from "react-slick";   
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+
 
 import "./home.css";
 
@@ -23,25 +47,28 @@ const Hero = () => {
   const slides = [
     {
       backgroundImage: image1,
-      heading: "Transform Your Career with Technohub",
+      heading: "Unlock New Career Opportunities with Technohub",
       description:
-        "Join our professional courses and start your journey toward a successful career. Explore a variety of training programs tailored just for you!",
-      // buttonText: "Get Started",
+        "“Join our professional courses and start your journey toward a successful career. Explore a variety of training programs tailored just for you!”",
+      buttonText: "Get Started",
+      path: "/auth",
       image: "/img/hero-image1.png",
     },
     {
       backgroundImage: image2,
       heading: "Learn from the Best in the Industry",
       description:
-        "Our expert instructors provide real-world knowledge to help you achieve your goals.",
-      // buttonText: "Discover Courses",
+        "“Our expert instructors provide real-world knowledge to help you achieve your goals.”",
+      buttonText: "Discover Courses",
+      path: "/courses", 
       image: "/img/hero-image2.png",
     },
-    
     {
-      backgroundImage: image4,
-      heading: "“Education is the passport to the future”",
-      // buttonText: "Explore More",
+      backgroundImage: image3,
+      heading: "Empowering You with Real-World Software Skills",
+      description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
+      buttonText: "Services",
+       path: "/services",
       image: "../assets/images/bg-imges/bg3.jpg",
     },
   ];
@@ -89,217 +116,281 @@ const Hero = () => {
         ></div>
 
         {/* Text */}
-        <div style={{ position: "relative", zIndex: 2, color: "#fff" }}>
-          <h1 className="fw-bold display-4">{slide.heading}</h1>
-          <p className="lead mt-3">{slide.description}</p>
-          {/* <button className="btn btn-danger btn-lg mt-3"> */}
-            {slide.buttonText}
-          {/* </button> */}
+        <div style={{ position: "relative", zIndex: 2, color: "#efe8e8ff" }}>
+  <motion.h1
+    key={slide.heading}
+    className="fw-bold display-4"
+    style={{ color: "#acf2feff" }} // change color as you like
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+  >
+    {slide.heading}
+  </motion.h1>
+  <motion.p
+  key={slide.description}
+    className="lead mt-3"
+    initial={{ opacity: 0, y: 30 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+    style={{
+    textShadow: "2px 2px 8px rgba(0,0,0,0.6)" // ✅ adds shadow
+  }}
+  >
+    {slide.description}
+  </motion.p>
+
+{/* Hero Buttons */}
+  {slide.buttonText && slide.path && (
+    slide.buttonText === "Get Started" ? (
+      <Link to={slide.path} className="hero-gift-card-btn btn-primary  mt-3">
+        {slide.buttonText}
+      </Link>
+    ) : (
+      <Link to={slide.path} className="hero-oval-btn btn-primary mt-3">
+        {slide.buttonText}
+      </Link>
+    )
+  )}
+</div>
+        {/* Oval Button
+        {slide.buttonText === "Get Started" ? (
+        <Link to={slide.path} className="hero-gift-card-btn mt-3">
+          {slide.buttonText}
+        </Link>
+      
+{slide.buttonText && slide.path && (
+  <Link to={slide.path} className="hero-oval-btn">
+    {slide.buttonText}
+  </Link>
+)}
+
+        </div> */}
+      </div>
+
+      {/* About Technohub Section */}
+      <div className="container text-center my-5">
+        <motion.h2
+          className="fw-bold"
+          style={{ color: "#007BFF",}}
+          initial={{ opacity: 0, rotateX: -90 }}
+          whileInView={{ opacity: 1, rotateX: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+        <b> About Technohub</b>
+        </motion.h2>
+
+        <motion.p
+          className="mt-3"
+          initial={{ opacity: 0, rotateY: -90 }}
+          whileInView={{ opacity: 1, rotateY: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+          style={{ transformOrigin: "left center" }}
+        >
+          Technohub is a training Institution and a good Software Training and
+          Certification platform. Technohub follows proper work ethics and has a
+          positive environment where an individual can learn and grow. We provide
+          both offline and online courses. The competitive environment at Technohub
+          also provides the necessary edge and exposure for every individual to
+          succeed in their career in Software.
+        </motion.p>
+      </div>
+
+      {/* Feature Cards Section */}
+      <div className="container text-center my-4">
+        <div className="row g-2 justify-content-center">
+          {[
+            { icon: icon1, text: "500+ Professionals Trained" },
+            { icon: icon2, text: "10+ Years of Experience" },
+            { icon: icon3, text: "30 to 40 Hours Live-Project" },
+            { icon: icon4, text: "100% Job Assistance" },
+          ].map((card, idx) => (
+            <motion.div
+              className="col-md-3 mb-3"
+              key={idx}
+              initial={{ y: 30, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ type: "spring", bounce: 0.3, duration: 0.4, delay: idx * 0.1 }}
+            >
+              <motion.div
+                className="card feature-card shadow p-3 h-100 border-0 rounded-4"
+                style={{ maxWidth: "220px", margin: "0 auto", cursor: "pointer", boxShadow: "0 8px 20px rgba(0, 123, 255, 0.6)", border: "2px solid #007BFF" }}
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                <div className="card-body">
+                  <img src={card.icon} alt="Feature Icon" width="40" className="feature-icon" />
+                  <h6 className="mt-2 fw-bold feature-text">{card.text}</h6>
+                </div>
+              </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
 
+      {/* Explore Our Featured Courses Section */}
+      <div className="container text-center my-5">
+        <h2 className="fw-bold" style={{ color: "#007BFF" }}>
+          Explore Our Featured Courses
+        </h2>
 
-{/* About Technohub Section */}
-<div className="container text-center my-5">
-  <motion.h2
-    className="fw-bold"
-    style={{ color: "#007BFF" }}
-    initial={{ opacity: 0, rotateX: -90 }}
-    whileInView={{ opacity: 1, rotateX: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    About Technohub
-  </motion.h2>
+        <div className="row g-4 mt-4">
+          {[
+            { title: "Java Programming", desc: "Learn Java from scratch and become an expert in backend development.", border: "#007BFF" },
+            { title: "React Development", desc: "Master React and build powerful front-end web applications.", border: "#007BFF" },
+            { title: "Python for Data Science", desc: "Learn Python for Data Science and build machine learning models.", border: "#007BFF" },
+            { title: "DevOps Essentials", desc: "Understand the fundamentals of DevOps and streamline development processes.", border: "#007BFF" },
+            
+          ].map((card, idx) => (
+            <motion.div
+              className="col-md-3"
+              key={idx}
+              initial={{ y: 50, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
+            >
+              <motion.div
+                className="card h-100 text-center p-4 border-0 rounded-4"
+                style={{
+                  border: `2px solid ${card.border}`,
+                  boxShadow: card.isGift
+                    ? "0 4px 15px rgba(255, 215, 0, 0.6)"
+                    : "0 4px 12px rgba(0, 123, 255, 0.3)",
+                  cursor: "pointer",
+                }}
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                <h6
+                  className="fw-bold"
+                  style={{ color: card.isGift ? "#FFD700" : "#007BFF" }}
+                >
+                  {card.title}
+                </h6>
+                <p className="text-muted small">{card.desc}</p>
+                {card.isGift && (
+                  <button className="btn btn-warning btn-sm fw-bold mt-2">
+                    Grab Now
+                  </button>
+                )}
 
-  <motion.p
-    className="mt-3"
-    initial={{ opacity: 0, rotateY: -90 }}
-    whileInView={{ opacity: 1, rotateY: 0 }}
-    viewport={{ once: true, amount: 0.3 }}
-    transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-    style={{ transformOrigin: "left center" }}
+              </motion.div>
+            </motion.div>
+          ))}
+            
+   {/* View All Button after DevOps */}
+<div className="mt-4 text-center">
+  <Link 
+    to="/courses" 
+    className="btn btn-primary btn-custom-small rounded-pill fw-bold"
   >
-    Technohub is a training Institution and a good Software Training and
-    Certification platform. Technohub follows proper work ethics and has a
-    positive environment where an individual can learn and grow. We provide
-    both offline and online courses. The competitive environment at Technohub
-    also provides the necessary edge and exposure for every individual to
-    succeed in their career in Software.
-  </motion.p>
+    View All
+  </Link>
 </div>
 
+          
+</div>
+</div>
       
 
-  {/* Feature Cards Section */}
-<div className="container text-center my-4">
-  <div className="row g-2 justify-content-center">
-    {[
-      { icon: icon1, text: "500+ Professionals Trained" },
-      { icon: icon2, text: "10+ Years of Experience" },
-      { icon: icon3, text: "30 to 40 Hours Live-Project" },
-      { icon: icon4, text: "100% Job Assistance" },
-    ].map((card, idx) => (
-      <motion.div
-        className="col-md-3 mb-3"
-        key={idx}
-        initial={{ y: 30, opacity: 0, scale: 0.9 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ type: "spring", bounce: 0.3, duration: 0.4, delay: idx * 0.1 }}
-      >
 
-        <motion.div
-          className="card feature-card shadow p-3 h-100 border-0 rounded-4"
-          style={{ maxWidth: "220px", margin: "0 auto", cursor: "pointer", transformStyle: "preserve-3d",boxShadow: "0 8px 20px rgba(0, 123, 255, 0.6)", border: "2px solid #007BFF", }}
-          whileHover={{ rotateX: 8, rotateY: 8 }}
-          onMouseMove={(e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * 8;
-            const rotateY = ((x - centerX) / centerX) * -8;
-            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
-          }}
-        >
-          <div className="card-body">
-            <img src={card.icon} alt="Feature Icon" width="40" className="feature-icon" />
-            <h6 className="mt-2 fw-bold feature-text">{card.text}</h6>
-          </div>
-        </motion.div>
-      </motion.div>
-    ))}
-  </div>
-</div>
+      {/* Why Training Courses Section */}
+      <div className="container text-center my-5">
+        <h2 className="fw-bold" style={{ color: "#007BFF" }}>
+          Why Training Courses from Technohub
+        </h2>
+        
+        <div className="row g-4 mt-4">
+          {[
+            { img: img1, title: "Live Interactive Learning", desc: "World-class Instructor <br /> Expert-led mentoring sessions <br /> Instant doubt clearing", border: "#0022ffff" },
+            { img: img2, title: "Lifetime Access", desc: "Course access never expires <br /> Free access to future updates <br /> Unlimited course content", border: "#007BFF" },
+            { img: img3, title: "24x7 Support", desc: "One-on-one learning assistance <br /> Help desk support <br /> Resolve doubts in real time", border: "#007BFF" },
+            { img: img4, title: "Industry-Aligned Curriculum", desc: "Up-to-date course content <br /> Real-time projects <br /> Hands-on practical knowledge", border: "#007BFF" },
+            { img: img5, title: "Job Assistance", desc: "Resume building workshops <br /> Mock interview sessions <br /> Job placement support", border: "#007BFF" },
+            { img: img6, title: "Flexible Learning", desc: "Self-paced learning options <br /> Live online sessions <br /> Learn at your convenience", border: "#007BFF" },
+          ].map((card, idx) => (
+            <motion.div
+              className="col-md-4"
+              key={idx}
+              initial={{ y: 50, opacity: 0, scale: 0.9 }}
+              whileInView={{ y: 0, opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
+            >
+              <motion.div
+                className="card h-100 text-center p-4 border-0 rounded-4"
+                style={{
+                  border: `2px solid ${card.border}`,
+                  boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
+                  cursor: "pointer",
+                }}
+                whileHover={{ scale: 1.08 }}
+                transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              >
+                <img src={card.img} alt={card.title} className="mx-auto mb-3" style={{ height: "100px", objectFit: "contain" }} />
+                <h4 className="fw-bold text-primary">{card.title}</h4>
+                <p className="text-muted small" dangerouslySetInnerHTML={{ __html: card.desc }} />
+              </motion.div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
 
-{/* Explore Our Featured Courses Section */}
-<div className="container text-center my-5">
-  <h2 className="fw-bold" style={{ color: "#007BFF" }}>
-    Explore Our Featured Courses
+    {/* Company Logos Slider Section */}
+<div className="container my-5">
+  <h2 className="fw-bold text-center mb-4" style={{ color: "#007BFF",marginBottom: "15px" }}>
+    Collaborated Companies
   </h2>
 
-  <div className="row g-4 mt-4">
-    {[
-      { title: "Java Programming", desc: "Learn Java from scratch and become an expert in backend development.", border: "#007BFF" },
-      { title: "React Development", desc: "Master React and build powerful front-end web applications.", border: "#007BFF" },
-      { title: "Python for Data Science", desc: "Learn Python for Data Science and build machine learning models.", border: "#007BFF" },
-      { title: "DevOps Essentials", desc: "Understand the fundamentals of DevOps and streamline development processes.", border: "#007BFF" },
-  
-    ].map((card, idx) => (
-      <motion.div
-        className="col-md-3"
-        key={idx}
-        initial={{ y: 50, opacity: 0, scale: 0.9 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
-      >
-        <motion.div
-          className="card h-100 text-center p-4 border-0 rounded-4"
+  <Slider
+    dots={false}
+    infinite={true}
+    speed={3000}
+    slidesToShow={7}   // 👈 show more logos per row
+    slidesToScroll={1}
+    autoplay={true}
+    autoplaySpeed={1500}
+    arrows={false}
+    pauseOnHover={false}
+  >
+    {[atpar, amazon, asar, global, infosys, revature, shell, strive, cognizant].map(
+      (logo, idx) => (
+        <div
+          key={idx}
           style={{
-            border: `2px solid ${card.border}`,
-            boxShadow: card.isGift
-              ? "0 4px 15px rgba(255, 215, 0, 0.6)" // gold glow for gift card
-              : "0 4px 12px rgba(0, 123, 255, 0.3)",
-            transformStyle: "preserve-3d",
-            cursor: "pointer",
-          }}
-          whileHover={{ rotateX: 8, rotateY: 8 }}
-          onMouseMove={(e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * 8;
-            const rotateY = ((x - centerX) / centerX) * -8;
-            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            padding: "0 5px",  // 👈 reduce spacing between logos
+            margin: "0",
           }}
         >
-          <h6
-            className="fw-bold"
-            style={{ color: card.isGift ? "#FFD700" : "#007BFF" }}
-          >
-            {card.title}
-          </h6>
-          <p className="text-muted small">{card.desc}</p>
-
-          {/* Only Gift Card has button */}
-          {card.isGift && (
-            <button className="btn btn-warning btn-sm fw-bold mt-2">
-              Grab Now
-            </button>
-          )}
-        </motion.div>
-      </motion.div>
-    ))}
-  </div>
+          <img
+            src={logo}
+            alt={`Company ${idx}`}
+            style={{
+              maxWidth: "120px",   // ✅ keep original size
+              maxHeight: "60px",
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      )
+    )}
+  </Slider>
 </div>
 
-{/* Why Training Courses Section */}
-<div className="container text-center my-5">
-  <h2 className="fw-bold" style={{ color: "#007BFF" }}>
-    Why Training Courses from Technohub
-  </h2>
-  
-  <div className="row g-4 mt-4">
-    {[
-      { img: img1, title: "Live Interactive Learning", desc: "World-class Instructor <br /> Expert-led mentoring sessions <br /> Instant doubt clearing", border: "#0022ffff" },
-      { img: img2, title: "Lifetime Access", desc: "Course access never expires <br /> Free access to future updates <br /> Unlimited course content", border: "#007BFF" },
-      { img: img3, title: "24x7 Support", desc: "One-on-one learning assistance <br /> Help desk support <br /> Resolve doubts in real time", border: "#007BFF" },
-      { img: img4, title: "Industry-Aligned Curriculum", desc: "Up-to-date course content <br /> Real-time projects <br /> Hands-on practical knowledge", border: "#007BFF" },
-      { img: img5, title: "Job Assistance", desc: "Resume building workshops <br /> Mock interview sessions <br /> Job placement support", border: "#007BFF" },
-      { img: img6, title: "Flexible Learning", desc: "Self-paced learning options <br /> Live online sessions <br /> Learn at your convenience", border: "#007BFF" },
-    ].map((card, idx) => (
-      <motion.div
-        className="col-md-4"
-        key={idx}
-        initial={{ y: 50, opacity: 0, scale: 0.9 }}
-        whileInView={{ y: 0, opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.2 }}
-        transition={{ type: "spring", bounce: 0.3, duration: 0.8, delay: idx * 0.1 }}
-      >
-        <motion.div
-          className="card h-100 text-center p-4 border-0 rounded-4"
-          style={{
-            border: `2px solid ${card.border}`,
-            boxShadow: "0 4px 12px rgba(0, 123, 255, 0.3)",
-            transformStyle: "preserve-3d",
-            cursor: "pointer",
-          }}
-          whileHover={{ rotateX: 8, rotateY: 8 }}
-          onMouseMove={(e) => {
-            const rect = e.currentTarget.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            const rotateX = ((y - centerY) / centerY) * 8;
-            const rotateY = ((x - centerX) / centerX) * -8;
-            e.currentTarget.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "rotateX(0deg) rotateY(0deg)";
-          }}
-        >
-          <img src={card.img} alt={card.title} className="mx-auto mb-3" style={{ height: "100px", objectFit: "contain" }} />
-          <h4 className="fw-bold text-primary">{card.title}</h4>
-          <p className="text-muted small" dangerouslySetInnerHTML={{ __html: card.desc }} />
-        </motion.div>
-      </motion.div>
-    ))}
-  </div>
-</div>
 
-{/* Placement Section with Carousel */}
+
+      
+   
+
+
+     {/* Placement Section with Carousel */}
 <div className="container my-5">
   <h2 className="fw-bold text-center" style={{ color: "#007BFF" }}>
     Our Successful Placements
@@ -309,77 +400,165 @@ const Hero = () => {
     id="placementCarousel"
     className="carousel slide mt-4"
     data-bs-ride="carousel"
-    data-bs-interval="3000"   // Auto rotate every 3 sec
+    data-bs-interval="3000"
   >
+    {/* Carousel items */}
     <div className="carousel-inner">
-
       {/* Placement 1 */}
-      <div className="carousel-item active" data-bs-interval="3000">
+      <div className="carousel-item active">
         <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
           <img
-            src="https://via.placeholder.com/100"
-            alt="Sarath Sai"
+            src={abbas}
+            alt="abbas"
             className="rounded-circle me-3"
             style={{ width: "100px", height: "100px", objectFit: "contain" }}
           />
           <div>
             <h5 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              Sarath Sai
+              A.AFROZ ABBAS
             </h5>
             <p className="mb-1 text-muted small">
-              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
+              Placed at <strong>AMAZON</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Joined as an intern, has been successfully placed as a Software Developer at ASAR IT Technology in 2024.”
+              “Joined as an Java full stack developer has been successfully placed at AMAZON.”
             </p>
           </div>
         </div>
       </div>
 
       {/* Placement 2 */}
-      <div className="carousel-item" data-bs-interval="3000">
+      <div className="carousel-item">
         <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
           <img
-            src="https://via.placeholder.com/100"
-            alt="Yamini"
+            src={bindu}
+            alt="hema bindhu"
             className="rounded-circle me-3"
             style={{ width: "100px", height: "100px", objectFit: "cover" }}
           />
           <div>
             <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              Yamini
+              B. HЕMA BINDHU
             </h6>
             <p className="mb-1 text-muted small">
-              Placed at <strong>ASAR IT Technology</strong> as Software Developer
+              Placed at <strong>AMAZON</strong> as Software Developer
             </p>
             <p className="text-muted small">
-              “Joined as an intern, has been successfully placed as a Software Developer at ASAR IT Technology in 2024.”
+              “Joined as Java full stack developer in TechnoHub and successfully placed at AMAZON.”
             </p>
           </div>
         </div>
       </div>
 
+      {/* Placement 3 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src={shannu}
+            alt="shanmukha"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              B. SHANMUKHA
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>REVARTURE</strong> as Software Developer
+            </p>
+            <p className="text-muted small">
+              “Joined as UX/UI Designer in TechnoHub and successfully placed at REVARTURE.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Placement 4 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            // src={spoorthi}
+            alt="spoorthi"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              SPOORTHI
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>COGNIZANT</strong> as Software Developer
+            </p>
+            <p className="text-muted small">
+              “Joined as an intern in TechnoHub and successfully placed at COGNIZANT.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Placement 5 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src={sarath}
+            alt="sarath"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              SARATH SAI
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
+            </p>
+            <p className="text-muted small">
+              “Joined as an intern in TechnoHub and successfully placed at ASAR IT TECHNOLOGY.”
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Placement 6 */}
+      <div className="carousel-item">
+        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
+          <img
+            src={yamini}
+            alt="yamini"
+            className="rounded-circle me-3"
+            style={{ width: "100px", height: "100px", objectFit: "cover" }}
+          />
+          <div>
+            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
+              YAMINI
+            </h6>
+            <p className="mb-1 text-muted small">
+              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
+            </p>
+            <p className="text-muted small">
+              “Joined as an intern in TechnoHub and successfully placed at ASAR IT TECHNOLOGY.”
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     {/* Carousel Indicators */}
     <div className="carousel-indicators">
-      <button
-        type="button"
-        data-bs-target="#placementCarousel"
-        data-bs-slide-to="0"
-        className="active"
-        aria-current="true"
-        aria-label="Slide 1"
-      ></button>
-      <button
-        type="button"
-        data-bs-target="#placementCarousel"
-        data-bs-slide-to="1"
-        aria-label="Slide 2"
-      ></button>
+      {[0, 1, 2, 3, 4, 5].map((index) => (
+        <button
+          key={index}
+          type="button"
+          data-bs-target="#placementCarousel"
+          data-bs-slide-to={index}
+          className={index === 0 ? "active" : ""}
+          aria-current={index === 0 ? "true" : undefined}
+          aria-label={`Slide ${index + 1}`}
+        ></button>
+      ))}
     </div>
 
-    {/* Controls */}
+    {/* Carousel Controls */}
     <button
       className="carousel-control-prev"
       type="button"
@@ -402,7 +581,6 @@ const Hero = () => {
 </div>
 
 
-    
     </section>
   );
 };
