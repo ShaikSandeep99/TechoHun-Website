@@ -11,7 +11,7 @@ import Gallery from './pages/gallery';
 import Contact from './pages/contact';
 import Industry from './pages/industry';
 import Register from './pages/register';
-
+import InternshipList from './pages/internships';
 
 import Courses from './pages/courses';
 import Login from './pages/login';
@@ -30,6 +30,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/industry" element={<Industry />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/internships" element={<InternshipList />} />
         <Route path="/register" element={<Register />} />
         <Route path="/auth" element={<Login />} />
       </Routes>
