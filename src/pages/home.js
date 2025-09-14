@@ -67,7 +67,7 @@ const Hero = () => {
       backgroundImage: image3,
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
-      buttonText: "Services",
+      buttonText: "Get Services",
        path: "/services",
       image: "../assets/images/bg-imges/bg3.jpg",
     },
