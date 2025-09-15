@@ -21,8 +21,8 @@
   width: 180px;       /* make logo wider / longer */
   max-width: none;
   object-fit: contain; /* ensures logo maintains aspect ratio */
-  padding: 0;          /* remove any padding */
-  margin: 0;           /* remove any margin */
+  padding: 0;
+  margin: 0;
 }
 
 /* Navigation Links */
@@ -39,7 +39,7 @@
 }
 
 .navbar-nav .nav-link {
-  color: #000 !important;
+  color: #000; /* normal text color */
   text-decoration: none;
   font-size: 15px;
   text-transform: uppercase;
@@ -50,11 +50,11 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #ff6f61;
+  color: #0945c6;  /* hover text color */
 }
 
 .navbar-nav .nav-link.active {
-  color: #e91502;
+  color: #e91502;  /* active (current page) text color */
   font-weight: bold;
 }
 
@@ -97,7 +97,7 @@
 
 /* Special styling for SIGNUP / SIGNIN */
 .auth-link {
-  color: #e60000 !important;
+  color: #e60000;
 }
 
 .auth-link:hover {
@@ -133,10 +133,10 @@
   }
 
   .navbar-logo {
-    height: 40px;     /* smaller logo for mobile */
-    width: 120px;     /* proportionally smaller width */
-    padding: 0;       /* remove padding */
-    margin: 0;        /* remove margin */
+    height: 40px;
+    width: 120px;
+    padding: 0;
+    margin: 0;
   }
 
   .nav-link {
@@ -146,27 +146,27 @@
 }
 
 .photo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin: 0;
-    padding: 0;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
 
-  /* Profile photo styling */
-  .profile-photo {
-    width: 60px;            
-    height: 60px;          
-    border-radius: 50%;    
-    object-fit: cover;     
-    border: 2px solid #E6BE8A;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
+/* Profile photo styling */
+.profile-photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #E6BE8A;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
-  /* Hover effect */
-  .profile-photo:hover {
-    transform: scale(1.1);  /* subtle zoom */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* soft shadow */
-  }
+/* Hover effect */
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

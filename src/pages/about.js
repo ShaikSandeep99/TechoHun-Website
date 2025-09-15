@@ -41,7 +41,7 @@ const leaders = [
       { label: "Workshops & Webinars", value: "20+" },
     ],
     quote:
-      "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
+      "At Technohub, we don’t just teach technology we connect ambition with opportunity, building a true bridge to success.",
   },
   
 ];
@@ -80,7 +80,7 @@ const cardVariants = {
 };
 
 const sliderSettings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 3,
@@ -359,46 +359,67 @@ const CEOSpotlight = ({ leader }) => {
           </div>
         </div>
 
-        {/* Quote bar */}
-        {quote ? (
-          <div
-            style={{
-              marginTop: 18,
-              background:
-                "linear-gradient(90deg, rgba(25,118,210,0.08), rgba(123,180,255,0.10))",
-              border: "1px solid rgba(25,118,210,0.14)",
-              borderRadius: 14,
-              padding: "12px 14px",
-              display: "flex",
-              gap: 10,
-              alignItems: "flex-start",
-            }}
-          >
-            <span
-              aria-hidden
-              style={{
-                fontSize: 22,
-                lineHeight: 1,
-                color: "#0f3d8a",
-                marginTop: -2,
-                userSelect: "none",
-              }}
-            >
-              ❝
-            </span>
-            <p
-              style={{
-                margin: 0,
-                color: "#12396f",
-                fontSize: "0.98rem",
-                lineHeight: 1.6,
-                fontWeight: 600,
-              }}
-            >
-              {`“${quote}”`}
-            </p>
-          </div>
-        ) : null}
+       
+                {/* Quote bar */}
+      {quote ? (
+  <div
+    style={{
+      marginTop: 18,
+      background:
+        "linear-gradient(90deg, rgba(25,118,210,0.08), rgba(123,180,255,0.10))",
+      border: "1px solid rgba(25,118,210,0.14)",
+      borderRadius: 14,
+      padding: "16px 20px",
+      textAlign: "center",
+    }}
+  >
+    <p
+      style={{
+        margin: 0,
+        color: "#12396f",
+        fontSize: "1rem",
+        lineHeight: 1.6,
+        fontWeight: 600,
+        textAlign: "center",
+        maxWidth: 900,
+        marginLeft: "auto",
+        marginRight: "auto",
+        wordBreak: "break-word",
+        display: "inline-block", // keeps everything inline
+      }}
+    >
+      <span
+        aria-hidden
+        style={{
+          fontSize: "1.1rem",
+          color: "#0f3d8a",
+          marginRight: 6,
+          userSelect: "none",
+        }}
+      >
+        ❝
+      </span>
+      {quote}
+      <span
+        aria-hidden
+        style={{
+          fontSize: "1.1rem",
+          color: "#0f3d8a",
+          marginLeft: 6,
+          userSelect: "none",
+        }}
+      >
+        ❞
+      </span>
+    </p>
+  </div>
+) : null}
+
+
+
+
+
+
       </div>
 
       {/* small-screen tweak */}
@@ -539,7 +560,7 @@ const About = () => {
           }}
         >
           <p>
-            Welcome to Technohub—where ambitious learners build real, job-ready skills.
+            Welcome to Technohub, where ambitious learners build real, job-ready skills.
             We offer online and offline programs for beginners and professionals,
             driven by hands-on projects and strong industry alignment.
           </p>
@@ -570,7 +591,7 @@ const About = () => {
             lineHeight: 1.55,
           }}
         >
-          We’re proud of our students—both successful placement achievers and dedicated interns—
+          We’re proud of our students, both successful placement achievers and dedicated interns
           who translate learning into measurable impact in the industry.
         </p>
 

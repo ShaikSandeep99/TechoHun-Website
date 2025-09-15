@@ -81,6 +81,10 @@ const Hero = () => {
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
       buttonText: "Services",
       path: "/services",
+
+      buttonText: "Get Services",
+       path: "/services",
+
       image: "../assets/images/bg-imges/bg3.jpg",
     },
   ];
