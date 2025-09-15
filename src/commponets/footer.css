@@ -1,9 +1,10 @@
 /* Top Footer Container */
 .footer-container {
-   background: linear-gradient(to right, #bed1ef, #c2e9fb); /* Gradient */
-  color: rgb(17, 18, 18);
-  padding: 15px 30px;
-  font-size: 12px;
+  background: linear-gradient(135deg, #838384, #1b263b); /* dark gradient */
+  color: #e0e0e0;
+  padding: 30px 40px;
+  font-size: 15px;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
 
 .footer-content {
@@ -15,18 +16,21 @@
 /* Sections */
 .footer-section {
   flex: 1;
-  min-width: 200px;
-  margin: 10px 20px;
+  min-width: 220px;
+  margin: 15px 20px;
 }
 
-.footer-section h4 {
-  color: #d24c4c; /* golden yellow for headings */
-  margin-bottom: 12px;
+.footer-section h5 {
+  color: #ffcc33; /* golden accent */
+  font-size: 16px;
+  margin-bottom: 14px;
+  font-weight: 600;
 }
 
 .footer-section p {
   font-size: 14px;
   line-height: 1.6;
+  color: #dcdcdc;
 }
 
 .footer-list {
@@ -39,65 +43,57 @@
 }
 
 .footer-list li a {
-  color: rgb(2, 1, 1);
+  color: #e0e0e0;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-list li a:hover {
-  color: #d94d4d; /* hover effect */
+  color: #ffcc33; /* hover effect golden */
 }
 
 /* Logo */
 .footer-logo {
-  width: 150px;
-  margin-bottom: 10px;
+  width: 160px;
+  margin-bottom: 12px;
 }
 
 /* Contact Section */
 .contact p {
   margin: 6px 0;
   font-size: 14px;
+  color: #dcdcdc;
 }
 
-.whatsapp-link {
-  color: rgb(155, 68, 68);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* Bottom Footer */
-.footer-bottom {
-  background: linear-gradient(to right, #689acf, #4facfe); /* Gradient bottom */
-  color: rgb(15, 13, 13)a0a;
+/* Social Media Section */
+.footer-social {
   text-align: center;
-  padding: 8px 10px;
+  margin-top: 25px;
 }
 
-.footer-bottom .social-icons span {
-  margin-right: 8px;
-  font-weight: bold;
-  font-size: 14px; /* smaller text */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  margin-bottom: 12px;
 }
 
-
-.footer-social-icons a {
-  color: black;          /* Change icons to black */
-  margin: 0 10px;        /* Add space between icons */
-  font-size: 22px;       /* (Optional) Adjust size */
-  transition: color 0.3s ease;
-}
-/* Footer Follow Us Icons */
-.footer-bottom .social-icons a {
-  margin: 0 15px; /* Adds space left and right of each icon */
-  font-size: 20px; /* Adjust size if needed */
+.social-icons a {
+  color: #e0e0e0;
+  font-size: 20px;
   transition: 0.3s;
-    color: #000; 
 }
 
-/* Optional hover effect */
-.footer-bottom .social-icons a:hover {
-  opacity: 0.8;
+.social-icons a:hover {
+  color: #ffcc33;
+  transform: scale(1.1);
+}
+
+/* Copyright */
+.footer-copy {
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 10px;
 }
 
 /* Responsive */
@@ -109,6 +105,6 @@
   }
 
   .footer-section {
-    margin: 15px 0;
+    margin: 18px 0;
   }
 }
