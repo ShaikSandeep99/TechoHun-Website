@@ -24,6 +24,28 @@ import asar from "../assets/images/bg-imges/ASAR.png";
 import atpar from "../assets/images/bg-imges/@par.png";
 import cognizant from "../assets/images/bg-imges/cognizant.png";
 import ceoPhoto from "../assets/images/gallery/colleges/ceo.png";
+// Placement achievers images
+import Shanmukh from "../assets/images/bg-imges/shannu.jpg";
+import Yeshwanth from "../assets/images/bg-imges/yeshwanth.jpg";
+import Bhanusrinivasareddy from "../assets/images/bg-imges/bhanu.jpg";
+import Rajesh from "../assets/images/bg-imges/rajesh.jpg";
+import Hemanthkumar from "../assets/images/bg-imges/hemanth.jpg";
+import VijayBhaskarreddy from "../assets/images/bg-imges/vijay.jpg";
+import Sarathsai from "../assets/images/bg-imges/sarath.jpg";
+import Abbas from "../assets/images/bg-imges/abbas.jpg";
+import Yamini from "../assets/images/bg-imges/yamini.jpg";
+// Intern images
+import Bhaskar from "../assets/images/bg-imges/bhaskar.jpg";
+import Anilkumar from "../assets/images/bg-imges/anil.jpg";
+import Hemabindu from "../assets/images/bg-imges/bindu.jpg";
+import Manjunath from "../assets/images/bg-imges/g.manjunath.jpg";
+import Surya from "../assets/images/bg-imges/surya.jpg";
+import Balaji from "../assets/images/bg-imges/balaji.jpg";
+import Damodhar from "../assets/images/bg-imges/damodhar.jpg";
+import Udaykiran from "../assets/images/bg-imges/uday.jpg";
+import VManjunath from "../assets/images/bg-imges/manjunath.jpg";
+import Bayanna from "../assets/images/bg-imges/bayanna.jpg";
+import Sneha from "../assets/images/bg-imges/sneha.jpg";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
@@ -31,8 +53,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
-
-
 import "./home.css";
 
 // ⬇️ Added leaders array here
@@ -100,6 +120,59 @@ const Hero = () => {
   }, [slides.length]);
 
   const slide = slides[currentSlide];
+  
+
+  const companySliderSettings = {
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    arrows: false,
+    pauseOnHover: false,
+  };
+
+  const profileSliderSettings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+    responsive: [
+      { breakpoint: 992, settings: { slidesToShow: 3 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 576, settings: { slidesToShow: 1 } },
+    ],
+  };
+
+  const placementAchievers = [
+    { name: "B. Shanmukh", image: Shanmukh, company: "REVARTURE" },
+    { name: "B. Yeshwanth", image: Yeshwanth, company: "ASAR IT TECHNOLOGIES" },
+    { name: "C. Bhanusrinivas reddy", image: Bhanusrinivasareddy, company: "ASAR IT TECHNOLOGIES" },
+    { name: "T. Rajesh", image: Rajesh, company: "VIRTUSA" },
+    { name: "M. Hemanthkumar", image: Hemanthkumar, company: "SYNECHRON" },
+    { name: "P. VijayBhaskar reddy", image: VijayBhaskarreddy, company: "REVARTURE" },
+    { name: "C. Sarathsai ", image: Sarathsai, company: "ASAR IT TECHNOLOGIES" },
+    { name: "K. Yamini", image: Yamini, company: "ASAR IT TECHNOLOGIES" },
+    { name: "A. Afroz Abbas", image: Abbas, company: "Amazon" },
+  ];
+
+  const interns = [
+    { name: "Bhaskar", image: Bhaskar, company: "ASAR IT TECHNOLOGIES" },
+    { name: "Anil kumar", image: Anilkumar, company: "ASAR IT TECHNOLOGIES" },
+    { name: "Hemabindu", image: Hemabindu, company: "ASAR IT TECHNOLOGIES" },
+    { name: "G.Manjunath", image: Manjunath, company: "ASAR IT TECHNOLOGIES" },
+    { name: "G. Surya", image: Surya, company: "ASAR IT TECHNOLOGIES" },
+    { name: "K. Balaji", image: Balaji, company: "ASAR IT TECHNOLOGIES" },
+    { name: "K. Damodhar", image: Damodhar, company: "ASAR IT TECHNOLOGIES" },
+    { name: "R. Udaykiran", image: Udaykiran, company: "ASAR IT TECHNOLOGIES" },
+    { name: "V. Manjunath", image: VManjunath, company: "ASAR IT TECHNOLOGIES" },
+    { name: "Y. Bayanna", image: Bayanna, company: "ASAR IT TECHNOLOGIES" },
+    { name: "Sneha", image: Sneha, company: "ASAR IT TECHNOLOGIES" },
+  ];
 
   return (
     <section>
@@ -414,12 +487,16 @@ const Hero = () => {
 
     {/* Company Logos Slider Section */}
 <div className="container my-5">
-  <h2 className="fw-bold text-center mb-4" style={{ color: "#007BFF",marginBottom: "15px" }}>
-    Collaborated Companies
-  </h2>
+ <h2 
+  className="fw-bold text-center mb-4" 
+  style={{ color: "#007BFF", marginBottom: "40px" }}
+>
+  Collaborated Companies
+</h2>
+
 
   <Slider
-    dots={false}
+   
     infinite={true}
     speed={3000}
     slidesToShow={7}   // 👈 show more logos per row
@@ -455,6 +532,55 @@ const Hero = () => {
     )}
   </Slider>
 </div>
+{/* Placement Achievers Section */}
+      <div className="container text-center my-5">
+        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "30px" }}>
+          Placement Achievers
+        </h2>
+        <Slider {...profileSliderSettings}>
+          {placementAchievers.map(({ image, name, company }, idx) => (
+            <motion.div
+              key={idx}
+              className="p-3"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: idx * 0.2 }}
+            >
+              <div className="profile-card text-center" style={{ cursor: "pointer" }}>
+                <img src={image} alt={name} />
+                <h6>{name}</h6>
+                <p className="text-primary small">{company}</p>
+              </div>
+            </motion.div>
+          ))}
+        </Slider>
+      </div>
+
+      {/* Interns Section */}
+      <div className="container text-center my-5">
+        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "30px" }}>
+          Interns
+        </h2>
+        <Slider {...profileSliderSettings}>
+          {interns.map(({ image, name, company }, idx) => (
+            <motion.div
+              key={idx}
+              className="p-3"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.8, delay: idx * 0.2 }}
+            >
+              <div className="profile-card text-center" style={{ cursor: "pointer" }}>
+                <img src={image} alt={name} />
+                <h6>{name}</h6>
+                <p className="text-primary small">{company}</p>
+              </div>
+            </motion.div>
+          ))}
+        </Slider>
+      </div>
     </section>
   );
 };

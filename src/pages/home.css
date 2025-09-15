@@ -405,3 +405,65 @@
   font-style: italic;
   color: #333;
 }
+
+.profile-card {
+  width: 200px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+  border-radius: 20px;
+  margin: 0 auto;
+  padding: 24px 0 16px 0;
+  transition: box-shadow 0.2s;
+}
+
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  background: #fafafa;
+}
+
+.profile-card h6 {
+  font-weight: 700;
+  margin: 0 0 6px 0;
+  font-size: 1.04rem;
+  text-align: center;
+}
+
+.profile-card p {
+  font-size: 0.98rem;
+  margin: 0;
+  color: #007BFF;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.slick-slide > div {
+  display: flex !important;
+  justify-content: center;
+}
+.collaborated-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 40px; /* 👈 adds space below heading */
+}
+
+.collaborated-section h2 {
+  margin-bottom: 40px;  /* space below heading */
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;  /* space between logos */
+}
