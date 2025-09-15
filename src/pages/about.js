@@ -43,13 +43,7 @@ const leaders = [
     quote:
       "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
   },
-  // Add more founders/co-founders like this:
-  // {
-  //   name: "Jane Doe",
-  //   title: "Co-Founder",
-  //   image: janeImg,
-  //   bio: "Focuses on curriculum strategy and partnerships.",
-  // },
+  
 ];
 
 const placements = [

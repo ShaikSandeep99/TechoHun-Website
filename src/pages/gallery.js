@@ -30,12 +30,12 @@ const injectStyles = () => {
   :root { --glx-bg:#0b1220; --glx-card:#101827; --glx-text:#e5e7eb; --glx-primary:#7c3aed; }
   .glx-root {
     min-height: 100%;
-    background:
-      radial-gradient(1200px 800px at 10% -10%, rgba(124,58,237,.12), transparent 60%),
-      radial-gradient(1000px 600px at 110% 10%, rgba(59,130,246,.10), transparent 50%),
-      var(--glx-bg);
-    color: var(--glx-text);
-    padding: clamp(12px, 2vw, 24px);
+     background:
+    radial-gradient(1200px 800px at 10% -10%, rgba(124,58,237,.12), transparent 60%),
+    radial-gradient(1000px 600px at 110% 10%, rgba(59,130,246,.10), transparent 50%),
+    var(--glx-bg);
+  color: var(--glx-text);
+  padding: clamp(12px, 2vw, 24px);
   }
   .glx-page-title {
     font-size: clamp(28px, 3.2vw, 44px);

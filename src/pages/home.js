@@ -23,16 +23,11 @@ import revature from "../assets/images/bg-imges/revature.png";
 import asar from "../assets/images/bg-imges/ASAR.png";
 import atpar from "../assets/images/bg-imges/@par.png";
 import cognizant from "../assets/images/bg-imges/cognizant.png";
-import abbas from "../assets/images/bg-imges/abbas.jpg";
-import bindu from "../assets/images/bg-imges/bindu.jpg";
-import shannu from "../assets/images/bg-imges/shannu.jpg";
-import sarath from "../assets/images/bg-imges/sarath.jpg";
-import yamini from "../assets/images/bg-imges/yamini.jpg";
+import ceoPhoto from "../assets/images/gallery/colleges/ceo.png";
 import { motion } from "framer-motion";
-
 import { Link } from "react-router-dom";
-import Slider from "react-slick";   
-import "slick-carousel/slick/slick.css"; 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
@@ -40,7 +35,24 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 import "./home.css";
 
-
+// ⬇️ Added leaders array here
+const leaders = [
+  {
+    name: "M. Shameer Basha",
+    title: "CEO & Founder",
+    image: ceoPhoto,
+    bio:
+      "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
+    stats: [
+      { label: "Founded", value: "2021" },
+      { label: "Students Trained", value: "5,000+" },
+      { label: "Students Placed", value: "2,000+" },
+      { label: "Workshops & Webinars", value: "20+" },
+    ],
+    quote:
+      "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
+  },
+];
 
 const Hero = () => {
   // Hero Section Slideshow Data
@@ -68,7 +80,7 @@ const Hero = () => {
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
       buttonText: "Services",
-       path: "/services",
+      path: "/services",
       image: "../assets/images/bg-imges/bg3.jpg",
     },
   ];
@@ -153,19 +165,6 @@ const Hero = () => {
     )
   )}
 </div>
-        {/* Oval Button
-        {slide.buttonText === "Get Started" ? (
-        <Link to={slide.path} className="hero-gift-card-btn mt-3">
-          {slide.buttonText}
-        </Link>
-      
-{slide.buttonText && slide.path && (
-  <Link to={slide.path} className="hero-oval-btn">
-    {slide.buttonText}
-  </Link>
-)}
-
-        </div> */}
       </div>
 
       {/* About Technohub Section */}
@@ -197,6 +196,80 @@ const Hero = () => {
           succeed in their career in Software.
         </motion.p>
       </div>
+
+    {/* Leadership Section */}
+<div className="container my-5">
+  {leaders.map((leader, idx) => (
+    <motion.div
+      key={idx}
+      className="col-12"
+      initial={{ y: 30, opacity: 0, scale: 0.95 }}
+      whileInView={{ y: 0, opacity: 1, scale: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
+    >
+      
+      {/* Header: photo left, text right */}
+      <div
+        className="card leader-card shadow p-4 border-0 rounded-4 text-center"
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          background: "#fff",
+          boxShadow: "0 8px 20px rgba(0, 123, 255, 0.3)",
+          border: "2px solid #007BFF",
+        }}
+      >
+        {/* Header: photo + info */}
+        <div className="leader-header d-flex flex-column flex-md-row align-items-center text-md-start mb-4">
+        <img
+          src={leader.image}
+          alt={leader.name}
+           className="leader-img rounded-circle mb-3 mb-md-0"
+           style={{ width: "120px", height: "120px", objectFit: "cover" }}
+        />
+     <div className="leader-info ms-md-4">
+  <h3 className="leader-name fw-bold text-primary d-flex align-items-center flex-wrap">
+    {leader.name}
+    <span
+      className="ms-2 px-3 py-1 rounded-pill"
+      style={{
+        backgroundColor: "#e9f2ff",
+        color: "#007BFF",
+        fontSize: "0.9rem",
+        fontWeight: "600",
+      }}
+    >
+      {leader.title}
+    </span>
+  </h3>
+  <p className="leader-bio mt-2 text-muted">{leader.bio}</p>
+</div>
+
+
+        </div>
+          
+      {/* Stats Section */}
+      <div className="leader-stats row text-center my-4">
+          {leader.stats.map((stat, sIdx) => (
+            <div key={sIdx} className="col-6 col-md-3 mb-3">
+              <div className="stat-box p-3 rounded-3 h-100">
+                <h5 className="fw-bold text-primary">{stat.value}</h5>
+                <p className="small text-muted mb-0">{stat.label}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+       {/* Quote */}
+        <div className="leader-quote fst-italic text-primary">
+          <p>“{leader.quote}”</p>
+        </div>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
 
       {/* Feature Cards Section */}
       <div className="container text-center my-4">
@@ -283,13 +356,8 @@ const Hero = () => {
           ))}
             
    {/* View All Button after DevOps */}
-<div className="mt-4 text-center">
-  <Link 
-    to="/courses" 
-    className="btn btn-primary btn-custom-small rounded-pill fw-bold"
-  >
-    View All
-  </Link>
+<div style={{ textAlign: "center", marginTop: "10px" }}>
+  <button className="view-all-btn">View All</button>
 </div>
 
           
@@ -383,204 +451,6 @@ const Hero = () => {
     )}
   </Slider>
 </div>
-
-
-
-      
-   
-
-
-     {/* Placement Section with Carousel */}
-<div className="container my-5">
-  <h2 className="fw-bold text-center" style={{ color: "#007BFF" }}>
-    Our Successful Placements
-  </h2>
-
-  <div
-    id="placementCarousel"
-    className="carousel slide mt-4"
-    data-bs-ride="carousel"
-    data-bs-interval="3000"
-  >
-    {/* Carousel items */}
-    <div className="carousel-inner">
-      {/* Placement 1 */}
-      <div className="carousel-item active">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src={abbas}
-            alt="abbas"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "contain" }}
-          />
-          <div>
-            <h5 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              A.AFROZ ABBAS
-            </h5>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>AMAZON</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as an Java full stack developer has been successfully placed at AMAZON.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 2 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src={bindu}
-            alt="hema bindhu"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              B. HЕMA BINDHU
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>AMAZON</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as Java full stack developer in TechnoHub and successfully placed at AMAZON.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 3 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src={shannu}
-            alt="shanmukha"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              B. SHANMUKHA
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>REVARTURE</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as UX/UI Designer in TechnoHub and successfully placed at REVARTURE.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 4 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            // src={spoorthi}
-            alt="spoorthi"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              SPOORTHI
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>COGNIZANT</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as an intern in TechnoHub and successfully placed at COGNIZANT.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 5 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src={sarath}
-            alt="sarath"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              SARATH SAI
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as an intern in TechnoHub and successfully placed at ASAR IT TECHNOLOGY.”
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Placement 6 */}
-      <div className="carousel-item">
-        <div className="d-flex align-items-center justify-content-center p-4 shadow rounded-4">
-          <img
-            src={yamini}
-            alt="yamini"
-            className="rounded-circle me-3"
-            style={{ width: "100px", height: "100px", objectFit: "cover" }}
-          />
-          <div>
-            <h6 className="fw-bold mb-1" style={{ color: "#007BFF" }}>
-              YAMINI
-            </h6>
-            <p className="mb-1 text-muted small">
-              Placed at <strong>ASAR IT TECHNOLOGY</strong> as Software Developer
-            </p>
-            <p className="text-muted small">
-              “Joined as an intern in TechnoHub and successfully placed at ASAR IT TECHNOLOGY.”
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {/* Carousel Indicators */}
-    <div className="carousel-indicators">
-      {[0, 1, 2, 3, 4, 5].map((index) => (
-        <button
-          key={index}
-          type="button"
-          data-bs-target="#placementCarousel"
-          data-bs-slide-to={index}
-          className={index === 0 ? "active" : ""}
-          aria-current={index === 0 ? "true" : undefined}
-          aria-label={`Slide ${index + 1}`}
-        ></button>
-      ))}
-    </div>
-
-    {/* Carousel Controls */}
-    <button
-      className="carousel-control-prev"
-      type="button"
-      data-bs-target="#placementCarousel"
-      data-bs-slide="prev"
-    >
-      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Previous</span>
-    </button>
-    <button
-      className="carousel-control-next"
-      type="button"
-      data-bs-target="#placementCarousel"
-      data-bs-slide="next"
-    >
-      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-      <span className="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
-
-
     </section>
   );
 };

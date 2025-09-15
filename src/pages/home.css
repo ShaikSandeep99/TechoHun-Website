@@ -323,3 +323,85 @@
   text-align: center;      /* Keep text centered */
   display: inline-block;   /* Prevent full row */
 }
+
+/* ===========================
+   Leadership Section
+   =========================== */
+.leader-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 950px;
+  margin: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.leader-header {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.leader-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  object-fit: cover;
+}
+
+.leader-info {
+  flex: 1;
+}
+
+.leader-name {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #0044cc;
+  margin-bottom: 5px;
+}
+
+.leader-title {
+  display: inline-block;
+  background: #e6f0ff;
+  color: #007bff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.leader-bio {
+  margin-top: 15px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Stats */
+.leader-stats .stat-box {
+  background: #f8fbff;
+  padding: 15px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.leader-stats .stat-box:hover {
+  background: #eaf4ff;
+}
+
+.leader-stats h5 {
+  color: #0044cc;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Quote */
+.leader-quote {
+  background: #f4f8ff;
+  border-left: 4px solid #007bff;
+  padding: 15px;
+  border-radius: 10px;
+  font-style: italic;
+  color: #333;
+}
