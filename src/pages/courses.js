@@ -6,7 +6,7 @@ const Courses = () => {
     <div className="courses-page">
       {/* Hero Section */}
       <section className="courses-hero">
-        <div className="hero-content">
+        <div className="courses-content">
           <h1>Our Courses</h1>
           <p>Explore our range of industry-relevant courses designed to help you excel in your career.</p>
         </div>

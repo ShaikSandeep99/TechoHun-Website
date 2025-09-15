@@ -10,10 +10,10 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
 
-         {/* Profile */}
+         {/* Profile
         <NavLink className="photo" to="/">
           <img src={profileImg} alt="Technohub" className="profile-photo" />
-        </NavLink>
+        </NavLink> */}
         
         {/* Logo */}
         <NavLink className="navbar-brand" to="/">
