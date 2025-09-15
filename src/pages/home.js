@@ -342,7 +342,7 @@ const Hero = () => {
 
     {/* Company Logos Slider Section */}
 <div className="container my-5">
-  <h2 className="fw-bold text-center mb-4" style={{ color: "#007BFF",marginBottom: "15px" }}>
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF",marginBottom: "100px", marginTop: "200px" }}>
     Collaborated Companies
   </h2>
 
@@ -392,7 +392,7 @@ const Hero = () => {
 
      {/* Placement Section with Carousel */}
 <div className="container my-5">
-  <h2 className="fw-bold text-center" style={{ color: "#007BFF" }}>
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF", marginTop: "140px" , marginBottom: "60px" }}>
     Our Successful Placements
   </h2>
 
