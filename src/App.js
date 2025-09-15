@@ -15,6 +15,7 @@ import Register from './pages/register';
 import Internship from "./pages/internships";
 import Courses from './pages/courses';
 import Login from './pages/login';
+import Forgot from'./pages/forgot';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/auth" element={<Login />} />
         <Route path="/Internships" element={<Internship />} />
+        <Route path="/forgot" element={<Forgot/>} />
       </Routes>
 
       {/* ✅ WhatsApp Floating Button */}
