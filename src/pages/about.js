@@ -25,17 +25,15 @@ import Udaykiran from "../assets/images/R.Udaykiran.jpg";
    Data
 ======================= */
 
-// Put CEO first in this array. Any additional founders you add here will
-// automatically show under the CEO hero as a compact grid.
 const leaders = [
   {
-    name: "M. Shameer Basha",
-    title: "CEO & Founder",
+    name: "M. Shameer Dharmavaram",
+    title: " Founder & CEO",
     image: ceoPhoto,
     bio:
-      "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
-  stats: [
-      { label: "Founded", value: "2021" },
+      "Technohub, founded in 2012, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
+    stats: [
+      { label: "Founded", value: "2012" },
       { label: "Students Trained", value: "5,000+" },
       { label: "Students Placed", value: "2,000+" },
       { label: "Workshops & Webinars", value: "20+" },
@@ -43,7 +41,6 @@ const leaders = [
     quote:
       "At Technohub, we don’t just teach technology we connect ambition with opportunity, building a true bridge to success.",
   },
-  
 ];
 
 const placements = [
@@ -128,7 +125,7 @@ const PersonCard = ({ person, i, borderColor = "#d9e5fe", bg = "#f2f8ff" }) => (
       borderRadius: 20,
       boxShadow: "0 6px 20px rgba(44,104,216,0.10)",
       padding: "22px 16px",
-     margin: "0 14px",
+      margin: "0 14px",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
@@ -197,7 +194,7 @@ const PersonCard = ({ person, i, borderColor = "#d9e5fe", bg = "#f2f8ff" }) => (
 ======================= */
 
 const CEOSpotlight = ({ leader }) => {
-  const { image, name, title, bio, stats = [], quote } = leader || {};
+  const { image, name, title, bio } = leader || {};
   return (
     <motion.section
       initial={{ opacity: 0, y: 18 }}
@@ -310,116 +307,8 @@ const CEOSpotlight = ({ leader }) => {
             >
               {bio}
             </p>
-
-            {/* Quick stats */}
-            {stats?.length ? (
-              <div
-                style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
-                  gap: 10,
-                  marginTop: 14,
-                }}
-              >
-                {stats.map((s) => (
-                  <div
-                    key={s.label}
-                    style={{
-                      background: "rgba(25,118,210,0.06)",
-                      border: "1px solid rgba(25,118,210,0.12)",
-                      borderRadius: 12,
-                      padding: "10px 12px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: 18,
-                        fontWeight: 800,
-                        color: "#0f3d8a",
-                        lineHeight: 1.1,
-                      }}
-                    >
-                      {s.value}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: 12.5,
-                        color: "#315e9d",
-                        fontWeight: 600,
-                        letterSpacing: 0.2,
-                        marginTop: 2,
-                      }}
-                    >
-                      {s.label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            ) : null}
           </div>
         </div>
-
-       
-                {/* Quote bar */}
-      {quote ? (
-  <div
-    style={{
-      marginTop: 18,
-      background:
-        "linear-gradient(90deg, rgba(25,118,210,0.08), rgba(123,180,255,0.10))",
-      border: "1px solid rgba(25,118,210,0.14)",
-      borderRadius: 14,
-      padding: "16px 20px",
-      textAlign: "center",
-    }}
-  >
-    <p
-      style={{
-        margin: 0,
-        color: "#12396f",
-        fontSize: "1rem",
-        lineHeight: 1.6,
-        fontWeight: 600,
-        textAlign: "center",
-        maxWidth: 900,
-        marginLeft: "auto",
-        marginRight: "auto",
-        wordBreak: "break-word",
-        display: "inline-block", // keeps everything inline
-      }}
-    >
-      <span
-        aria-hidden
-        style={{
-          fontSize: "1.1rem",
-          color: "#0f3d8a",
-          marginRight: 6,
-          userSelect: "none",
-        }}
-      >
-        ❝
-      </span>
-      {quote}
-      <span
-        aria-hidden
-        style={{
-          fontSize: "1.1rem",
-          color: "#0f3d8a",
-          marginLeft: 6,
-          userSelect: "none",
-        }}
-      >
-        ❞
-      </span>
-    </p>
-  </div>
-) : null}
-
-
-
-
-
-
       </div>
 
       {/* small-screen tweak */}
@@ -514,12 +403,8 @@ const CoFoundersGrid = ({ items }) => {
   );
 };
 
-/* =======================
-   Page Component
-======================= */
-
 const About = () => {
-  const [ceo, ...founders] = leaders; // first item is CEO hero
+  const [ceo, ...founders] = leaders;
 
   return (
     <motion.div
@@ -546,7 +431,7 @@ const About = () => {
           About Technohub
         </h1>
 
-        {/* Intro */}
+        {/* Passage Section */}
         <div
           style={{
             marginTop: 22,
@@ -571,13 +456,74 @@ const About = () => {
           </p>
         </div>
 
+        {/* Stats & Quote Section (above CEO and separate) */}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            background: "#f2f8ff",
+            borderRadius: 18,
+            padding: "24px 20px 18px 20px",
+            margin: "24px auto 28px auto",
+            maxWidth: 820,
+            boxShadow: "0 2px 12px rgba(44,104,216,0.07)",
+          }}
+        >
+          <div style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: "18px",
+            width: "100%",
+            marginBottom: "18px",
+          }}>
+            {ceo.stats.map((stat) => (
+              <div
+                key={stat.label}
+                style={{
+                  background: "#e3effd",
+                  borderRadius: 12,
+                  padding: "12px 22px",
+                  minWidth: 138,
+                  textAlign: "center",
+                  boxShadow: "0 1px 8px rgba(44,104,216,0.04)",
+                }}
+              >
+                <div style={{ color: "#0f3d8a", fontWeight: 800, fontSize: "1.2rem" }}>
+                  {stat.value}
+                </div>
+                <div style={{ color: "#2196f3", fontWeight: 600, fontSize: "1rem", marginTop: 2 }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(25,118,210,0.07), rgba(123,180,255,0.11))",
+              borderRadius: 12,
+              padding: "13px 16px",
+              maxWidth: 700,
+              fontStyle: "italic",
+              color: "#145ca6",
+              fontWeight: 600,
+              fontSize: "1.07rem",
+              textAlign: "center",
+            }}
+          >
+            “{ceo.quote}”
+          </div>
+        </div>
+
         {/* CEO Hero Spotlight */}
         {ceo ? <CEOSpotlight leader={ceo} /> : null}
 
-        {/* Co-founders grid (shows only if you add more founders to leaders[]) */}
+        {/* Founders Grid */}
         <CoFoundersGrid items={founders} />
 
-        {/* Placements Intro */}
+        {/* Placements Introduction */}
         <p
           style={{
             marginTop: 42,

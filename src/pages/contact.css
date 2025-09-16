@@ -1,13 +1,18 @@
 /* General Page Styling */
 .contact-hero {
-  height: 40vh; /* full screen height */
+  height: 37vh; /* full screen height */
   display: flex;
   justify-content: center; /* centers horizontally */
   align-items: center;    /* centers vertically */
   text-align: center;     /* centers text */
-  background: linear-gradient(135deg, #6992bd, #00d4ff);
+<<<<<<< HEAD
+  background: linear-gradient(135deg, #61a0e4, #00d4ff);
+=======
+  background: #0d47a1;
+>>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
   color: white;
-  padding: 2rem /* reduced from 10px */
+  padding: 50px 20px;
+
 }
 
 .hero-content h1 {
