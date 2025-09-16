@@ -487,16 +487,14 @@ const Hero = () => {
 
     {/* Company Logos Slider Section */}
 <div className="container my-5">
- <h2 
-  className="fw-bold text-center mb-4" 
-  style={{ color: "#007BFF", marginBottom: "40px" }}
->
-  Collaborated Companies
-</h2>
+ 
 
+
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF",marginBottom: "100px", marginTop: "200px" }}>
+    Collaborated Companies
+  </h2>
 
   <Slider
-   
     infinite={true}
     speed={3000}
     slidesToShow={7}   // 👈 show more logos per row
@@ -580,7 +578,7 @@ const Hero = () => {
             </motion.div>
           ))}
         </Slider>
-      </div>
+      </div>    
     </section>
   );
 };
