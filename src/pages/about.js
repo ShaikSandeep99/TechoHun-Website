@@ -29,19 +29,19 @@ import Udaykiran from "../assets/images/R.Udaykiran.jpg";
 // automatically show under the CEO hero as a compact grid.
 const leaders = [
   {
-    name: "M. Shameer Basha",
-    title: "CEO & Founder",
+    name: "M. Shameer Dharmavaram ",
+    title: "Founder & CEO",
     image: ceoPhoto,
     bio:
-      "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
+      <i>"Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology."</i>,
   stats: [
-      { label: "Founded", value: "2021" },
+      { label: "Founded", value: "2012" },
       { label: "Students Trained", value: "5,000+" },
       { label: "Students Placed", value: "2,000+" },
       { label: "Workshops & Webinars", value: "20+" },
     ],
     quote:
-      "At Technohub, we don’t just teach technology we connect ambition with opportunity, building a true bridge to success.",
+      <i>"At Technohub, we don’t just teach technology we connect ambition with opportunity, building a true bridge to success."</i>,
   },
   
 ];

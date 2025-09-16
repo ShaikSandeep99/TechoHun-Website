@@ -70,7 +70,7 @@ const Footer = () => {
             <a href="mailto:shameer@technohubtrainings.com">
               <FaEnvelope />
             </a>
-            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/asar-it-technologies/" target="_blank" rel="noopener noreferrer">
               <FaLinkedin />
             </a>
           </div>

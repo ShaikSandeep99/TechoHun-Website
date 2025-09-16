@@ -1,3 +1,4 @@
+// export default Hero;
 import React, { useState, useEffect } from "react";
 
 // import heroBg from "../assets/images/bg-imges/bg1.jpg";
@@ -56,23 +57,23 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "./home.css";
 
 // ⬇️ Added leaders array here
-const leaders = [
-  {
-    name: "M. Shameer Basha",
-    title: "CEO & Founder",
-    image: ceoPhoto,
-    bio:
-      "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
-    stats: [
-      { label: "Founded", value: "2021" },
-      { label: "Students Trained", value: "5,000+" },
-      { label: "Students Placed", value: "2,000+" },
-      { label: "Workshops & Webinars", value: "20+" },
-    ],
-    quote:
-      "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
-  },
-];
+// const leaders = [
+//   {
+//     name: "M. Shameer Dharmavarm",
+//     title: "Founder & CEO",
+//     image: ceoPhoto,
+//     bio:
+//       "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
+//     stats: [
+//       { label: "Founded", value: "2012" },
+//       { label: "Students Trained", value: "5,000+" },
+//       { label: "Students Placed", value: "2,000+" },
+//       { label: "Workshops & Webinars", value: "20+" },
+//     ],
+//     quote:
+//       "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
+//   },
+// ];
 
 const Hero = () => {
   // Hero Section Slideshow Data
@@ -265,9 +266,9 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
           style={{ transformOrigin: "left center" }}
         >
-          Technohub is a training Institution and a good Software Training and
+          Technohub is a training institution and a reputable Software Training and
           Certification platform. Technohub follows proper work ethics and has a
-          positive environment where an individual can learn and grow. We provide
+          positive environment where individual can learn and grow. We provide
           both offline and online courses. The competitive environment at Technohub
           also provides the necessary edge and exposure for every individual to
           succeed in their career in Software.
@@ -275,7 +276,7 @@ const Hero = () => {
       </div>
 
     {/* Leadership Section */}
-<div className="container my-5">
+{/* <div className="container my-5">
   {leaders.map((leader, idx) => (
     <motion.div
       key={idx}
@@ -285,9 +286,9 @@ const Hero = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
     >
-      
+       */}
       {/* Header: photo left, text right */}
-      <div
+      {/* <div
         className="card leader-card shadow p-4 border-0 rounded-4 text-center"
         style={{
           maxWidth: "900px",
@@ -296,9 +297,9 @@ const Hero = () => {
           boxShadow: "0 8px 20px rgba(0, 123, 255, 0.3)",
           border: "2px solid #007BFF",
         }}
-      >
+      > */}
         {/* Header: photo + info */}
-        <div className="leader-header d-flex flex-column flex-md-row align-items-center text-md-start mb-4">
+        {/* <div className="leader-header d-flex flex-column flex-md-row align-items-center text-md-start mb-4">
         <img
           src={leader.image}
           alt={leader.name}
@@ -324,10 +325,10 @@ const Hero = () => {
 </div>
 
 
-        </div>
+        </div> */}
           
       {/* Stats Section */}
-      <div className="leader-stats row text-center my-4">
+      {/* <div className="leader-stats row text-center my-4">
           {leader.stats.map((stat, sIdx) => (
             <div key={sIdx} className="col-6 col-md-3 mb-3">
               <div className="stat-box p-3 rounded-3 h-100">
@@ -336,16 +337,16 @@ const Hero = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
        {/* Quote */}
-        <div className="leader-quote fst-italic text-primary">
+        {/* <div className="leader-quote fst-italic text-primary">
           <p>“{leader.quote}”</p>
         </div>
       </div>
     </motion.div>
   ))}
-</div>
+</div> */}
 
 
       {/* Feature Cards Section */}
@@ -389,9 +390,9 @@ const Hero = () => {
 
         <div className="row g-4 mt-4">
           {[
-            { title: "Java Programming", desc: "Learn Java from scratch and become an expert in backend development.", border: "#007BFF" },
+            { title: "Java fullstack", desc: "Learn Java from scratch and become an expert in backend development.", border: "#007BFF" },
             { title: "React Development", desc: "Master React and build powerful front-end web applications.", border: "#007BFF" },
-            { title: "Python for Data Science", desc: "Learn Python for Data Science and build machine learning models.", border: "#007BFF" },
+            { title: "Python fullstack ", desc: "Learn Python fullstack and build machine learning models.", border: "#007BFF" },
             { title: "DevOps Essentials", desc: "Understand the fundamentals of DevOps and streamline development processes.", border: "#007BFF" },
             
           ].map((card, idx) => (
@@ -434,7 +435,7 @@ const Hero = () => {
             
    {/* View All Button after DevOps */}
 <div style={{ textAlign: "center", marginTop: "10px" }}>
-  <button className="view-all-btn">View All</button>
+  <Link to="/courses" className="view-all-btn">View All</Link>
 </div>
 
           
@@ -497,12 +498,28 @@ const Hero = () => {
   <Slider
     infinite={true}
     speed={3000}
-    slidesToShow={7}   // 👈 show more logos per row
+    slidesToShow={6}   // 👈 show more logos per row
     slidesToScroll={1}
     autoplay={true}
     autoplaySpeed={1500}
     arrows={false}
     pauseOnHover={false}
+    responsive={[
+    {
+      breakpoint: 1024, // tablets
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 768, // mobile
+      settings: {
+        slidesToShow: 3,   // ✅ only 2 logos per row
+        slidesToScroll: 1,
+      },
+    },
+  ]}
   >
     {[atpar, amazon, asar, global, infosys, revature, shell, strive, cognizant].map(
       (logo, idx) => (
@@ -512,7 +529,7 @@ const Hero = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: "0 5px",  // 👈 reduce spacing between logos
+            padding: "0 15px",  // 👈 reduce spacing between logos
             margin: "0",
           }}
         >
@@ -532,7 +549,7 @@ const Hero = () => {
 </div>
 {/* Placement Achievers Section */}
       <div className="container text-center my-5">
-        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "30px" }}>
+        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "50px", marginTop: "150px" }}>
           Placement Achievers
         </h2>
         <Slider {...profileSliderSettings}>
