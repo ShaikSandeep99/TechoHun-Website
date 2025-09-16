@@ -88,9 +88,13 @@ export default function IndustryAdvisors() {
               </div>
               <div style={industryStyles.industryName}>{advisor.name}</div>
               <div style={industryStyles.industryRole}>{advisor.role}</div>
-              <div style={industryStyles.industryDescription}>{advisor.description}</div>
+              <div style={industryStyles.industryDescription}>
+                {advisor.description}
+              </div>
               {isExpanded && (
-                <div style={industryStyles.industryDetails}>{advisor.details}</div>
+                <div style={industryStyles.industryDetails}>
+                  {advisor.details}
+                </div>
               )}
               <span
                 onClick={() => toggleExpand(index)}
@@ -110,32 +114,32 @@ const industryStyles = {
   industrySection: {
     textAlign: "center",
     padding: "60px 20px",
-    background: "linear-gradient(135deg, #bfe2e8ff, #89e0ef, #48cae4)",
+    background: "#fff", // White background
     minHeight: "100vh",
-    animation: "industryFadeIn 1s ease forwards",
+    animation: "industryFadeIn 1s ease forwards"
   },
   industryHeading: {
     fontSize: "42px",
     marginBottom: "50px",
     fontWeight: "bold",
-    color: "#fff",
-    textShadow: "3px 3px 10px rgba(0,0,0,0.4)",
+    color: "#333",
+    textShadow: "2px 2px 6px rgba(0,0,0,0.1)",
     letterSpacing: "2px",
-    animation: "industryFadeIn 1.5s ease-in-out",
+    animation: "industryFadeIn 1.5s ease-in-out"
   },
   industryContainer: {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
     gap: "35px",
-    alignItems: "flex-start",
+    alignItems: "flex-start"
   },
   industryCard: {
-    background: "linear-gradient(145deg, #ffffff, #f6f9fc)",
+    background: "#fff",
     padding: "30px 25px",
     width: "280px",
     borderRadius: "20px",
-    boxShadow: "0 10px 25px rgba(0,0,0,0.15)",
+    boxShadow: "0 12px 30px rgba(0,0,0,0.12), 0 0 15px rgba(72,202,228,0.2)", // Highlighted glow
     transition: "all 0.4s ease",
     textAlign: "center",
     cursor: "pointer",
@@ -144,8 +148,7 @@ const industryStyles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    border: "2px solid transparent",
-    backgroundClip: "padding-box",
+    border: "1px solid #e6f4f7"
   },
   imageWrapper: {
     width: "120px",
@@ -157,33 +160,33 @@ const industryStyles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexShrink: 0,  // Prevent shrinking
+    flexShrink: 0
   },
   industryImage: {
     width: "120px",
     height: "120px",
     borderRadius: "50%",
     objectFit: "cover",
-    flexShrink: 0,  // Prevent shrinking
+    flexShrink: 0
   },
   industryName: {
     fontSize: "22px",
     fontWeight: "700",
     marginBottom: "6px",
     color: "#222",
-    letterSpacing: "1px",
+    letterSpacing: "1px"
   },
   industryRole: {
     fontSize: "15px",
     color: "#555",
     marginBottom: "12px",
-    fontStyle: "italic",
+    fontStyle: "italic"
   },
   industryDescription: {
     fontSize: "14px",
     color: "#444",
     marginBottom: "18px",
-    lineHeight: 1.6,
+    lineHeight: 1.6
   },
   industryDetails: {
     fontSize: "14px",
@@ -191,7 +194,7 @@ const industryStyles = {
     marginTop: "12px",
     marginBottom: "18px",
     lineHeight: 1.6,
-    textAlign: "left",
+    textAlign: "left"
   },
   industryMoreLink: {
     display: "inline-block",
@@ -200,6 +203,6 @@ const industryStyles = {
     color: "#0077b6",
     cursor: "pointer",
     marginTop: "12px",
-    transition: "color 0.3s ease",
-  },
+    transition: "color 0.3s ease"
+  }
 };

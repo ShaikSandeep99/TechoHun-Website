@@ -1,20 +1,8 @@
-import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
+import React from "react";
+import { Link } from "react-router-dom"; 
 import "./login.css";
 
 export default function Login() {
-  const [isClicked, setIsClicked] = useState(false);
-  const navigate = useNavigate();
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    setIsClicked(true);
-
-    // Wait for animation to finish (0.6s) then navigate
-    setTimeout(() => {
-      navigate("/register");
-    }, 600);
-  };
   return (
     <div className="login-container">
       <div className="login-card">
@@ -30,7 +18,7 @@ export default function Login() {
             <label>
               <input type="checkbox" /> Remember Me
             </label>
-            <Link to="/forgot">Forget Password</Link>
+            <Link to="/forgot">Forgot Password</Link>
           </div>
 
           <button type="submit" className="login-btn">
