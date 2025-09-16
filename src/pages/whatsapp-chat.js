@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import "./whatsapp-chat.css"; // We'll style it
+import "./whatsapp-chat.css"; 
 
 const WhatsAppChatbot = () => {
   const [open, setOpen] = useState(false);
   const [selectedQuestion, setSelectedQuestion] = useState("");
 
  const questions = [
+  "Present courses offering",
   "Course price details",
+  "Counseling or guidance for course information",
   "Information about upcoming workshops",
   "Career guidance or mentorship",
   "Contact details or office location",
   "Other queries"
 ];
-  const phoneNumber = "9392227189"; // Your WhatsApp number
-
+  const phoneNumber = "9849175588"; 
   const handleQuestionClick = (q) => {
     setSelectedQuestion(q);
   };
