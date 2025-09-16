@@ -6,7 +6,9 @@ const WhatsAppChatbot = () => {
   const [selectedQuestion, setSelectedQuestion] = useState("");
 
  const questions = [
+  "Present courses offering",
   "Course price details",
+  "Counseling or guidance for course information",
   "Information about upcoming workshops",
   "Career guidance or mentorship",
   "Contact details or office location",
