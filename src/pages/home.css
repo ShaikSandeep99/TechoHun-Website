@@ -326,14 +326,14 @@
   min-width: 140px;        /* Optional */
   text-align: center;
   margin: 0 auto;          /* Centers the button */
-<<<<<<< HEAD
+
 
   text-decoration: none;   /* ✅ removes the line under View All */
   margin-top: 20px;
 
-=======
+
   margin-top: 20px;
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
+
 }
 .btn-custom-small {
   font-size: 1rem;

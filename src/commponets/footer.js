@@ -64,7 +64,7 @@ const Footer = () => {
             <a href="https://www.instagram.com/technohub_trainings/" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://www.facebook.com/yourpage" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/profile.php?id=61575195953354&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
               <FaFacebook />
             </a>
             <a href="mailto:shameer@technohubtrainings.com">

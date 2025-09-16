@@ -84,11 +84,10 @@ const Hero = () => {
       backgroundImage: image3,
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
-<<<<<<< HEAD
+
       buttonText: "Get Services",
-=======
      buttonText: "Get Services",
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
+
       path: "/services",
 
       image: "../assets/images/bg-imges/bg3.jpg",
@@ -580,8 +579,28 @@ const Hero = () => {
             </motion.div>
           ))}
         </Slider>
+     {/* Map Section */}
+<div className="container my-5">
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF", marginBottom: "30px" }}>
+    Our Location
+  </h2>
+  <div style={{ width: "100%", height: "250px", borderRadius: "20px", overflow: "hidden" }}>
+    <iframe
+      title="Technohub Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1390548322142!2d77.57674707484232!3d13.026815587293665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17bbe308bc23%3A0x914d4d95aac2da1!2sTechnohub%20Trainings!5e0!3m2!1sen!2sin!4v1758032274002!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
       </div>    
     </section>
+    
   );
 };
 
