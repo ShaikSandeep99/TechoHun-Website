@@ -299,6 +299,7 @@
 
  /* View All Button */
 .view-all-btn {
+  text-decoration: none;
   display: inline-block;   /* Prevent full width */
   padding: 10px 25px;      /* Smaller size */
   font-size: 1rem;         /* Adjust text */
@@ -313,6 +314,7 @@
   min-width: 140px;        /* Optional */
   text-align: center;
   margin: 0 auto;          /* Centers the button */
+  margin-top: 20px;
 }
 .btn-custom-small {
   font-size: 1rem;

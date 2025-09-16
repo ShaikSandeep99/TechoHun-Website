@@ -434,7 +434,7 @@ const Hero = () => {
             
    {/* View All Button after DevOps */}
 <div style={{ textAlign: "center", marginTop: "10px" }}>
-  <button className="view-all-btn">View All</button>
+  <Link to="/courses" className="view-all-btn">View All</Link>
 </div>
 
           
@@ -532,7 +532,7 @@ const Hero = () => {
 </div>
 {/* Placement Achievers Section */}
       <div className="container text-center my-5">
-        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "30px" }}>
+        <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "50px", marginTop: "150px" }}>
           Placement Achievers
         </h2>
         <Slider {...profileSliderSettings}>
