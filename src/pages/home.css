@@ -21,9 +21,21 @@
   }
   
   .hero-section h1 {
-    font-size: 3rem;
-    font-weight: bold;
+  font-size: 1.5rem;   /* desktop (~40px) */
+}
+
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2rem;   /* tablet (~32px) */
   }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.5rem; /* mobile (~24px) */
+  }
+}
+
   
   .hero-section p {
     font-weight: bold;
@@ -90,7 +102,7 @@
 .btn-primary {
   display: inline-block;
   text-decoration: none;
-  background-color: #61a4e7;
+  background-color: #1b66b0;
   border: none;
   padding: 10px 20px;
   font-size: 1.2rem;
@@ -100,7 +112,7 @@
 }
 
 .btn-primary:hover {
-  background-color: #91dee0;
+  background-color: #4a7cbe;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -304,7 +316,7 @@
   padding: 10px 25px;      /* Smaller size */
   font-size: 1rem;         /* Adjust text */
   border-radius: 25px;     /* Keep rounded look */
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: linear-gradient(to right, #1b6db4, #5c7bc6);
   color: white;
   font-weight: bold;
   border: none;            /* ✅ keep this, don’t remove */
@@ -314,11 +326,10 @@
   min-width: 140px;        /* Optional */
   text-align: center;
   margin: 0 auto;          /* Centers the button */
-<<<<<<< HEAD
+
   text-decoration: none;   /* ✅ removes the line under View All */
-=======
   margin-top: 20px;
->>>>>>> 880562408828054ed28d069260f21fe98045b957
+
 }
 
 .view-all-btn:hover {

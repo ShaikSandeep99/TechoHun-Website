@@ -1,7 +1,7 @@
 /* Top Footer Container */
 .footer-container {
-  background: linear-gradient(135deg, #838384, #1b263b); /* dark gradient */
-  color: #e0e0e0;
+  background: linear-gradient(135deg, #9595f6, #7ca7f6); /* dark gradient */
+  color: #000000;
   padding: 30px 40px;
   font-size: 15px;
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, sans-serif;
@@ -21,7 +21,7 @@
 }
 
 .footer-section h5 {
-  color: #ffcc33; /* golden accent */
+  color:#bd1818; /* golden accent */
   font-size: 16px;
   margin-bottom: 14px;
   font-weight: 600;
@@ -30,7 +30,7 @@
 .footer-section p {
   font-size: 14px;
   line-height: 1.6;
-  color: #dcdcdc;
+  color: #000000;
 }
 
 .footer-list {
@@ -43,13 +43,13 @@
 }
 
 .footer-list li a {
-  color: #e0e0e0;
+  color: #000000;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .footer-list li a:hover {
-  color: #ffcc33; /* hover effect golden */
+  color:#bd1818; /* hover effect golden */
 }
 
 /* Logo */
@@ -62,7 +62,7 @@
 .contact p {
   margin: 6px 0;
   font-size: 14px;
-  color: #dcdcdc;
+  color: #000000;
 }
 
 /* Social Media Section */
@@ -79,20 +79,20 @@
 }
 
 .social-icons a {
-  color: #e0e0e0;
-  font-size: 20px;
+  color: #000000;
+  font-size: 25x;
   transition: 0.3s;
 }
 
 .social-icons a:hover {
-  color: #ffcc33;
+  color: #e46767;
   transform: scale(1.1);
 }
 
 /* Copyright */
 .footer-copy {
   font-size: 12px;
-  color: #aaa;
+  color: #000000;
   margin-top: 10px;
 }
 

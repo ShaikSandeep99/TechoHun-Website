@@ -100,11 +100,8 @@ const Hero = () => {
       backgroundImage: image3,
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
-      buttonText: "Services",
-      path: "/services",
-
       buttonText: "Get Services",
-       path: "/services",
+      path: "/services",
 
       image: "../assets/images/bg-imges/bg3.jpg",
     },
@@ -152,6 +149,7 @@ const Hero = () => {
   const placementAchievers = [
     { name: "B. Shanmukh", image: Shanmukh, company: "REVARTURE" },
     { name: "B. Yeshwanth", image: Yeshwanth, company: "ASAR IT TECHNOLOGIES" },
+     { name: "Hemabindu", image: Hemabindu, company: "AMAZON" },
     { name: "C. Bhanusrinivas reddy", image: Bhanusrinivasareddy, company: "ASAR IT TECHNOLOGIES" },
     { name: "T. Rajesh", image: Rajesh, company: "VIRTUSA" },
     { name: "M. Hemanthkumar", image: Hemanthkumar, company: "SYNECHRON" },
@@ -164,7 +162,6 @@ const Hero = () => {
   const interns = [
     { name: "Bhaskar", image: Bhaskar, company: "ASAR IT TECHNOLOGIES" },
     { name: "Anil kumar", image: Anilkumar, company: "ASAR IT TECHNOLOGIES" },
-    { name: "Hemabindu", image: Hemabindu, company: "ASAR IT TECHNOLOGIES" },
     { name: "G.Manjunath", image: Manjunath, company: "ASAR IT TECHNOLOGIES" },
     { name: "G. Surya", image: Surya, company: "ASAR IT TECHNOLOGIES" },
     { name: "K. Balaji", image: Balaji, company: "ASAR IT TECHNOLOGIES" },
@@ -409,7 +406,7 @@ const Hero = () => {
                 style={{
                   border: `2px solid ${card.border}`,
                   boxShadow: card.isGift
-                    ? "0 4px 15px rgba(255, 215, 0, 0.6)"
+                    ? "0 4px 15px rgba(66, 139, 204, 0.6)"
                     : "0 4px 12px rgba(0, 123, 255, 0.3)",
                   cursor: "pointer",
                 }}

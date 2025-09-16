@@ -78,7 +78,7 @@
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 16px; /* fully rounded button */
+  border-radius: 15px; /* fully rounded button */
   cursor: pointer;
   transition: all 0.3s ease;
 }

@@ -169,12 +169,12 @@ const HomePage = () => {
           <p>Best Opportunity To Learn From Currently Working Professionals</p>
 
           <div className="service_career-buttons">
-            <button className="service_btn service_green">Online Training</button>
-            <button className="service_btn service_blue">Classroom Training</button>
+            <button className="service_carrer_btn  service_green">Online Training</button>
+            <button className="service_carrer_btn service_blue">Classroom Training</button>
           </div>
 
           <div className="service_career-buttons">
-            <button className="service_btn service_orange">Internships</button>
+            <button className="service_carrer_btn  service_orange">Internships</button>
           </div>
         </div>
       </section>
