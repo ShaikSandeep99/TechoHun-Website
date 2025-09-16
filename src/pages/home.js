@@ -24,7 +24,7 @@ import revature from "../assets/images/bg-imges/revature.png";
 import asar from "../assets/images/bg-imges/ASAR.png";
 import atpar from "../assets/images/bg-imges/@par.png";
 import cognizant from "../assets/images/bg-imges/cognizant.png";
-import ceoPhoto from "../assets/images/gallery/colleges/ceo.png";
+
 // Placement achievers images
 import Shanmukh from "../assets/images/bg-imges/shannu.jpg";
 import Yeshwanth from "../assets/images/bg-imges/yeshwanth.jpg";
@@ -35,6 +35,7 @@ import VijayBhaskarreddy from "../assets/images/bg-imges/vijay.jpg";
 import Sarathsai from "../assets/images/bg-imges/sarath.jpg";
 import Abbas from "../assets/images/bg-imges/abbas.jpg";
 import Yamini from "../assets/images/bg-imges/yamini.jpg";
+
 // Intern images
 import Bhaskar from "../assets/images/bg-imges/bhaskar.jpg";
 import Anilkumar from "../assets/images/bg-imges/anil.jpg";
@@ -56,24 +57,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
 import "./home.css";
 
-// ⬇️ Added leaders array here
-// const leaders = [
-//   {
-//     name: "M. Shameer Dharmavarm",
-//     title: "Founder & CEO",
-//     image: ceoPhoto,
-//     bio:
-//       "Technohub, founded in 2021, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
-//     stats: [
-//       { label: "Founded", value: "2012" },
-//       { label: "Students Trained", value: "5,000+" },
-//       { label: "Students Placed", value: "2,000+" },
-//       { label: "Workshops & Webinars", value: "20+" },
-//     ],
-//     quote:
-//       "At Technohub, we don’t just teach technology—we connect ambition with opportunity, building a true bridge to success.",
-//   },
-// ];
+
 
 const Hero = () => {
   // Hero Section Slideshow Data
@@ -100,11 +84,8 @@ const Hero = () => {
       backgroundImage: image3,
       heading: "Empowering You with Real-World Software Skills",
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
-      buttonText: "Services",
+     buttonText: "Get Services",
       path: "/services",
-
-      buttonText: "Get Services",
-       path: "/services",
 
       image: "../assets/images/bg-imges/bg3.jpg",
     },
@@ -123,16 +104,16 @@ const Hero = () => {
   const slide = slides[currentSlide];
   
 
-  const companySliderSettings = {
-    infinite: true,
-    speed: 3000,
-    slidesToShow: 7,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    arrows: false,
-    pauseOnHover: false,
-  };
+  // const companySliderSettings = {
+  //   infinite: true,
+  //   speed: 3000,
+  //   slidesToShow: 7,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 1500,
+  //   arrows: false,
+  //   pauseOnHover: false,
+  // };
 
   const profileSliderSettings = {
     infinite: true,

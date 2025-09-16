@@ -4,28 +4,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #74a8e3, #cce7f6); /* gradient background */
+  background: linear-gradient(135deg, #b8e0fb, #ebedef);
   padding: 20px;
   animation: fadeIn 0.8s ease-in-out;
 }
 
 /* Register Card */
 .register-card {
-  background: rgba(208, 217, 220, 0.95); /* soft glassy effect */
-  padding: 30px; /* more breathing space */
-  border-radius: 20px; /* smoother rounded corners on all sides */
-  border: none; /* clean look */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* subtle shadow */
-  width: 460px;
-  max-height: 95vh;
-  overflow-y: auto;
-  animation: slideUp 0.6s ease;
+  width: 650px; /* even wider */
+  padding: 35px 30px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1); /* more transparent */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  color: #000;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideIn 0.6s ease forwards;
 }
 
 /* Title */
 .title {
   text-align: center;
-  font-size: 26px;
+  font-size: 25px; /* smaller */
   font-weight: bold;
   margin-bottom: 20px;
   color: #333;
@@ -34,14 +38,11 @@
 /* Labels */
 .register-card label {
   display: block;
-  margin: 12px 0 6px;
-  font-weight: 600;
-  color: #444;
-  transition: color 0.3s ease;
-}
-
-.register-card label:hover {
-  color: #0077b6;
+  margin: 10px 0 4px;
+  font-weight: 500;
+  font-size: 20px; /* smaller text */
+  color: #333;
+  text-align: left;
 }
 
 /* Inputs, Select & Textarea */
@@ -49,23 +50,23 @@
 .register-card select,
 .register-card textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px; /* smaller padding */
   border: 1px solid #bbb;
-  border-radius: 16px; /* more curved edges */
-  font-size: 14px;
-  margin-bottom: 14px;
+  border-radius: 10px;
+  font-size: 16px; /* smaller font */
+  margin-bottom: 12px;
   transition: all 0.3s ease;
   outline: none;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
 }
 
 /* Input focus effect */
 .register-card input:focus,
 .register-card select:focus,
 .register-card textarea:focus {
-  border-color: #61a2c5;
-  box-shadow: 0 0 6px rgba(97, 162, 197, 0.5);
-  transform: scale(1.02);
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+  transform: scale(1.01);
 }
 
 /* Register Button */
@@ -73,34 +74,33 @@
   width: 100%;
   padding: 12px;
   margin-top: 12px;
-  background: linear-gradient(90deg, #9fbde1, #61a2c5); /* modern gradient */
-  color: white;
-  font-size: 16px;
+  background: #007bff;
+  color: #fff;
+  font-size: 14px; /* smaller font */
   font-weight: bold;
   border: none;
-  border-radius: 16px; /* fully rounded button */
+  border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* Button hover effect */
 .btn:hover {
-  background: linear-gradient(90deg, #83b2cb, #90d4f3); /* hover gradient */
-  transform: scale(1.05) translateY(-2px); /* lift effect */
-  box-shadow: 0 6px 15px rgba(97, 162, 197, 0.3);
+  background: #0056b3;
+  transform: scale(1.02) translateY(-2px);
 }
 
 /* Switch text (Login link) */
 .switch-text {
   text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 13px;
   color: #312b2b;
   animation: fadeIn 1s ease-in;
 }
 
 .switch-text a {
-  color: #0077b6;
+  color: #007bff;
   font-weight: bold;
   text-decoration: none;
 }
@@ -109,18 +109,14 @@
   text-decoration: underline;
 }
 
-/* Animations */
-@keyframes slideUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+/* Responsive */
+@media (max-width: 800px) {
+  .register-card {
+    width: 95%; /* shrink on small screens */
   }
 }
 
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }

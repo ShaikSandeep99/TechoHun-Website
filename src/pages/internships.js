@@ -17,9 +17,9 @@ import dbmsImg from '../assets/images/bg-imges/dbms.jpg';
 
 // ---------------------- Theme & shared styles ----------------------
 const theme = {
-  bg: "#c3e1ff",
-  brand: "#00bbff",
-  brand2: "#00d9ff",
+  bg: "#fff",
+  brand: "#0d47a1",
+  brand2: "#0d47a1",
   brandDark: "#1883f7",
   link: "#047bfb",
   text: "#1f2937",
@@ -60,11 +60,20 @@ const cardVariants = {
   hover: { scale: 1.03, boxShadow: theme.shadowLg },
 };
 
+// ---------------------- Motion variants ----------------------
 const buttonVariants = {
-  rest: { scale: 1 },
-  hover: { scale: 1.06, backgroundColor: theme.brandDark, transition: { duration: 0.12 } },
+  rest: { 
+    scale: 1,
+    backgroundColor: theme.brand 
+  },
+  hover: { 
+    scale: 1.06, 
+    backgroundColor: "#43a047",  // ✅ green hover
+    transition: { duration: 0.2 } 
+  },
   tap: { scale: 0.96 },
 };
+
 
 // ---------------------- Component ----------------------
 export default function InternshipList() {
@@ -75,7 +84,7 @@ export default function InternshipList() {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      style={{ minHeight: "100vh", background: theme.bg }}
+      style={{ minHeight: "100vh", background: theme.bg , marginBottom: "40px"}}
     >
       {/* Hero */}
       <motion.section
@@ -84,7 +93,7 @@ export default function InternshipList() {
         transition={{ duration: 0.5, delay: 0.05 }}
         style={{
           background: `linear-gradient(90deg, ${theme.brand}, ${theme.brand2} 90%)`,
-          padding: "72px 16px",
+          padding: "50px 20px",
           textAlign: "center",
         }}
       >
@@ -94,7 +103,7 @@ export default function InternshipList() {
             fontWeight: 800,
             color: "#fff",
             letterSpacing: ".02em",
-            margin: 0,
+            marginBottom: 15,
           }}
         >
           Our Internships
@@ -105,7 +114,7 @@ export default function InternshipList() {
             fontSize: "1.12rem",
             margin: "2px auto 0",
             maxWidth: 760,
-            lineHeight: 2.5,
+            lineHeight: 1.5,
           }}
         >
           Discover hands-on internships designed to help you gain real skills and launch your career.
@@ -228,6 +237,8 @@ export default function InternshipList() {
           ))}
         </div>
       </section>
+
+
     </motion.div>
   );
 }

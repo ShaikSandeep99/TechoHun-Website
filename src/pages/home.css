@@ -307,25 +307,15 @@
   background: linear-gradient(to right, #4facfe, #00f2fe);
   color: white;
   font-weight: bold;
-  border: none;            /* ✅ keep this, don’t remove */
+  border: none;
   cursor: pointer;
   transition: 0.3s ease;
   width: auto;             /* Shrink to fit text */
   min-width: 140px;        /* Optional */
   text-align: center;
   margin: 0 auto;          /* Centers the button */
-<<<<<<< HEAD
-  text-decoration: none;   /* ✅ removes the line under View All */
-=======
   margin-top: 20px;
->>>>>>> 880562408828054ed28d069260f21fe98045b957
 }
-
-.view-all-btn:hover {
-  text-decoration: none;   /* ✅ prevent underline on hover */
-  opacity: 0.9;            /* Optional hover effect */
-}
-
 .btn-custom-small {
   font-size: 1rem;
   padding: 8px 20px;       /* Smaller padding */
@@ -478,61 +468,4 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;  /* space between logos */
-}
-/* ============================
-   Responsive Fixes for Mobile
-   ============================ */
-@media (max-width: 768px) {
-  .collaborated-section {
-    padding: 20px 10px;
-    text-align: center;
-  }
-
-  .collaborated-title {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-  }
-
-  .company-logos {
-    display: flex;
-    flex-wrap: wrap;    /* allow wrapping */
-    justify-content: center;
-    gap: 50px;          /* smaller gaps */
-  }
-
-  .company-logos img {
-    max-width: 100px;    /* shrink logos */
-    height: auto;
-    object-fit: contain;   
-  }
-  @media (max-width: 768px) {
-  .company-logos {
-    gap: 15px;             /* slightly smaller gap on mobile */
-  }
-
-  .company-logos img {
-    max-width: 80px;       /* shrink logos for small screens */
-  }
-}
-/* Space between slides */
-.slick-slide > div {
-  margin: 0 10px;
-}
-
-.slick-list {
-  margin: 0 -10px; /* prevents side cut-offs */
-}
-
-
-  .placement-achievers {
-    font-size: 1.2rem;
-    margin-top: 20px;
-  }
-
-  .whatsapp-btn {
-    font-size: 0.9rem;
-    padding: 8px 16px;
-    margin-top: 20px;
-    display: inline-block;
-  }
 }

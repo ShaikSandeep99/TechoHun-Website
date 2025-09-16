@@ -16,18 +16,7 @@
 
 }
 
-.courses-hero::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 20%, transparent 20%);
-    background-size: 50% 50%;
-    animation: rotateBg 20s linear infinite;
-    top: -50%;
-    left: -50%;
-    z-index: 0;
-}
+
 
 /* Right Side Curve Shape */
 .courses-hero::after {
