@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background: linear-gradient(135deg, #b8e0fb, #ebedef);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -41,7 +41,7 @@
   width: 100%;
   padding: 12px;
   border: none;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  background: #0793d1;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -51,7 +51,7 @@
 }
 
 .forgot-card button:hover {
-  background: linear-gradient(135deg, #00f2fe, #4facfe);
+  background: #027bae;
 }
 
 .message {
