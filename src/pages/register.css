@@ -79,11 +79,10 @@
   font-size: 14px; /* smaller font */
   font-weight: bold;
   border: none;
-<<<<<<< HEAD
+
   border-radius: 15px; /* fully rounded button */
-=======
   border-radius: 10px;
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
+
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }

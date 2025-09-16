@@ -58,7 +58,6 @@
 ========================================= */
 .service_btn { 
   padding: 10px 10px; 
-<<<<<<< HEAD
   border-radius: 50px; 
   font-weight: 600; 
   text-decoration: none; 
@@ -70,8 +69,6 @@
 }
 .service_carrer_btn {
   padding: 10px 10px; 
-=======
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
   border-radius: 8px; 
   font-weight: 600; 
   text-decoration: none; 
@@ -79,12 +76,9 @@
   display: inline-block; 
   border: none;
   text-align: center;
-<<<<<<< HEAD
-  transition: 0.3s;
 
-=======
-  transition: 0.3s;  
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
+  transition: 0.3s; 
+
 }
 .service_btn-primary { background: #1b6db4; color: #fff; }
 .service_btn-primary:hover { background: rgba(7, 148, 209, 0.91); }
@@ -458,6 +452,3 @@
   }
 <<<<<<< HEAD
 } */
-=======
-} */
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900

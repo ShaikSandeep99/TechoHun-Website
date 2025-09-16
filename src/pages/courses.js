@@ -51,10 +51,10 @@ const Courses = () => {
       { title: "Cloud Security", img: "/img/coursesname-images/CloudS.png", desc: "Protects cloud systems, data, and applications from cyber threats.", link: "/auth" },
     ],
     SAP: [
-      { title: "Cybersecurity", img: "/img/coursesname-images/CyberSec.png", desc: "Safeguards digital systems, networks, and data from malicious attacks.", link: "/auth" },
-      { title: "Ethical Hacking", img: "/img/coursesname-images/Ethical.png", desc: "Identifies and fixes security vulnerabilities to protect systems safely.", link: "/auth" },
-      { title: "Networking", img: "/img/coursesname-images/Network.png", desc: "Connects devices to share data, resources, and ensure communication.", link: "/auth" },
-      { title: "Cloud Security", img: "/img/coursesname-images/CloudS.png", desc: "Protects cloud systems, data, and applications from cyber threats.", link: "/auth" },
+      { title: "SAP ABAP", img: "/img/coursesname-images/SapABAP.png", desc: "Develop custom applications, reports, and enhancements using SAP language.", link: "/auth" },
+      { title: "SAP BASIS", img: "/img/coursesname-images/SapBasis.png", desc: "Manage SAP systems, configuration, tuning, and user administration efficiently.", link: "/auth" },
+      { title: "SAP BW / BW4HANA", img: "/img/coursesname-images/SapBw4.png", desc: "Build data warehouses, ETL processes, and real-time analytics reports.", link: "/auth" },
+      { title: "SAP HANA", img: "/img/coursesname-images/SapHana.png", desc: "Master in-memory data modeling, analytics, and high-speed processing.", link: "/auth" },
     ],
   };
 

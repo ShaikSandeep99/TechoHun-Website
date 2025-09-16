@@ -5,11 +5,11 @@
   justify-content: center; /* centers horizontally */
   align-items: center;    /* centers vertically */
   text-align: center;     /* centers text */
-<<<<<<< HEAD
+
   background: linear-gradient(135deg, #61a0e4, #00d4ff);
-=======
+
   background: #0d47a1;
->>>>>>> e6e41a76ae555e0bb8c414dc36fb942aeab3d900
+
   color: white;
   padding: 50px 20px;
 
