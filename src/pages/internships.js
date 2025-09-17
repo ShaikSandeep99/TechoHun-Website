@@ -68,7 +68,7 @@ const buttonVariants = {
   },
   hover: { 
     scale: 1.06, 
-    backgroundColor: "#47bdf4ff",  
+    backgroundColor: "#43a047",  // ✅ green hover
     transition: { duration: 0.2 } 
   },
   tap: { scale: 0.96 },
@@ -111,7 +111,7 @@ export default function InternshipList() {
         <p
           style={{
             color: "#eef7ff",
-            fontSize: "19px",
+            fontSize: "16px",
             margin: "2px auto 0",
             maxWidth: 760,
             lineHeight: 1.5,
