@@ -104,7 +104,7 @@ const HomePage = () => {
         {/* Hero Content */}
         <div className="service_hero-content">
           <h1>
-            Empower Your <br /> Learning Journey
+            Empower Your Learning Journey
           </h1>
           <p>
             Discover top courses, expert mentorship, and level up your skills <br />

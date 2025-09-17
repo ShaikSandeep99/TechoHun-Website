@@ -8,7 +8,7 @@ const Contact = () => {
       <section className="contact-hero">
         <div className="hero-content">
           <h1>Get in Touch with Technohub</h1>
-          <p>We'd love to hear from you! Feel free to reach out with any questions or inquiries.</p>
+          <p>We'd love to hear from you! Feel free to reach out with <br></br> any questions or inquiries.</p>
         </div>
       </section>
 

@@ -1,6 +1,6 @@
 /* General Page Styling */
 .contact-hero {
-  height: 37vh; /* full screen height */
+  height: 32vh; /* full screen height */
   display: flex;
   justify-content: center; /* centers horizontally */
   align-items: center;    /* centers vertically */
@@ -16,13 +16,13 @@
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
   margin-bottom: 5px; /* reduced from 10px */
 }
 
 .hero-content p {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   line-height: 1.4;
   max-width: 600px;
   margin: 0 auto;

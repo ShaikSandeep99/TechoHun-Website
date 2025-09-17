@@ -99,11 +99,11 @@ export default function InternshipList() {
       >
         <h1
           style={{
-            fontSize: "2.6rem",
+            fontSize: "2rem",
             fontWeight: 800,
             color: "#fff",
             letterSpacing: ".02em",
-            marginBottom: 15,
+            marginBottom: 10,
           }}
         >
           Our Internships
@@ -111,13 +111,13 @@ export default function InternshipList() {
         <p
           style={{
             color: "#eef7ff",
-            fontSize: "1.12rem",
+            fontSize: "19px",
             margin: "2px auto 0",
             maxWidth: 760,
             lineHeight: 1.5,
           }}
         >
-          Discover hands-on internships designed to help you gain real skills and launch your career.
+          Discover hands-on internships designed to help you gain real skills <br></br>and launch your career.
         </p>
       </motion.section>
 
