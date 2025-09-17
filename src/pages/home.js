@@ -482,7 +482,7 @@ const Hero = () => {
   <Slider
     infinite={true}
     speed={3000}
-    slidesToShow={6}   // 👈 show more logos per row
+    slidesToShow={6}  
     slidesToScroll={1}
     autoplay={true}
     autoplaySpeed={1500}
@@ -490,16 +490,16 @@ const Hero = () => {
     pauseOnHover={false}
     responsive={[
     {
-      breakpoint: 1024, // tablets
+      breakpoint: 1024, 
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 768, // mobile
+      breakpoint: 768, 
       settings: {
-        slidesToShow: 3,   // ✅ only 2 logos per row
+        slidesToShow: 3,   
         slidesToScroll: 1,
       },
     },
@@ -513,7 +513,7 @@ const Hero = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: "0 15px",  // 👈 reduce spacing between logos
+            padding: "0 15px", 
             margin: "0",
           }}
         >
@@ -521,7 +521,7 @@ const Hero = () => {
             src={logo}
             alt={`Company ${idx}`}
             style={{
-              maxWidth: "120px",   // ✅ keep original size
+              maxWidth: "120px",  
               maxHeight: "60px",
               objectFit: "contain",
             }}
@@ -531,6 +531,7 @@ const Hero = () => {
     )}
   </Slider>
 </div>
+
 {/* Placement Achievers Section */}
       <div className="container text-center my-5">
         <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "50px", marginTop: "150px" }}>
@@ -579,8 +580,28 @@ const Hero = () => {
             </motion.div>
           ))}
         </Slider>
+     {/* Map Section */}
+<div className="container my-5">
+  <h2 className="fw-bold text-center" style={{ color: "#007BFF", marginBottom: "30px" }}>
+    Our Location
+  </h2>
+  <div style={{ width: "100%", height: "250px", borderRadius: "20px", overflow: "hidden" }}>
+    <iframe
+      title="Technohub Location"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1390548322142!2d77.57674707484232!3d13.026815587293665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17bbe308bc23%3A0x914d4d95aac2da1!2sTechnohub%20Trainings!5e0!3m2!1sen!2sin!4v1758032274002!5m2!1sen!2sin"
+      width="100%"
+      height="100%"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+
       </div>    
     </section>
+    
   );
 };
 
