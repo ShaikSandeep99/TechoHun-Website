@@ -1,5 +1,5 @@
 /* =========================================
-   GLOBAL PAGE STYLES
+  GLOBAL PAGE STYLES
 ========================================= */
 .service_homepage { 
   min-height: 100vh; 
@@ -58,10 +58,7 @@
 ========================================= */
 .service_btn { 
   padding: 10px 10px; 
-<<<<<<< HEAD
 
-=======
->>>>>>> 943fed86e91a0eaeae0439901004bedf20195262
   border-radius: 50px; 
   font-weight: 600; 
   text-decoration: none; 
@@ -72,12 +69,7 @@
   transition: 0.3s;  
 }
 .service_carrer_btn {
-  padding: 10px 10px; 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 943fed86e91a0eaeae0439901004bedf20195262
+  padding: 10px 10px;
   border-radius: 8px; 
   font-weight: 600; 
   text-decoration: none; 
@@ -85,14 +77,13 @@
   display: inline-block; 
   border: none;
   text-align: center;
-<<<<<<< HEAD
+
   transition: 0.3s;
 
-=======
+
 
   transition: 0.3s; 
 
->>>>>>> 943fed86e91a0eaeae0439901004bedf20195262
 }
 .service_btn-primary { background: #1b6db4; color: #fff; }
 .service_btn-primary:hover { background: rgba(7, 148, 209, 0.91); }
@@ -466,8 +457,6 @@
   }
 
 } */
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 943fed86e91a0eaeae0439901004bedf20195262
+
