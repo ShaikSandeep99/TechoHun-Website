@@ -1,26 +1,39 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import './navbar.css';
 
-import profileImg from '../assets/profile.png'; 
-
-
+//import profileImg from '../assets/profile.png'; 
 function Navbar() {
+  useEffect(() => {
+    // Select all nav links
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.getElementById('navbarNav');
+
+    navLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        // Collapse the navbar when a link is clicked
+        if (navbarCollapse.classList.contains('show')) {
+          navbarCollapse.classList.remove('show');
+        }
+      });
+    });
+
+    // Cleanup on unmount
+    return () => {
+      navLinks.forEach((link) => {
+        link.removeEventListener('click', () => {});
+      });
+    };
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
 
-         {/* Profile
-        <NavLink className="photo" to="/">
-          <img src={profileImg} alt="Technohub" className="profile-photo" />
-        </NavLink> */}
-        
         {/* Logo */}
         <NavLink className="navbar-brand" to="/">
           <img src="/img/technohub-logo.png" alt="Technohub" className="navbar-logo" />
         </NavLink>
-
-       
 
         {/* Toggler for mobile */}
         <button
@@ -39,48 +52,45 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav align-items-center">
             <li className="nav-item">
-              <NavLink className="nav-link" exact="true" to="/" activeclassname="active">
+              <NavLink className="nav-link" exact="true" to="/">
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about" activeclassname="active">
+              <NavLink className="nav-link" to="/about">
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/courses" activeclassname="active">
+              <NavLink className="nav-link" to="/courses">
                 Courses
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/services" activeclassname="active">
+              <NavLink className="nav-link" to="/services">
                 Services
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/industry" activeclassname="active">
+              <NavLink className="nav-link" to="/industry">
                 INDUSTRY ADVISORS
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/gallery" activeclassname="active">
+              <NavLink className="nav-link" to="/gallery">
                 Gallery
               </NavLink>
             </li>
-            {/* ✅ New Internships link */}
             <li className="nav-item">
-              <NavLink className="nav-link" to="/internships" activeclassname="active">
+              <NavLink className="nav-link" to="/internships">
                 Internships
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact" activeclassname="active">
+              <NavLink className="nav-link" to="/contact">
                 Contact Us
               </NavLink>
             </li>
-
-            {/* Signup/Signin combined */}
             <li className="nav-item ms-3">
               <NavLink className="nav-link auth-link" to="/auth">
                 Login
@@ -89,7 +99,6 @@ function Navbar() {
           </ul>
         </div>
       </div>
-
     </nav>
   );
 }

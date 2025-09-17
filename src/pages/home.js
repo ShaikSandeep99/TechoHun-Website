@@ -86,7 +86,7 @@ const Hero = () => {
       description:"“Unlock top courses, expert guidance, and skill growth with flexible, practical, and career-driven programs.”",
 
       buttonText: "Get Services",
-     buttonText: "Get Services",
+    
 
       path: "/services",
 

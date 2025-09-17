@@ -170,13 +170,14 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* ================== Career Value Section ================== */}
+           {/* ================== Career Value Section ================== */}
       <section className="service_career-value" id="career-value">
         <div className="service_container">
           <h2>The Bright Place to Build The Best Career Value</h2>
           <p>Best Opportunity To Learn From Currently Working Professionals</p>
 
-          {/* Buttons */}
+          {/* Buttons */}         
+
           <div className="service_career-buttons">
             <button className="service_carrer_btn  service_green">Online Training</button>
             <button className="service_carrer_btn service_blue">Classroom Training</button>
@@ -184,8 +185,15 @@ const HomePage = () => {
           <div className="service_career-buttons">
             <button className="service_carrer_btn  service_orange">Internships</button>
           </div>
+
+
+
+
+
+
         </div>
       </section>
+
 
       {/* ================== Services Cards Grid ================== */}
       <motion.div

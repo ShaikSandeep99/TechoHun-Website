@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Images
-import ceoPhoto from "../assets/images/gallery/colleges/ceo.png";
+import ceoPhoto from "../assets/ceo.png";
 import Shanmukh from "../assets/images/B.Shanmukh.jpg";
 import Yeshwanth from "../assets/images/B.Yeshwanth.jpg";
 import Bhanusrinivasareddy from "../assets/images/C.Bhanusrinivasreddy.jpg";
