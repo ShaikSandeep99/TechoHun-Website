@@ -482,7 +482,7 @@ const Hero = () => {
   <Slider
     infinite={true}
     speed={3000}
-    slidesToShow={6}   // 👈 show more logos per row
+    slidesToShow={6}  
     slidesToScroll={1}
     autoplay={true}
     autoplaySpeed={1500}
@@ -490,16 +490,16 @@ const Hero = () => {
     pauseOnHover={false}
     responsive={[
     {
-      breakpoint: 1024, // tablets
+      breakpoint: 1024, 
       settings: {
         slidesToShow: 4,
         slidesToScroll: 1,
       },
     },
     {
-      breakpoint: 768, // mobile
+      breakpoint: 768, 
       settings: {
-        slidesToShow: 3,   // ✅ only 2 logos per row
+        slidesToShow: 3,   
         slidesToScroll: 1,
       },
     },
@@ -513,7 +513,7 @@ const Hero = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            padding: "0 15px",  // 👈 reduce spacing between logos
+            padding: "0 15px", 
             margin: "0",
           }}
         >
@@ -521,7 +521,7 @@ const Hero = () => {
             src={logo}
             alt={`Company ${idx}`}
             style={{
-              maxWidth: "120px",   // ✅ keep original size
+              maxWidth: "120px",  
               maxHeight: "60px",
               objectFit: "contain",
             }}
@@ -531,6 +531,7 @@ const Hero = () => {
     )}
   </Slider>
 </div>
+
 {/* Placement Achievers Section */}
       <div className="container text-center my-5">
         <h2 className="fw-bold" style={{ color: "#007BFF", marginBottom: "50px", marginTop: "150px" }}>
