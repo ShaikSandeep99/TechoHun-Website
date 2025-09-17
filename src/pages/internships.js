@@ -68,7 +68,7 @@ const buttonVariants = {
   },
   hover: { 
     scale: 1.06, 
-    backgroundColor: "#43a047",  // ✅ green hover
+    backgroundColor: "#47bdf4ff",  
     transition: { duration: 0.2 } 
   },
   tap: { scale: 0.96 },
