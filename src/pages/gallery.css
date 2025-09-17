@@ -3,7 +3,7 @@
   padding: 40px;
   background: linear-gradient(135deg, #87ceeb, #ffffff); /* skyblue → white */
   color: #000000; 
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   letter-spacing: 1px;     
 }
 
@@ -12,7 +12,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 25px;
-  color: #211717; /* dark text */
+  color: #211717;
   text-align: center;
 }
 
@@ -21,7 +21,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 25px; /* gap between cards */
+  gap: 25px;
 }
 
 /* Individual Cards */
@@ -45,13 +45,13 @@
   transition: transform 0.6s ease;
 }
 
-/* Slide Padding (if using carousel) */
+/* Slide Padding */
 .gallery-slide {
-  padding: 0 10px; /* space on left & right */
+  padding: 0 10px;
   box-sizing: border-box;
 }
 
-/* Alternative image class if needed */
+/* Alternative Image Class */
 .gallery-image {
   border-radius: 12px;
   width: 100%;
@@ -76,5 +76,40 @@
   }
   to {
     transform: translateY(-10px);
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .gallery-container {
+    padding: 20px;
+  }
+
+  .gallery-title {
+    font-size: 22px;
+  }
+
+  .gallery-grid {
+    gap: 15px;
+  }
+
+  .gallery-card {
+    width: 45%;   /* 2 cards per row on tablets */
+    height: 200px;
+  }
+
+  .gallery-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-card {
+    width: 100%;  /* 1 card per row on small phones */
+    height: 180px;
+  }
+
+  .gallery-image {
+    height: 180px;
   }
 }

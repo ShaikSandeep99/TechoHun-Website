@@ -81,11 +81,7 @@
   border: none;
 
   border-radius: 15px; /* fully rounded button */
-<<<<<<< HEAD
-
-=======
->>>>>>> 943fed86e91a0eaeae0439901004bedf20195262
-  border-radius: 10px;
+ border-radius: 10px;
 
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
