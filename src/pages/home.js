@@ -73,7 +73,7 @@ const Hero = () => {
     },
     {
       backgroundImage: image2,
-      heading: "Learn from the Best in the Industry",
+      heading: "Learn from the best in the industry",
       description:
         "“Our expert instructors provide real-world knowledge to help you achieve your goals.”",
       buttonText: "Discover Courses",
@@ -136,7 +136,7 @@ const Hero = () => {
   const placementAchievers = [
     { name: "B. Shanmukh", image: Shanmukh, company: "REVARTURE" },
     { name: "B. Yeshwanth", image: Yeshwanth, company: "ASAR IT TECHNOLOGIES" },
-     { name: "Hemabindu", image: Hemabindu, company: "AMAZON" },
+    { name: "Hemabindu", image: Hemabindu, company: "AMAZON" },
     { name: "C. Bhanusrinivas reddy", image: Bhanusrinivasareddy, company: "ASAR IT TECHNOLOGIES" },
     { name: "T. Rajesh", image: Rajesh, company: "VIRTUSA" },
     { name: "M. Hemanthkumar", image: Hemanthkumar, company: "SYNECHRON" },

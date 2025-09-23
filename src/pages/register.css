@@ -80,11 +80,8 @@
   font-weight: bold;
   border: none;
   border-radius: 15px; /* fully rounded button */
-<<<<<<< HEAD
-  border-radius: 10px;
 
-=======
->>>>>>> f32d67cae8626aa7048f61cfae1a9ef7f117cb8f
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
