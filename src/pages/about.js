@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 // Images
 import ceoPhoto from "../assets/ceo.png";
@@ -22,7 +20,7 @@ import Damodhar from "../assets/images/K.Damodhar.jpg";
 import Udaykiran from "../assets/images/R.Udaykiran.jpg";
 
 /* =======================
-   Data
+   CEO Data
 ======================= */
 
 const leaders = [
@@ -42,6 +40,8 @@ const leaders = [
       "At Technohub, we don’t just teach technology we connect ambition with opportunity, building a true bridge to success.",
   },
 ];
+
+
 
 const placements = [
   { name: "B. Shanmukh", image: Shanmukh, company: "Revature" },

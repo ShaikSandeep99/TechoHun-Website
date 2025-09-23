@@ -1,6 +1,6 @@
 /* General Page Styling */
 .contact-hero {
-  height: 32vh; /* full screen height */
+  height: 31vh; /* full screen height */
   display: flex;
   justify-content: center; /* centers horizontally */
   align-items: center;    /* centers vertically */

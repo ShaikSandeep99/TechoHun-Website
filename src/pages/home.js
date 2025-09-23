@@ -64,7 +64,7 @@ const Hero = () => {
   const slides = [
     {
       backgroundImage: image1,
-      heading: "Unlock New Career Opportunities with Technohub",
+      heading: "Join Technohub-Hit Recession",
       description:
         "“Join our professional courses and start your journey toward a successful career. Explore a variety of training programs tailored just for you!”",
       buttonText: "Get Started",
@@ -106,17 +106,6 @@ const Hero = () => {
 
   const slide = slides[currentSlide];
   
-
-  // const companySliderSettings = {
-  //   infinite: true,
-  //   speed: 3000,
-  //   slidesToShow: 7,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 1500,
-  //   arrows: false,
-  //   pauseOnHover: false,
-  // };
 
   const profileSliderSettings = {
     infinite: true,
