@@ -1,8 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 // Images
 import ceoPhoto from "../assets/ceo.png";
@@ -20,9 +18,10 @@ import Manjunath from "../assets/images/G.Manjunath.jpg";
 import Surya from "../assets/images/G.Surya.jpg";
 import Damodhar from "../assets/images/K.Damodhar.jpg";
 import Udaykiran from "../assets/images/R.Udaykiran.jpg";
+import sharath from "../assets/images/bg-imges/sharathsr.jpg";
 
 /* =======================
-   Data
+   CEO Data
 ======================= */
 
 const leaders = [
@@ -30,8 +29,18 @@ const leaders = [
     name: "M. Shameer Dharmavaram",
     title: " Founder & CEO",
     image: ceoPhoto,
-    bio:
-      "Technohub, founded in 2012, has grown into a bridge between learning and career success. With a strong focus on hands-on training, industry mentorship, and real-world exposure, we prepare every learner to step confidently into the future of technology.",
+   bio:
+ (
+      <>
+        <p>
+        As the CEO of Asar IT Technologies, brings over 12 years of expertise in IT leadership, client relationship management, and cutting-edge solutions like IoT and data analytics. Focuses on enabling organizations to streamline operations and adopt transformative technologies through collaborative strategies and innovative approaches. 
+        </p>
+        <p style={{ marginTop: 8 }}>
+         Previously founded TechnoHub Software Solutions, delivering impactful projects including advanced logistics software and data analytics training. Passionate about fostering growth, building scalable IT systems, and aligning complex, time-sensitive initiatives with organizational goals. Excels in orchestrating cross-functional teams and nurturing global partnerships to achieve sustainable success.
+        </p>
+      </>
+    ),
+
     stats: [
       { label: "Founded", value: "2012" },
       { label: "Students Trained", value: "5,000+" },
@@ -53,7 +62,8 @@ const placements = [
   { name: "C. Sarath Sai", image: Sarathsai, company: "ASAR IT Technologies" },
   { name: "K. Yamini", image: Yamini, company: "ASAR IT Technologies" },
   { name: "A. Afroz Abbas", image: Abbas, company: "Amazon" },
-  { name: "B. Hema Bindu", image: Hemabindu, company: "ASAR IT Technologies" },
+  { name: "B. Hema Bindu", image: Hemabindu, company: "Amazon" },
+  { name: "sharath", image: sharath, company: "ASAR IT Technologies"},
 ];
 
 const interns = [
@@ -445,14 +455,13 @@ const About = () => {
           }}
         >
           <p>
-            Welcome to Technohub, where ambitious learners build real, job-ready skills.
-            We offer online and offline programs for beginners and professionals,
-            driven by hands-on projects and strong industry alignment.
+            At technohub, we’re committed to empowering aspiring IT professionals with industry-leading IT courses. Our mission is to bridge the gap between academic learning and real-world expertise by providing hands-on training, expert mentorship, and career-focused programs.
           </p>
           <p style={{ marginTop: 10 }}>
-            Our curriculum spans Software Development, Data Science, Cybersecurity,
-            Mobile App Development, and more. You get lifetime access to updated
-            materials, expert mentorship, and personalized support to accelerate your career.
+           We believe that quality education should be accessible to everyone, which is why our courses are designed to cater to beginners, working professionals, and tech enthusiasts alike. With a curriculum that aligns with industry standards, real-time projects, and placement assistance, we ensure that our students gain the skills needed to excel in today’s competitive tech landscape.
+          </p>
+          <p style={{marginTop: 10}}>
+            Join us at Technohub, where learning meets innovation, and take the next step in building a successful IT career!
           </p>
         </div>
 

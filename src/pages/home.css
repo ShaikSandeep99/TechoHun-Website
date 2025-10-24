@@ -1,11 +1,5 @@
 
 
-/* Hero Section
-.hero-section {
-    height: 90vh;
-    background: linear-gradient(135deg, pink, lightblue, white);
-=======
-
 /* Hero Section */
 .hero-section {
     height: 90vh;
@@ -227,7 +221,7 @@
 
 .featured-courses-section .card-title {
     font-size: 1.25rem;
-    color: #0044cc;
+    color: #f0f2f6;
 }
 
 .featured-courses-section .card-text {
@@ -295,18 +289,17 @@
 }
 
 .feature-card:hover {
-  background-color: #007BFF; /* Blue background */
-  transform: translateY(-8px); /* Slight lift */
+  background-color: #f0f3f5dd; 
+  transform: translateY(-8px);
 }
 
 .feature-card:hover .feature-text {
-  color: #fff; /* White text on hover */
+  color: #1b1818; /* White text on hover */
 }
 
 .feature-card:hover .feature-icon {
-  filter: brightness(0) invert(1); /* Make icons white */
-  transition: filter 0.3s ease-in-out;
-  
+  color: black;
+  transition: color 0.3s ease-in-out;
 }
 
  /* View All Button */
